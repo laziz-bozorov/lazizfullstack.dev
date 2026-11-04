@@ -1,71 +1,69 @@
 <!DOCTYPE html>
-<html lang="uz" class="scroll-smooth">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LazizFullStack — Senior Full-Stack Engineer & Tech Partner</title>
-    <meta name="description" content="Senior Full-Stack dasturchi. Ortiqcha xarajatlarsiz, aniq muddat va rasmiy shartnoma bilan biznesingizga sotuv keltiruvchi Web saytlar, Telegram WebApp va CRM tizimlar.">
-    <meta name="keywords" content="web sayt yaratish, telegram bot, crm tizimi, fullstack dasturchi, toshkent, it xizmatlar, web development, lazizfullstack">
-    <meta property="og:title" content="LazizFullStack — Senior Full-Stack Engineer & Tech Partner">
-    <meta property="og:description" content="Har bir sarflangan dollar biznesingizga maksimal foyda keltirsin. Rasmiy shartnoma, temir deadline va 30 kunlik kafolat.">
+    <title data-i18n="title">Laziz Bozorov — Full-Stack Dasturchi &amp; IT Hamkor | Toshkent</title>
+    
+    <!-- Meta & SEO -->
+    <meta name="description" content="Toshkentdan Full-Stack dasturchi. Biznesingiz uchun vositachilarsiz va toza kod bilan veb-saytlar, Telegram botlar va boshqaruv tizimlari yarataman.">
+    <meta name="keywords" content="web sayt yaratish, telegram bot, fullstack dasturchi, toshkent dasturchi, crm tizimi, laziz bozorov, react, nextjs, python">
+    <meta name="author" content="Laziz Bozorov">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Laziz Bozorov — Full-Stack Dasturchi & IT Hamkor">
+    <meta property="og:description" content="Vositachilarsiz to'g'ridan-to'g'ri dasturchi bilan hamkorlik: veb-saytlar, Telegram botlar va CRM tizimlar.">
     <meta property="og:url" content="https://lazizfullstack.dev">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2305070B'/><path d='M30 40 L45 50 L30 60' stroke='%2338BDF8' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><line x1='52' y1='62' x2='72' y2='62' stroke='%2310B981' stroke-width='8' stroke-linecap='round'/></svg>">
 </head>
-<body class="bg-base text-primary antialiased selection:bg-cyan selection:text-black">
+<body class="dark-theme">
 
-    <!-- Ambient Aurora Glows -->
-    <div class="ambient-glow glow-hero"></div>
-    <div class="ambient-glow glow-order"></div>
-
-    <!-- Top Scarcity Bar -->
-    <aside class="scarcity-top-bar" aria-label="Loyiha qabul qilish holati">
-        <div class="container scarcity-inner">
-            <div class="scarcity-badge">
-                <span class="live-dot"></span>
-                <strong>STATUS:</strong> <span data-i18n="scarcity_status">Yangi loyihalar qabul qilinmoqda</span>
+    <!-- Top Availability Bar -->
+    <aside class="scarcity-bar" id="scarcityBar">
+        <div class="container scarcity-container">
+            <div class="scarcity-content">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span class="scarcity-badge" data-i18n="scarcity_status">Yangi loyihalar uchun ochiq</span>
+                <span class="scarcity-message" data-i18n="scarcity_text">Har bir loyihaga to'liq e'tibor berish uchun bir vaqtda faqat 2-3 ta asosiy loyiha bilan ishlayman.</span>
             </div>
-            <p class="scarcity-text" data-i18n="scarcity_text">
-                Har bir loyihaga 100% vaqt va sifat ajratish maqsadida oyiga faqat 2-3 ta sifatli loyiha olamiz.
-            </p>
-            <a href="#zakas-section" class="scarcity-link" data-i18n="scarcity_link">Navbatni band qilish &rarr;</a>
+            <a href="#zakas-section" class="scarcity-cta" data-i18n="scarcity_link">Bog'lanish &rarr;</a>
         </div>
     </aside>
 
     <!-- Header -->
     <header class="sticky-header" id="mainHeader">
         <div class="container header-container">
-            <a href="#" class="brand-logo" aria-label="Bosh sahifa">
+            <a href="#hero" class="brand-logo" aria-label="Bosh sahifa">
                 <div class="brand-icon">
                     <span class="code-symbol">&gt;_</span>
                 </div>
                 <div class="brand-text">
-                    <span class="brand-name">lazizfullstack<span class="brand-tld">.dev</span></span>
-                    <span class="brand-role" data-i18n="brand_role">Full-Stack Engineer &amp; Tech Partner</span>
+                    <span class="brand-name">laziz<span class="brand-tld">.dev</span></span>
+                    <span class="brand-role" data-i18n="brand_role">Full-Stack Dasturchi</span>
                 </div>
             </a>
 
             <!-- Desktop Nav -->
             <nav class="desktop-nav" aria-label="Menyu">
                 <ul class="nav-menu">
+                    <li><a href="#afzalliklar" class="nav-item" data-i18n="nav_guarantees">Afzalliklar</a></li>
                     <li><a href="#xizmatlar" class="nav-item" data-i18n="nav_services">Xizmatlar</a></li>
-                    <li><a href="#portfolio" class="nav-item" data-i18n="nav_portfolio">Natijalar</a></li>
+                    <li><a href="#portfolio" class="nav-item" data-i18n="nav_portfolio">Portfolio</a></li>
                     <li><a href="#kalkulyator" class="nav-item" data-i18n="nav_calculator">Kalkulyator</a></li>
-                    <li><a href="#kafolatlar" class="nav-item" data-i18n="nav_guarantees">Kafolatlar</a></li>
                     <li><a href="#jarayon" class="nav-item" data-i18n="nav_process">Jarayon</a></li>
+                    <li><a href="#zakas-section" class="nav-item" data-i18n="nav_contact">Aloqa</a></li>
                 </ul>
             </nav>
 
             <!-- Header Actions & Language Switcher -->
             <div class="header-actions">
-                
                 <!-- Language Switcher Segmented Pill -->
                 <div class="lang-switcher" role="group" aria-label="Tilni tanlash">
                     <button class="lang-btn active" data-lang="uz" title="O'zbekcha">UZ</button>
@@ -75,12 +73,14 @@
 
                 <button type="button" class="btn btn-ghost btn-sm header-contract-btn" id="btnOpenContractModal">
                     <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                    <span data-i18n="btn_contract_sample">Shartnoma namunasi</span>
+                    <span data-i18n="btn_contract_sample">Kafolat shartlari</span>
                 </button>
-                <a href="#zakas-section" class="btn btn-glowing btn-sm header-cta">
-                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    <span data-i18n="btn_start_project">Loyiha boshlash</span>
+
+                <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <span data-i18n="btn_start_project">Telegramda yozish</span>
                 </a>
+
                 <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Menyuni ochish">
                     <span></span><span></span><span></span>
                 </button>
@@ -89,7 +89,6 @@
 
         <!-- Mobile Drawer -->
         <div class="mobile-drawer" id="mobileDrawer">
-            <!-- Mobile Lang Switcher -->
             <div class="mobile-lang-row">
                 <span class="mobile-lang-label" data-i18n="lang_label">Til / Язык / Language:</span>
                 <div class="lang-switcher">
@@ -100,15 +99,17 @@
             </div>
 
             <ul class="mobile-nav-list">
-                <li><a href="#xizmatlar" class="mobile-link" data-i18n="nav_services">⚡ Xizmatlar &amp; Narxlar</a></li>
-                <li><a href="#portfolio" class="mobile-link" data-i18n="nav_portfolio">💼 Natijalar (Portfolio)</a></li>
-                <li><a href="#kalkulyator" class="mobile-link" data-i18n="nav_calculator">🧮 Narxni hisoblash</a></li>
-                <li><a href="#kafolatlar" class="mobile-link" data-i18n="nav_guarantees">🛡️ Rasmiy Kafolatlar</a></li>
-                <li><a href="#jarayon" class="mobile-link" data-i18n="nav_process">🔄 Hamkorlik Jarayoni</a></li>
+                <li><a href="#afzalliklar" class="mobile-link" data-i18n="nav_guarantees">Afzalliklar &amp; Kafolatlar</a></li>
+                <li><a href="#xizmatlar" class="mobile-link" data-i18n="nav_services">Xizmatlar &amp; Narxlar</a></li>
+                <li><a href="#portfolio" class="mobile-link" data-i18n="nav_portfolio">Bajargan ishlarim</a></li>
+                <li><a href="#kalkulyator" class="mobile-link" data-i18n="nav_calculator">Narx kalkulyatori</a></li>
+                <li><a href="#jarayon" class="mobile-link" data-i18n="nav_process">Hamkorlik jarayoni</a></li>
+                <li><a href="#zakas-section" class="mobile-link" data-i18n="nav_contact">Aloqa</a></li>
             </ul>
+
             <div class="mobile-drawer-footer">
-                <button class="btn btn-secondary w-full" id="btnOpenContractMobile" data-i18n="btn_contract_sample">📄 Shartnoma Namunasi</button>
-                <a href="#zakas-section" class="btn btn-primary w-full mt-2" data-i18n="btn_submit_order">🚀 Zakas qoldirish</a>
+                <button class="btn btn-secondary w-full" id="btnOpenContractMobile" data-i18n="btn_contract_sample">Kafolat shartlari</button>
+                <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full mt-2" data-i18n="btn_submit_order">Telegramda yozish</a>
             </div>
         </div>
     </header>
@@ -123,34 +124,37 @@
                     <!-- Left: Core Value Proposition -->
                     <div class="hero-content">
                         <div class="trust-pill">
-                            <span class="trust-shield-icon">🛡️</span>
-                            <span data-i18n="hero_pill">Rasmiy Shartnoma • Aniq Muddat • 30 Kun Bepul Yordam</span>
+                            <span class="live-status-dot"></span>
+                            <span data-i18n="hero_pill">Yangi loyihalar uchun ochiq • Toshkent, O'zbekiston</span>
                         </div>
 
                         <h1 class="hero-heading" data-i18n="hero_h1">
-                            Biznesingizga <span class="gradient-text-cyan-indigo">yangi mijoz keltiruvchi</span> va xarajatni kamaytiruvchi IT tizimlar yaratamiz.
+                            Salom, men <span class="gradient-text-cyan-indigo">Laziz Bozorovman</span>. Biznesingiz uchun sifatli veb-saytlar va Telegram tizimlari yarataman.
                         </h1>
 
                         <p class="hero-lead" data-i18n="hero_lead">
-                            Ortiqcha va keraksiz funksiyalarsiz. Mijozingiz sarflagan har 1 so'mi o'zini oqlashi uchun faqat real sotuv keltiradigan Web-saytlar, Telegram do'konlar va CRM tizimlar quramiz.
+                            Agentliklardagi byurokratiya va ortiqcha vositachilarsiz — to'g'ridan-to'g'ri dasturchi bilan ishlaysiz. Toza kod, aniq muddat va samimiy hamkorlik.
                         </p>
 
                         <div class="hero-cta-group">
-                            <a href="#kalkulyator" class="btn btn-primary btn-xl">
-                                <span class="btn-glow-pulse"></span>
-                                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                                <span data-i18n="hero_btn_calc">Narxni hisoblash va Zakas berish</span>
+                            <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl">
+                                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                <span data-i18n="hero_btn_calc">Telegram orqali bog'lanish</span>
                             </a>
-                            <a href="#portfolio" class="btn btn-outline btn-xl">
-                                <span data-i18n="hero_btn_cases">Oldingi ishlarni ko'rish &rarr;</span>
+                            <a href="#kalkulyator" class="btn btn-outline btn-xl">
+                                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
+                                <span data-i18n="hero_btn_cases">Narxni hisoblash</span>
+                            </a>
+                            <a href="#portfolio" class="btn btn-ghost btn-xl">
+                                <span data-i18n="hero_btn_portfolio">Ishlarni ko'rish &rarr;</span>
                             </a>
                         </div>
 
-                        <!-- Micro Proof -->
+                        <!-- Micro Proof Row -->
                         <div class="micro-proof-row">
                             <div class="proof-pill">
                                 <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span data-i18n="proof_15min">15 daqiqada bepul konsultatsiya</span>
+                                <span data-i18n="proof_15min">Vositalarsiz to'g'ridan-to'g'ri aloqa</span>
                             </div>
                             <div class="proof-pill">
                                 <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
@@ -158,95 +162,111 @@
                             </div>
                             <div class="proof-pill">
                                 <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span data-i18n="proof_payment">Bosqichma-bosqich xavfsiz to'lov</span>
+                                <span data-i18n="proof_payment">Topshirilgach 30 kun bepul yordam</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Direct Business Proof Card -->
+                    <!-- Right: Developer Profile Card (Human, Personal, Real) -->
                     <div class="hero-visual">
-                        <div class="bento-card hero-summary-card">
-                            <div class="card-top-header">
-                                <span class="badge-direct" data-i18n="hero_box_badge">MIJOZ UCHUN ANIQ FOYDA</span>
-                                <span class="badge-status" data-i18n="hero_box_status">100% AMALDA</span>
-                            </div>
-
-                            <div class="hero-benefits-list">
-                                <div class="benefit-box">
-                                    <div class="b-icon">🚀</div>
-                                    <div class="b-text">
-                                        <strong data-i18n="benefit1_title">Tez va Sotuvchi Web-Sayt</strong>
-                                        <p data-i18n="benefit1_desc">Reklamaga ketgan pulingiz havoga uchmaydi. Sayt 1.5 soniyada yuklanadi va har bir tashrifchini ariza qoldirishga undaydi.</p>
-                                    </div>
+                        <div class="bento-card dev-profile-card">
+                            <div class="dev-card-header">
+                                <div class="dev-avatar-wrap">
+                                    <div class="dev-avatar-initials">LB</div>
+                                    <span class="dev-status-indicator" title="Open for projects"></span>
                                 </div>
-
-                                <div class="benefit-box">
-                                    <div class="b-icon">🛒</div>
-                                    <div class="b-text">
-                                        <strong data-i18n="benefit2_title">Telegram WebApp Do'kon</strong>
-                                        <p data-i18n="benefit2_desc">Eng tez daromad keltiruvchi vosita. Mijoz ortiqcha ilova o'rnatmasdan Telegramda tovar tanlaydi va to'lov qiladi.</p>
-                                    </div>
-                                </div>
-
-                                <div class="benefit-box">
-                                    <div class="b-icon">📊</div>
-                                    <div class="b-text">
-                                        <strong data-i18n="benefit3_title">Biznesni Avtomatlashtirish (CRM)</strong>
-                                        <p data-i18n="benefit3_desc">Menejerlar mijozlarni yo'qotmaydi, barcha moliya va hisobotlar yagona ekranda nazorat qilinadi.</p>
-                                    </div>
+                                <div class="dev-header-meta">
+                                    <h3 class="dev-name">Laziz Bozorov</h3>
+                                    <span class="dev-title" data-i18n="dev_card_role">Full-Stack Dasturchi &amp; Tech Hamkor</span>
+                                    <span class="dev-loc">📍 Tashkent, Uzbekistan</span>
                                 </div>
                             </div>
 
-                            <div class="hero-card-footer">
-                                <div class="guarantee-mini">
-                                    <span class="g-check">🔒</span>
-                                    <span data-i18n="hero_penalty_note">Agar belgilangan muddatdan kechiksak, shartnoma bo'yicha penya to'laymiz.</span>
+                            <div class="dev-card-bio">
+                                <p data-i18n="dev_card_bio">
+                                    "Agentliklardagi byurokratiyani yoqtirmayman. Har bir loyiha ustida to'g'ridan-to'g'ri o'zim ishlayman, har kuni aloqada bo'laman va biznesingizga rostdan foyda keltiradigan sifatli kod yozaman."
+                                </p>
+                            </div>
+
+                            <div class="dev-stack-box">
+                                <span class="dev-stack-label" data-i18n="dev_stack_label">Texnologik stek:</span>
+                                <div class="dev-tech-chips">
+                                    <span class="tech-chip">React</span>
+                                    <span class="tech-chip">Next.js</span>
+                                    <span class="tech-chip">Node.js</span>
+                                    <span class="tech-chip">Python</span>
+                                    <span class="tech-chip">Django</span>
+                                    <span class="tech-chip">PostgreSQL</span>
+                                    <span class="tech-chip">Telegram API</span>
+                                    <span class="tech-chip">TailwindCSS</span>
                                 </div>
+                            </div>
+
+                            <div class="dev-card-perks">
+                                <div class="dev-perk">
+                                    <svg class="perk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span data-i18n="dev_perk_1">100% to'g'ridan-to'g'ri muloqot</span>
+                                </div>
+                                <div class="dev-perk">
+                                    <svg class="perk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span data-i18n="dev_perk_2">Toza va tushunarli manba kodi</span>
+                                </div>
+                                <div class="dev-perk">
+                                    <svg class="perk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span data-i18n="dev_perk_3">Topshirilgach 30 kun bepul yordam</span>
+                                </div>
+                            </div>
+
+                            <div class="dev-card-actions">
+                                <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm w-full">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                    <span data-i18n="btn_tg_direct_hero">Telegram orqali to'g'ridan-to'g'ri yozish</span>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- 4 Real Numbers That Matter -->
+                <!-- 4 Honest, Verifiable Metrics -->
                 <div class="hero-stats-bento">
                     <div class="bento-card stat-bento-card">
                         <div class="stat-number-wrap">
-                            <span class="stat-num counter" data-target="150">0</span><span class="stat-plus">+</span>
+                            <span class="stat-num">100%</span>
                         </div>
                         <div class="stat-detail">
-                            <strong data-i18n="stat1_title">Yakunlangan Loyihalar</strong>
-                            <p data-i18n="stat1_desc">Real biznes egalari foydalanayotgan dasturlar</p>
+                            <strong data-i18n="stat1_title">To'g'ridan-to'g'ri aloqa</strong>
+                            <p data-i18n="stat1_desc">O'rtada menejersiz, faqat dasturchi bilan ishlaysiz</p>
                         </div>
                     </div>
 
                     <div class="bento-card stat-bento-card">
                         <div class="stat-number-wrap">
-                            <span class="stat-num counter" data-target="5">0</span><span class="stat-plus">+ Yil</span>
+                            <span class="stat-num">&lt;15 daq</span>
                         </div>
                         <div class="stat-detail">
-                            <strong data-i18n="stat2_title">Amaliy Tajriba</strong>
-                            <p data-i18n="stat2_desc">Frontend, Backend va Tizimlar Arxitekturasi</p>
+                            <strong data-i18n="stat2_title">Tezkor javob</strong>
+                            <p data-i18n="stat2_desc">Telegram orqali savollaringizga zudlik bilan javob</p>
                         </div>
                     </div>
 
                     <div class="bento-card stat-bento-card">
                         <div class="stat-number-wrap">
-                            <span class="stat-num counter" data-target="15">0</span><span class="stat-plus"> Daq</span>
+                            <span class="stat-num">100%</span>
                         </div>
                         <div class="stat-detail">
-                            <strong data-i18n="stat3_title">Tezkor Aloqa</strong>
-                            <p data-i18n="stat3_desc">Savollaringizga tezda javob beramiz</p>
+                            <strong data-i18n="stat3_title">Kod to'liq sizniki</strong>
+                            <p data-i18n="stat3_desc">Barcha manba kodlari mijoz nomiga rasmiylashtiriladi</p>
                         </div>
                     </div>
 
                     <div class="bento-card stat-bento-card highlight-card">
                         <div class="stat-number-wrap text-emerald">
-                            <span class="stat-num counter" data-target="100">0</span><span class="stat-plus">%</span>
+                            <span class="stat-num">30 kun</span>
                         </div>
                         <div class="stat-detail">
-                            <strong data-i18n="stat4_title">Mulk Huquqi Sizniki</strong>
-                            <p data-i18n="stat4_desc">Barcha manba kodlari mijoz nomiga o'tadi</p>
+                            <strong data-i18n="stat4_title">Bepul kafolatlangan yordam</strong>
+                            <p data-i18n="stat4_desc">Ish topshirilgach ham texnik nazorat va ko'mak</p>
                         </div>
                     </div>
                 </div>
@@ -254,93 +274,105 @@
             </div>
         </section>
 
-        <!-- SECTION: 4 TA KAFOLAT -->
-        <section class="section-padding" id="kafolatlar">
+        <!-- SECTION: AFZALLIKLAR & ISHLASH TAMOYILLARI -->
+        <section class="section-padding" id="afzalliklar">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-badge" data-i18n="guar_badge">XOTIRJAMLIK KAFOLATI</span>
+                    <span class="section-badge" data-i18n="guar_badge">ISHLASH TAMOYILLARI</span>
                     <h2 class="section-title" data-i18n="guar_title">
-                        Siz to'lagan pul <span class="gradient-text-cyan-indigo">100% himoyalangan</span>
+                        Nega agentlik emas, aynan <span class="gradient-text-cyan-indigo">men bilan ishlash qulay?</span>
                     </h2>
                     <p class="section-subtitle" data-i18n="guar_subtitle">
-                        Ish chala qolishi yoki muddat cho'zilishidan charchadingizmi? Bizda hammasi rasmiy va qonuniy:
+                        Agentliklardagi byurokratiya, ortiqcha ustama narxlar va aloqa uzilishlarisiz — shaffof hamkorlik:
                     </p>
                 </div>
 
                 <div class="guarantees-grid">
+                    <!-- Principle 1 -->
                     <div class="bento-card guarantee-card">
-                        <div class="guarantee-icon-wrap bg-cyan-glass">📄</div>
-                        <h3 class="guarantee-title" data-i18n="g1_title">1. Rasmiy Shartnoma va NDA (Maxfiylik)</h3>
+                        <div class="guarantee-icon-wrap bg-cyan-glass">
+                            <svg class="g-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <h3 class="guarantee-title" data-i18n="g1_title">1. To'g'ridan-to'g'ri Muloqot (Vositalarsiz)</h3>
                         <p class="guarantee-desc" data-i18n="g1_desc">
-                            Biznes g'oyangiz va mijozlar bazangiz hech qachon uchinchi shaxslarga chiqmaydi. Rasmiy yuridik shartnoma tuzamiz, xohlasangiz hisob-kitob schyotga pul o'tkazasiz.
+                            Agentliklarda har bir gap menejerdan dasturchiga yetguncha o'zgaradi. Men bilan esa birinchi kundanoq to'g'ridan-to'g'ri texnik yechimni muhokama qilasiz va har kuni jarayondan xabardor bo'lasiz.
                         </p>
-                        <button class="btn btn-ghost btn-sm guarantee-action-btn" id="btnNdaModalTrigger">
-                            <span data-i18n="g1_btn">Shartnoma bandlarini o'qish &rarr;</span>
-                        </button>
+                        <button class="link-action btn-open-contract-modal" data-i18n="g1_btn">Kafolat shartlarini ko'rish &rarr;</button>
                     </div>
 
+                    <!-- Principle 2 -->
                     <div class="bento-card guarantee-card">
-                        <div class="guarantee-icon-wrap bg-emerald-glass">⏱️</div>
-                        <h3 class="guarantee-title" data-i18n="g2_title">2. Temir Deadline (Muddat Kafolati)</h3>
+                        <div class="guarantee-icon-wrap bg-emerald-glass">
+                            <svg class="g-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 class="guarantee-title" data-i18n="g2_title">2. Aniq Muddat va Doimiy Demo</h3>
                         <p class="guarantee-desc" data-i18n="g2_desc">
-                            Vaqtingiz bekor ketmaydi. Agar shartnomadagi muddatdan 1 kun kechiksak, shartnoma bo'yicha har bir kechikkan kun uchun moliyaviy penya to'laymiz.
+                            Vaqtingiz bekor ketmaydi. Loyihani bosqichma-bosqich ishlab, oraliq natijalarni ko'rsatib boraman. Belgilangan muddatga qat'iy rioya qilinadi.
                         </p>
                     </div>
 
+                    <!-- Principle 3 -->
                     <div class="bento-card guarantee-card">
-                        <div class="guarantee-icon-wrap bg-indigo-glass">🔑</div>
-                        <h3 class="guarantee-title" data-i18n="g3_title">3. To'liq Kod Egaligi (100% Sizniki)</h3>
+                        <div class="guarantee-icon-wrap bg-indigo-glass">
+                            <svg class="g-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3 class="guarantee-title" data-i18n="g3_title">3. Toza Kod va To'liq Mulk Huquqi</h3>
                         <p class="guarantee-desc" data-i18n="g3_desc">
-                            Loyiha tayyor bo'lgach, barcha dastur kodlari (GitHub va Server) to'liq sizning nomingizga topshiriladi. Bizga bog'lanib qolmaysiz, loyihaning to'liq egasi o'zingiz bo'lasiz.
+                            Loyiha yakunida barcha dastur kodlari (GitHub va Server) to'liq sizning nomingizga topshiriladi. Hech qanday yashirin to'lovlar yoki sun'iy bog'liqlik bo'lmaydi.
                         </p>
                     </div>
 
+                    <!-- Principle 4 -->
                     <div class="bento-card guarantee-card">
-                        <div class="guarantee-icon-wrap bg-amber-glass">🛡️</div>
-                        <h3 class="guarantee-title" data-i18n="g4_title">4. 30 Kun Bepul VIP Texnik Yordam</h3>
+                        <div class="guarantee-icon-wrap bg-amber-glass">
+                            <svg class="g-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="guarantee-title" data-i18n="g4_title">4. Ishga Tushgach 30 Kun Bepul Yordam</h3>
                         <p class="guarantee-desc" data-i18n="g4_desc">
-                            Sayt topshirilgandan keyin ham sizni tashlab ketmaymiz. 1 oy davomida server nazorati, mayda tuzatishlar va xodimlaringizga o'rgatish mutlaqo bepul.
+                            Sayt yoki bot topshirilgach ham sizni tashlab ketmayman. 1 oy davomida texnik nazorat, xatoliklarni bartaraf etish va foydalanishni o'rgatish mutlaqo bepul.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: 4 TA ASOSIY XIZMAT -->
+        <!-- SECTION: XIZMATLAR VA ANIQ NARXLAR -->
         <section class="section-padding bg-surface" id="xizmatlar">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-badge" data-i18n="serv_badge">XIZMATLAR &amp; ANIQ NARXLAR</span>
+                    <span class="section-badge" data-i18n="serv_badge">XIZMATLAR &amp; NARXLAR</span>
                     <h2 class="section-title" data-i18n="serv_title">
-                        Har bir tiyin biznesingizga <span class="gradient-text-cyan-indigo">maksimal natija</span> bersin
+                        Biznesingiz uchun <span class="gradient-text-cyan-indigo">real foyda keltiruvchi</span> xizmatlar
                     </h2>
                     <p class="section-subtitle" data-i18n="serv_subtitle">
-                        Faqat o'zimiz professional bajara oladigan, sinovdan o'tgan xizmatlar. Birgina tugma bilan xizmatni tanlab zakas qoldirishingiz mumkin:
+                        Faqat o'zim professional bajara oladigan, sinovdan o'tgan yechimlar. 1-klikda xizmatni tanlab muhokama qilishingiz mumkin:
                     </p>
                 </div>
 
                 <div class="services-grid services-grid-4">
                     
-                    <!-- Service 1: Landing & Web sayt -->
+                    <!-- Service 1: Veb-saytlar -->
                     <div class="bento-card service-card">
                         <div class="service-top">
-                            <div class="service-icon-box">🌐</div>
+                            <div class="service-icon-box">
+                                <svg class="s-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
                             <span class="service-timing" data-i18n="s1_time">5–10 ish kuni</span>
                         </div>
-                        <h3 class="service-title" data-i18n="s1_title">Sotuvchi Landing Page &amp; Sayt</h3>
+                        <h3 class="service-title" data-i18n="s1_title">Tezkor Veb-Sayt &amp; Landing Page</h3>
                         <p class="service-goal" data-i18n="s1_goal">
-                            <strong>Keltiradigan foydasi:</strong> Reklamangizdan tushadigan arizalar soni 2-3 barobar oshadi. Sayt telefon va kompyuterda bir zumda ochiladi.
+                            <strong>Keltiradigan foydasi:</strong> Reklamangizdan tushadigan arizalar soni oshadi. Sayt telefon va kompyuterda 1 soniyada ochiladi.
                         </p>
                         <ul class="service-checklist">
                             <li data-i18n="s1_f1">Zamonaviy va ishonch uyg'otuvchi dizayn</li>
                             <li data-i18n="s1_f2">Arizalar to'g'ridan-to'g'ri Telegramingizga keladi</li>
-                            <li data-i18n="s1_f3">Google va Yandex'da qidiruv optimizatsiyasi (SEO)</li>
-                            <li data-i18n="s1_f4">O'zingiz boshqara oladigan qulay panel</li>
+                            <li data-i18n="s1_f3">Qidiruv tizimlari (SEO) uchun to'liq optimizatsiya</li>
+                            <li data-i18n="s1_f4">Moslashuvchan mobil moslik</li>
                         </ul>
                         <div class="service-footer">
                             <div class="service-pricing">
-                                <span class="price-label" data-i18n="price_label">Narxi:</span>
-                                <span class="price-val">$350 – $600</span>
+                                <span class="price-label" data-i18n="price_label">Taxminiy narxi:</span>
+                                <span class="price-val">$300 – $600</span>
                             </div>
                             <button class="btn btn-primary btn-select-service w-full" data-service-key="website" data-service-price="350">
                                 <span data-i18n="btn_choose_service">Ushbu xizmatni tanlash &rarr;</span>
@@ -349,82 +381,88 @@
                     </div>
 
                     <!-- Service 2: Telegram Bot & WebApp -->
-                    <div class="bento-card service-card service-card-popular">
-                        <div class="popular-ribbon" data-i18n="popular_badge">Eng Ko'p Daromad Keltiruvchi</div>
+                    <div class="bento-card service-card featured-service">
+                        <div class="featured-service-badge" data-i18n="popular_badge">Eng Ko'p Buyurtma Qilinadigan</div>
                         <div class="service-top">
-                            <div class="service-icon-box">🤖</div>
+                            <div class="service-icon-box">
+                                <svg class="s-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            </div>
                             <span class="service-timing" data-i18n="s2_time">4–8 ish kuni</span>
                         </div>
                         <h3 class="service-title" data-i18n="s2_title">Telegram Bot &amp; WebApp Do'kon</h3>
                         <p class="service-goal" data-i18n="s2_goal">
-                            <strong>Keltiradigan foydasi:</strong> Mijozlaringiz alohida ilova o'rnatmaydi. Telegram ichida katalog ko'radi va to'lov qiladi.
+                            <strong>Keltiradigan foydasi:</strong> Xaridorlar ilova yuklab olmasdan Telegram ichida mahsulot tanlaydi va Click/Payme orqali to'laydi.
                         </p>
                         <ul class="service-checklist">
                             <li data-i18n="s2_f1">Telegram ichida qulay vizual mini-do'kon</li>
-                            <li data-i18n="s2_f2">Payme, Click, Stripe to'lovlari avtomatik tushadi</li>
-                            <li data-i18n="s2_f3">Buyurtmalarni nazorat qilish boti</li>
+                            <li data-i18n="s2_f2">Payme va Click to'lovlari avtomatik tushadi</li>
+                            <li data-i18n="s2_f3">Buyurtmalarni guruh yoki admin botga yuborish</li>
                             <li data-i18n="s2_f4">Mijozlarga avtomatik xabar va eslatma yuborish</li>
                         </ul>
                         <div class="service-footer">
                             <div class="service-pricing">
-                                <span class="price-label" data-i18n="price_label">Narxi:</span>
-                                <span class="price-val text-cyan">$250 – $500</span>
+                                <span class="price-label" data-i18n="price_label">Taxminiy narxi:</span>
+                                <span class="price-val">$250 – $500</span>
                             </div>
-                            <button class="btn btn-primary btn-select-service w-full" data-service-key="bot" data-service-price="250">
+                            <button class="btn btn-primary btn-select-service w-full" data-service-key="bot" data-service-price="300">
                                 <span data-i18n="btn_choose_service">Ushbu xizmatni tanlash &rarr;</span>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Service 3: CRM & Biznes Avtomatlashtirish -->
+                    <!-- Service 3: CRM & Dashboard -->
                     <div class="bento-card service-card">
                         <div class="service-top">
-                            <div class="service-icon-box">⚡</div>
-                            <span class="service-timing" data-i18n="s3_time">15–25 ish kuni</span>
+                            <div class="service-icon-box">
+                                <svg class="s-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            </div>
+                            <span class="service-timing" data-i18n="s3_time">12–20 ish kuni</span>
                         </div>
                         <h3 class="service-title" data-i18n="s3_title">CRM &amp; Boshqaruv Tizimi</h3>
                         <p class="service-goal" data-i18n="s3_goal">
-                            <strong>Keltiradigan foydasi:</strong> Xodimlaringiz mijozlarni unutmaydi, pul yo'qolishi to'xtaydi, biznesingiz tizimli holatga keladi.
+                            <strong>Keltiradigan foydasi:</strong> Buyurtmalar va hisobotlar daftarda emas, yagona xavfsiz panelda nazorat qilinadi.
                         </p>
                         <ul class="service-checklist">
-                            <li data-i18n="s3_f1">Mijozlar bazasi va sotuv voronkasi</li>
-                            <li data-i18n="s3_f2">Kassa, daromad va sof foyda hisoboti</li>
-                            <li data-i18n="s3_f3">Xodimlar uchun ruxsatlar va rollar tizimi</li>
-                            <li data-i18n="s3_f4">Excel ga bir tugma bilan eksport va hisobot</li>
+                            <li data-i18n="s3_f1">Mijozlar bazasi va buyurtmalar holati</li>
+                            <li data-i18n="s3_f2">Kassa, daromad va oylik hisobotlar</li>
+                            <li data-i18n="s3_f3">Xodimlar uchun alohida kirish huquqlari</li>
+                            <li data-i18n="s3_f4">Excel ga bir tugma bilan eksport qilish</li>
                         </ul>
                         <div class="service-footer">
                             <div class="service-pricing">
-                                <span class="price-label" data-i18n="price_label">Narxi:</span>
-                                <span class="price-val">$800 – $1,800</span>
+                                <span class="price-label" data-i18n="price_label">Taxminiy narxi:</span>
+                                <span class="price-val">$700 – $1,500</span>
                             </div>
-                            <button class="btn btn-primary btn-select-service w-full" data-service-key="webapp" data-service-price="800">
+                            <button class="btn btn-primary btn-select-service w-full" data-service-key="webapp" data-service-price="750">
                                 <span data-i18n="btn_choose_service">Ushbu xizmatni tanlash &rarr;</span>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Service 4: Mobil Ilova -->
+                    <!-- Service 4: API & Integratsiyalar -->
                     <div class="bento-card service-card">
                         <div class="service-top">
-                            <div class="service-icon-box">📱</div>
-                            <span class="service-timing" data-i18n="s4_time">20–35 ish kuni</span>
+                            <div class="service-icon-box">
+                                <svg class="s-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <span class="service-timing" data-i18n="s4_time">3–7 ish kuni</span>
                         </div>
-                        <h3 class="service-title" data-i18n="s4_title">Mobil Ilova (iOS &amp; Android)</h3>
+                        <h3 class="service-title" data-i18n="s4_title">API &amp; Texnik Integratsiya</h3>
                         <p class="service-goal" data-i18n="s4_goal">
-                            <strong>Keltiradigan foydasi:</strong> Doimiy mijozlaringiz cho'ntagida bo'lasiz. Push-xabarlar orqali takroriy sotuvlar bepul oshadi.
+                            <strong>Keltiradigan foydasi:</strong> Mavjud saytingiz yoki botingizga to'lov, SMS yoki boshqa tizimlarni to'siqlarsiz ulash.
                         </p>
                         <ul class="service-checklist">
-                            <li data-i18n="s4_f1">Bitta kod bilan iPhone va Android'da 100% sifatli ish</li>
-                            <li data-i18n="s4_f2">App Store va Google Play'ga chiqarib berish</li>
-                            <li data-i18n="s4_f3">SMS kod bilan tezkor ro'yxatdan o'tish</li>
-                            <li data-i18n="s4_f4">Tez va qulay buyurtma berish mexanizmi</li>
+                            <li data-i18n="s4_f1">Payme, Click, Uzum to'lov tizimlarini ulash</li>
+                            <li data-i18n="s4_f2">SMS xabarnomalar va avtomatik bildirishnomalar</li>
+                            <li data-i18n="s4_f3">Mavjud sayt tezligini 2-3 barobar oshirish</li>
+                            <li data-i18n="s4_f4">Server va ma'lumotlar bazasini sozlash</li>
                         </ul>
                         <div class="service-footer">
                             <div class="service-pricing">
-                                <span class="price-label" data-i18n="price_label">Narxi:</span>
-                                <span class="price-val">$1,200 – $2,500</span>
+                                <span class="price-label" data-i18n="price_label">Taxminiy narxi:</span>
+                                <span class="price-val">$150 – $400</span>
                             </div>
-                            <button class="btn btn-primary btn-select-service w-full" data-service-key="mobile" data-service-price="1200">
+                            <button class="btn btn-primary btn-select-service w-full" data-service-key="other" data-service-price="200">
                                 <span data-i18n="btn_choose_service">Ushbu xizmatni tanlash &rarr;</span>
                             </button>
                         </div>
@@ -434,16 +472,16 @@
             </div>
         </section>
 
-        <!-- SECTION: REAL NATIJALAR (PORTFOLIO) -->
+        <!-- SECTION: BAJARGON ISHLAR (PORTFOLIO & KEYS-STADILAR) -->
         <section class="section-padding" id="portfolio">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-badge" data-i18n="cases_badge">REAL KEYS-STADILAR</span>
+                    <span class="section-badge" data-i18n="cases_badge">AMALIY TAJRIBA</span>
                     <h2 class="section-title" data-i18n="cases_title">
-                        Mijozlarimiz olgan <span class="gradient-text-cyan-indigo">haqiqiy natijalar</span>
+                        Mijozlar bilan erishilgan <span class="gradient-text-cyan-indigo">amaliy natijalar</span>
                     </h2>
                     <p class="section-subtitle" data-i18n="cases_subtitle">
-                        Faqat quruq rasm emas — biznes qanday muammo bilan keldi va tizim orqali qanday foyda ko'rdi:
+                        Faqat quruq rasm emas — biznes qanday muammo bilan keldi va tizim orqali qanday natijaga erishdi:
                     </p>
                 </div>
 
@@ -452,23 +490,23 @@
                     <!-- Case 1 -->
                     <div class="bento-card case-compact-card">
                         <div class="case-meta-header">
-                            <span class="case-tag" data-i18n="case1_tag">Sotuvchi Web-Sayt</span>
-                            <span class="case-time" data-i18n="case1_time">7 kunda topshirildi</span>
+                            <span class="case-tag" data-i18n="case1_tag">Telegram WebApp Do'kon</span>
+                            <span class="case-time" data-i18n="case1_time">5 kunda topshirildi</span>
                         </div>
-                        <h3 class="case-name" data-i18n="case1_title">Konversiyali B2B Landing Page</h3>
+                        <h3 class="case-name" data-i18n="case1_title">Telegram Avtomatik Savdo Tizimi</h3>
                         <div class="case-comparison">
                             <div class="comp-col before">
-                                <span class="comp-label" data-i18n="comp_before">Avvalgi holat:</span>
-                                <p data-i18n="case1_before">Eski saytda arizalar kam edi, har 100 tashrifchidan faqat 1 tasi telefon qilar edi (1% konversiya).</p>
+                                <span class="comp-label" data-i18n="comp_before">Avvalgi muammo:</span>
+                                <p data-i18n="case1_before">Mijozlar mahsulot rasmi va narxini alohida so'rar, administrator javob berguncha xaridor boshqa joyga ketib qolar edi.</p>
                             </div>
                             <div class="comp-col after">
-                                <span class="comp-label text-emerald" data-i18n="comp_after">Biz yaratgan natija:</span>
-                                <p data-i18n="case1_after">Yangi tezkor sayt va qulay forma orqali arizalar 3.8% ga chiqdi. Reklamaga ketgan pul 2 barobar ko'proq mijoz keltirmoqda.</p>
+                                <span class="comp-label text-emerald" data-i18n="comp_after">Qilingan ish va natija:</span>
+                                <p data-i18n="case1_after">Telegram ichida interaktiv katalog, savatcha va Payme/Click ulandi. Buyurtmalar kechasi ham to'liq avtomatik tarzda tushmoqda.</p>
                             </div>
                         </div>
                         <div class="case-compact-footer">
-                            <button class="btn btn-outline btn-sm w-full btn-select-service" data-service-key="website" data-service-price="400">
-                                <span data-i18n="btn_order_similar">Shunday sayt zakas qilish &rarr;</span>
+                            <button class="btn btn-outline btn-sm w-full btn-select-service" data-service-key="bot" data-service-price="300">
+                                <span data-i18n="btn_order_similar">Shu kabi tizimni muhokama qilish &rarr;</span>
                             </button>
                         </div>
                     </div>
@@ -476,23 +514,23 @@
                     <!-- Case 2 -->
                     <div class="bento-card case-compact-card">
                         <div class="case-meta-header">
-                            <span class="case-tag" data-i18n="case2_tag">Telegram WebApp Do'kon</span>
-                            <span class="case-time" data-i18n="case2_time">5 kunda topshirildi</span>
+                            <span class="case-tag" data-i18n="case2_tag">Veb-Sayt &amp; Landing Page</span>
+                            <span class="case-time" data-i18n="case2_time">7 kunda topshirildi</span>
                         </div>
-                        <h3 class="case-name" data-i18n="case2_title">Telegram Avtomatik Savdo Tizimi</h3>
+                        <h3 class="case-name" data-i18n="case2_title">Xizmatlar Kompaniyasi uchun Tezkor Sayt</h3>
                         <div class="case-comparison">
                             <div class="comp-col before">
-                                <span class="comp-label" data-i18n="comp_before">Avvalgi holat:</span>
-                                <p data-i18n="case2_before">Menejerlar lichkada kech javob bergani uchun mijozlar boshqa joyga ketib qolardi.</p>
+                                <span class="comp-label" data-i18n="comp_before">Avvalgi muammo:</span>
+                                <p data-i18n="case2_before">Eski sayt telefonlarda sekin ochilar, arizalar deyarli tushmas va reklama byudjeti o'zini oqlamas edi.</p>
                             </div>
                             <div class="comp-col after">
-                                <span class="comp-label text-emerald" data-i18n="comp_after">Biz yaratgan natija:</span>
-                                <p data-i18n="case2_after">Telegram bot ichida rasm, razmer va onlayn to'lov ulandi. Savdolarning 65% i kechasi ham avtomatik tushmoqda.</p>
+                                <span class="comp-label text-emerald" data-i18n="comp_after">Qilingan ish va natija:</span>
+                                <p data-i18n="case2_after">Toza Next.js da qayta qurildi, yuklanish tezligi 1.2 soniyaga tushirildi va arizalar zudlik bilan Telegram guruhga ulandi.</p>
                             </div>
                         </div>
                         <div class="case-compact-footer">
-                            <button class="btn btn-outline btn-sm w-full btn-select-service" data-service-key="bot" data-service-price="300">
-                                <span data-i18n="btn_order_similar">Shunday Telegram do'kon zakas qilish &rarr;</span>
+                            <button class="btn btn-outline btn-sm w-full btn-select-service" data-service-key="website" data-service-price="350">
+                                <span data-i18n="btn_order_similar">Shu kabi tizimni muhokama qilish &rarr;</span>
                             </button>
                         </div>
                     </div>
@@ -500,23 +538,23 @@
                     <!-- Case 3 -->
                     <div class="bento-card case-compact-card">
                         <div class="case-meta-header">
-                            <span class="case-tag" data-i18n="case3_tag">Biznes CRM Tizimi</span>
-                            <span class="case-time" data-i18n="case3_time">18 kunda topshirildi</span>
+                            <span class="case-tag" data-i18n="case3_tag">Biznes Boshqaruvi (CRM)</span>
+                            <span class="case-time" data-i18n="case3_time">15 kunda topshirildi</span>
                         </div>
-                        <h3 class="case-name" data-i18n="case3_title">Xizmatlar Kompaniyasi uchun CRM</h3>
+                        <h3 class="case-name" data-i18n="case3_title">Buyurtmalarni Boshqarish Paneli (Mini CRM)</h3>
                         <div class="case-comparison">
                             <div class="comp-col before">
-                                <span class="comp-label" data-i18n="comp_before">Avvalgi holat:</span>
-                                <p data-i18n="case3_before">Barcha hisob-kitoblar qog'oz va daftarda yuritilardi. Oylik hisobot chiqarish 3 kun vaqt olardi.</p>
+                                <span class="comp-label" data-i18n="comp_before">Avvalgi muammo:</span>
+                                <p data-i18n="case3_before">Barcha hisob-kitoblar qog'oz va daftarda yuritilar, buyurtmalar chalkashib ketar va hisobot chiqarish soatlab vaqt olar edi.</p>
                             </div>
                             <div class="comp-col after">
-                                <span class="comp-label text-emerald" data-i18n="comp_after">Biz yaratgan natija:</span>
-                                <p data-i18n="case3_after">Barcha filiallar va kassa bitta ekranda. Rahbar istalgan daqiqada foydani ko'radi, hisobotlar 1 soniyada chiqadi.</p>
+                                <span class="comp-label text-emerald" data-i18n="comp_after">Qilingan ish va natija:</span>
+                                <p data-i18n="case3_after">Mijozlar bazasi, buyurtmalar statusi va kassa tushumini ko'rsatuvchi sodda veb-panel qurildi. Oylik hisobot 1 klikda chiqadi.</p>
                             </div>
                         </div>
                         <div class="case-compact-footer">
-                            <button class="btn btn-outline btn-sm w-full btn-select-service" data-service-key="webapp" data-service-price="900">
-                                <span data-i18n="btn_order_similar">Shunday CRM tizim zakas qilish &rarr;</span>
+                            <button class="btn btn-outline btn-sm w-full btn-select-service" data-service-key="webapp" data-service-price="750">
+                                <span data-i18n="btn_order_similar">Shu kabi tizimni muhokama qilish &rarr;</span>
                             </button>
                         </div>
                     </div>
@@ -529,9 +567,9 @@
         <section class="section-padding bg-surface" id="kalkulyator">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-badge" data-i18n="calc_badge">ANIQ SMETA</span>
+                    <span class="section-badge" data-i18n="calc_badge">KALKULYATOR</span>
                     <h2 class="section-title" data-i18n="calc_title">
-                        Loyihangiz narxini <span class="gradient-text-cyan-indigo">1 daqiqada hisoblang</span>
+                        Loyiha byudjeti va muddatini <span class="gradient-text-cyan-indigo">taxminiy hisoblang</span>
                     </h2>
                     <p class="section-subtitle" data-i18n="calc_subtitle">
                         Yashirin to'lovlarsiz. Nima kerakligini tanlang va taxminiy narxni ko'ring:
@@ -541,127 +579,124 @@
                 <div class="calculator-wrapper bento-card">
                     <div class="calculator-grid">
                         
-                        <!-- Left: Controls -->
+                        <!-- Controls -->
                         <div class="calc-controls">
+                            
                             <!-- 1. Loyiha turi -->
                             <div class="calc-group">
                                 <label class="calc-label">
-                                    <span class="step-num">1</span> <span data-i18n="calc_step1">Qanday tizim kerak?</span>
+                                    <span class="step-num">1</span>
+                                    <span data-i18n="calc_step1">Qanday tizim kerak?</span>
                                 </label>
                                 <div class="calc-type-selector" id="calcTypeSelector">
                                     <label class="calc-type-card active">
-                                        <input type="radio" name="calcProjectType" value="website" data-base-price="350" data-base-days="7" checked>
-                                        <span class="type-icon">🌐</span>
-                                        <span class="type-title" data-i18n="calc_type_web">Sotuvchi Web-Sayt</span>
-                                        <span class="type-meta">$350 <span data-i18n="from_text">dan</span> &bull; 7 <span data-i18n="days_text">ish kuni</span></span>
+                                        <input type="radio" name="calcType" value="website" checked>
+                                        <div class="c-type-info">
+                                            <strong data-i18n="calc_type_web">Veb-Sayt / Landing</strong>
+                                            <span class="c-type-price">$300 <span data-i18n="from_text">dan</span> • 5-10 <span data-i18n="days_text">ish kuni</span></span>
+                                        </div>
                                     </label>
 
                                     <label class="calc-type-card">
-                                        <input type="radio" name="calcProjectType" value="bot" data-base-price="250" data-base-days="5">
-                                        <span class="type-icon">🤖</span>
-                                        <span class="type-title" data-i18n="calc_type_bot">Telegram Do'kon / Bot</span>
-                                        <span class="type-meta">$250 <span data-i18n="from_text">dan</span> &bull; 5 <span data-i18n="days_text">ish kuni</span></span>
+                                        <input type="radio" name="calcType" value="bot">
+                                        <div class="c-type-info">
+                                            <strong data-i18n="calc_type_bot">Telegram Bot / WebApp</strong>
+                                            <span class="c-type-price">$250 <span data-i18n="from_text">dan</span> • 4-8 <span data-i18n="days_text">ish kuni</span></span>
+                                        </div>
                                     </label>
 
                                     <label class="calc-type-card">
-                                        <input type="radio" name="calcProjectType" value="webapp" data-base-price="800" data-base-days="18">
-                                        <span class="type-icon">⚡</span>
-                                        <span class="type-title" data-i18n="calc_type_crm">CRM / Ichki Tizim</span>
-                                        <span class="type-meta">$800 <span data-i18n="from_text">dan</span> &bull; 18 <span data-i18n="days_text">ish kuni</span></span>
+                                        <input type="radio" name="calcType" value="crm">
+                                        <div class="c-type-info">
+                                            <strong data-i18n="calc_type_crm">CRM / Boshqaruv Tizimi</strong>
+                                            <span class="c-type-price">$700 <span data-i18n="from_text">dan</span> • 12-20 <span data-i18n="days_text">ish kuni</span></span>
+                                        </div>
                                     </label>
 
                                     <label class="calc-type-card">
-                                        <input type="radio" name="calcProjectType" value="mobile" data-base-price="1200" data-base-days="25">
-                                        <span class="type-icon">📱</span>
-                                        <span class="type-title" data-i18n="calc_type_mobile">Mobil Ilova (iOS/Android)</span>
-                                        <span class="type-meta">$1,200 <span data-i18n="from_text">dan</span> &bull; 25 <span data-i18n="days_text">ish kuni</span></span>
+                                        <input type="radio" name="calcType" value="other">
+                                        <div class="c-type-info">
+                                            <strong data-i18n="calc_type_mobile">API / Integratsiya</strong>
+                                            <span class="c-type-price">$150 <span data-i18n="from_text">dan</span> • 3-7 <span data-i18n="days_text">ish kuni</span></span>
+                                        </div>
                                     </label>
                                 </div>
                             </div>
 
-                            <!-- 2. Qo'shimchalar -->
+                            <!-- 2. Qo'shimcha funksiyalar -->
                             <div class="calc-group">
                                 <label class="calc-label">
-                                    <span class="step-num">2</span> <span data-i18n="calc_step2">Kerakli qo'shimcha imkoniyatlar:</span>
+                                    <span class="step-num">2</span>
+                                    <span data-i18n="calc_step2">Kerakli qo'shimcha imkoniyatlar:</span>
                                 </label>
                                 <div class="calc-features-grid">
                                     <label class="calc-feature-checkbox">
-                                        <input type="checkbox" name="calcFeatures" value="billing" data-price="100" data-days="2">
-                                        <span class="custom-check"></span>
-                                        <span class="f-info">
-                                            <strong data-i18n="feat_billing_title">💳 Onlayn To'lov Tizimi</strong>
-                                            <small data-i18n="feat_billing_desc">Payme, Click, Stripe to'g'ridan-to'g'ri hisobga (+$100)</small>
-                                        </span>
+                                        <input type="checkbox" id="calcFeatBilling" value="100">
+                                        <span class="checkbox-box"></span>
+                                        <div class="feat-info">
+                                            <strong data-i18n="feat_billing_title">Onlayn To'lov Tizimi</strong>
+                                            <span data-i18n="feat_billing_desc">Payme, Click to'lovlarini ulash (+$100)</span>
+                                        </div>
                                     </label>
 
                                     <label class="calc-feature-checkbox">
-                                        <input type="checkbox" name="calcFeatures" value="admin" data-price="150" data-days="3" checked>
-                                        <span class="custom-check"></span>
-                                        <span class="f-info">
-                                            <strong data-i18n="feat_admin_title">📊 Boshqaruv Paneli (Admin)</strong>
-                                            <small data-i18n="feat_admin_desc">O'zingiz tovar va narxlarni boshqarasiz (+$150)</small>
-                                        </span>
+                                        <input type="checkbox" id="calcFeatAdmin" value="120">
+                                        <span class="checkbox-box"></span>
+                                        <div class="feat-info">
+                                            <strong data-i18n="feat_admin_title">Boshqaruv Paneli (Admin)</strong>
+                                            <span data-i18n="feat_admin_desc">O'zingiz tovar va narxlarni boshqarasiz (+$120)</span>
+                                        </div>
                                     </label>
 
                                     <label class="calc-feature-checkbox">
-                                        <input type="checkbox" name="calcFeatures" value="multilang" data-price="80" data-days="2">
-                                        <span class="custom-check"></span>
-                                        <span class="f-info">
-                                            <strong data-i18n="feat_lang_title">🌐 Ko'p tillilik (UZ / RU / EN)</strong>
-                                            <small data-i18n="feat_lang_desc">Bir nechta tilda to'liq ishlash (+$80)</small>
-                                        </span>
+                                        <input type="checkbox" id="calcFeatLang" value="60">
+                                        <span class="checkbox-box"></span>
+                                        <div class="feat-info">
+                                            <strong data-i18n="feat_lang_title">Ko'p tillilik (UZ / RU / EN)</strong>
+                                            <span data-i18n="feat_lang_desc">Bir nechta tilda to'liq ishlash (+$60)</span>
+                                        </div>
                                     </label>
 
                                     <label class="calc-feature-checkbox">
-                                        <input type="checkbox" name="calcFeatures" value="sms" data-price="70" data-days="1">
-                                        <span class="custom-check"></span>
-                                        <span class="f-info">
-                                            <strong data-i18n="feat_notify_title">📲 SMS / Telegram Xabarnoma</strong>
-                                            <small data-i18n="feat_notify_desc">Har bir zakas bo'yicha tezkor eslatma (+$70)</small>
-                                        </span>
+                                        <input type="checkbox" id="calcFeatNotify" value="50">
+                                        <span class="checkbox-box"></span>
+                                        <div class="feat-info">
+                                            <strong data-i18n="feat_notify_title">Telegram / SMS Xabarnoma</strong>
+                                            <span data-i18n="feat_notify_desc">Har bir arizada tezkor xabar kelishi (+$50)</span>
+                                        </div>
                                     </label>
                                 </div>
                             </div>
+
                         </div>
 
-                        <!-- Right: Live Smeta Box -->
+                        <!-- Summary Display -->
                         <div class="calc-summary-panel">
-                            <div class="summary-card">
-                                <div class="summary-header">
-                                    <span class="summary-badge" data-i18n="calc_box_badge">HISOBLANGAN SMETA</span>
-                                    <span class="summary-id">#EST-2026</span>
+                            <div class="calc-summary-card">
+                                <div class="calc-badge-top" data-i18n="calc_box_badge">HISOBLANGAN SMETA</div>
+
+                                <div class="calc-price-row">
+                                    <span class="calc-sub" data-i18n="calc_est_price">Taxminiy Narx:</span>
+                                    <div class="calc-big-price" id="calcEstimatedPrice">$300</div>
+                                    <span class="calc-note" data-i18n="calc_fixed_note">* Yakuniy narx loyiha talabiga ko'ra o'zaro kelishiladi</span>
                                 </div>
 
-                                <div class="summary-price-box">
-                                    <span class="s-label" data-i18n="calc_est_price">Taxminiy Narx:</span>
-                                    <div class="s-price">
-                                        <span id="calcMinPrice">$500</span> &ndash; <span id="calcMaxPrice">$650</span>
-                                    </div>
-                                    <span class="s-note" data-i18n="calc_fixed_note">* Shartnoma tuzilgach narx o'zgarmaydi</span>
+                                <div class="calc-time-row">
+                                    <span class="calc-sub" data-i18n="calc_est_time">Bajarilish muddati:</span>
+                                    <strong class="calc-time-val" id="calcEstimatedDays">5–10 ish kuni</strong>
                                 </div>
 
-                                <div class="summary-timeline-box">
-                                    <div class="timeline-row">
-                                        <span class="t-icon">⏱️</span>
-                                        <div class="t-details">
-                                            <strong data-i18n="calc_est_time">Bajarilish muddati:</strong>
-                                            <span id="calcDaysDisplay">10 ish kuni</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="summary-included-bonuses">
-                                    <div class="bonus-title" data-i18n="calc_bonuses_title">Narx ichiga kiritilgan bepul narsalar:</div>
-                                    <ul class="bonus-list">
-                                        <li><span>✅</span> <span data-i18n="bonus_1">Rasmiy yuridik shartnoma</span></li>
-                                        <li><span>✅</span> <span data-i18n="bonus_2">30 kun bepul texnik yordam va kafolat</span></li>
-                                        <li><span>✅</span> <span data-i18n="bonus_3">Barcha dastur kodi va server huquqlari</span></li>
+                                <div class="calc-bonuses">
+                                    <span class="bonuses-title" data-i18n="calc_bonuses_title">Narx ichiga kiritilgan:</span>
+                                    <ul class="bonuses-list">
+                                        <li data-i18n="bonus_1">To'g'ridan-to'g'ri dasturchi bilan maslahat</li>
+                                        <li data-i18n="bonus_2">30 kun bepul texnik yordam va kafolat</li>
+                                        <li data-i18n="bonus_3">Barcha dastur kodi to'liq sizning nomingizga</li>
                                     </ul>
                                 </div>
 
-                                <button class="btn btn-primary btn-xl w-full btn-transfer-calc" id="btnTransferCalc">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                                    <span data-i18n="btn_calc_submit">Shu narx bo'yicha zakas berish &rarr;</span>
+                                <button type="button" class="btn btn-primary btn-xl w-full" id="btnApplyCalcToOrder">
+                                    <span data-i18n="btn_calc_submit">Shu hisob bo'yicha bog'lanish &rarr;</span>
                                 </button>
                             </div>
                         </div>
@@ -671,7 +706,7 @@
             </div>
         </section>
 
-        <!-- SECTION: 4 BOSQICHLI ISH JARAYONI -->
+        <!-- SECTION: ISH TARTIBI (HAMKORLIK JARAYONI) -->
         <section class="section-padding" id="jarayon">
             <div class="container">
                 <div class="section-header text-center">
@@ -685,89 +720,77 @@
                 </div>
 
                 <div class="process-steps-grid">
-                    <div class="bento-card step-card">
-                        <div class="step-badge" data-i18n="proc_step1_badge">1-QADAM</div>
-                        <div class="step-icon">📋</div>
-                        <h3 class="step-title" data-i18n="proc_step1_title">Suhbat &amp; Reja (TZ)</h3>
+                    <div class="bento-card process-step-card">
+                        <div class="step-badge">1-Qadam</div>
+                        <h3 class="step-title" data-i18n="proc_step1_title">Suhbat &amp; Reja</h3>
                         <p class="step-desc" data-i18n="proc_step1_desc">
-                            Biznesingizni eshitamiz, nima kerakligini aniqlaymiz va aniq narx hamda muddatni yozma tasdiqlaymiz.
+                            G'oyangiz va talablaringizni eshitaman. Ortiqcha xarajatlarsiz eng ma'qul texnik yechim va aniq smetani taklif qilaman.
                         </p>
-                        <span class="step-duration" data-i18n="proc_step1_time">1 kun &bull; Mutlaqo bepul</span>
                     </div>
 
-                    <div class="bento-card step-card">
-                        <div class="step-badge" data-i18n="proc_step2_badge">2-QADAM</div>
-                        <div class="step-icon">📄</div>
-                        <h3 class="step-title" data-i18n="proc_step2_title">Shartnoma &amp; Dizayn</h3>
+                    <div class="bento-card process-step-card">
+                        <div class="step-badge">2-Qadam</div>
+                        <h3 class="step-title" data-i18n="proc_step2_title">Dizayn &amp; Kelishuv</h3>
                         <p class="step-desc" data-i18n="proc_step2_desc">
-                            Rasmiy shartnoma tuzamiz. Saytning chiroyli dizaynini ko'rsatamiz — siz ma'qullaganingizdan keyingina kod yozish boshlanadi.
+                            Sayt yoki botning asosiy sahifalari ko'rinishini tasdiqlab olamiz. Har bir narsa sizga yoqqach ishni boshlaymiz.
                         </p>
-                        <span class="step-duration" data-i18n="proc_step2_time">2–3 kun</span>
                     </div>
 
-                    <div class="bento-card step-card">
-                        <div class="step-badge" data-i18n="proc_step3_badge">3-QADAM</div>
-                        <div class="step-icon">💻</div>
+                    <div class="bento-card process-step-card">
+                        <div class="step-badge">3-Qadam</div>
                         <h3 class="step-title" data-i18n="proc_step3_title">Dasturlash &amp; Demo</h3>
                         <p class="step-desc" data-i18n="proc_step3_desc">
-                            Tizimni sifatli dasturlaymiz. Sizga har bir bosqichda ishlayotgan loyihani ko'rsatib boramiz.
+                            Toza kod yoziladi, to'lov tizimlari ulanadi. Oraliq natijalarni ko'rsatib, fikringizni olib boraman.
                         </p>
-                        <span class="step-duration" data-i18n="proc_step3_time">Kelishilgan muddatda</span>
                     </div>
 
-                    <div class="bento-card step-card highlight-step">
-                        <div class="step-badge" data-i18n="proc_step4_badge">4-QADAM</div>
-                        <div class="step-icon">🚀</div>
-                        <h3 class="step-title" data-i18n="proc_step4_title">Topshirish &amp; 30 Kun Kafolat</h3>
+                    <div class="bento-card process-step-card">
+                        <div class="step-badge">4-Qadam</div>
+                        <h3 class="step-title" data-i18n="proc_step4_title">Topshirish &amp; Bepul Yordam</h3>
                         <p class="step-desc" data-i18n="proc_step4_desc">
-                            Serverga o'rnatib, to'liq ishga tushirib beramiz. 30 kun davomida texnik nazorat va yordam bepul bo'ladi.
+                            Loyiha serverga joylanadi, kodlar to'liq topshiriladi va keyingi 30 kun davomida bepul texnik ko'mak beriladi.
                         </p>
-                        <span class="step-duration text-emerald" data-i18n="proc_step4_time">To'liq xotirjamlik</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: ZAKAS VA ARIZA QOLDIRISH -->
-        <section class="section-padding order-funnel-section" id="zakas-section">
+        <!-- SECTION: ALOQA VA BUYURTMA FORMASI -->
+        <section class="section-padding bg-surface" id="zakas-section">
             <div class="container">
-                <div class="order-funnel-wrapper bento-card">
-                    <div class="order-grid">
+                <div class="funnel-container bento-card">
+                    <div class="funnel-grid">
                         
-                        <!-- Left: Direct Contacts -->
-                        <div class="order-trust-col">
-                            <div class="trust-badge-funnel">
-                                <span data-i18n="funnel_badge">🔒 RASMIY SHARTNOMA ASOSIDA</span>
-                            </div>
-
+                        <!-- Left: Instructions & Direct Contacts -->
+                        <div class="funnel-info-col">
+                            <span class="section-badge" data-i18n="funnel_badge">ALOQA VA BUYURTMA</span>
                             <h2 class="funnel-heading" data-i18n="funnel_heading">
-                                Loyihangizni professional qo'llarga topshirishga <span class="gradient-text-cyan-indigo">tayyormisiz?</span>
+                                Loyihangiz bormi? <span class="gradient-text-cyan-indigo">Keling, muhokama qilamiz</span>
                             </h2>
-
                             <p class="funnel-lead" data-i18n="funnel_lead">
-                                O'ng tarafdagi formani to'ldiring. <strong>15 daqiqa ichida</strong> siz bilan shaxsan bog'lanib, loyihangiz bo'yicha bepul maslahat va aniq smetani beramiz.
+                                Ortiqcha qog'ozbozliksiz. Qisqacha yozing yoki Telegram orqali to'g'ridan-to'g'ri bog'laning.
                             </p>
 
                             <div class="funnel-steps-list">
                                 <div class="f-step-item">
                                     <div class="f-step-num">1</div>
                                     <div class="f-step-text">
-                                        <strong data-i18n="funnel_step1_title">15 daqiqada aloqaga chiqamiz</strong>
-                                        <p data-i18n="funnel_step1_desc">Telegram yoki telefon orqali loyihani muhokama qilamiz.</p>
+                                        <strong data-i18n="funnel_step1_title">15 daqiqada javob</strong>
+                                        <p data-i18n="funnel_step1_desc">Arizangiz bo'yicha tezkor bog'lanib, bepul maslahat beraman.</p>
                                     </div>
                                 </div>
                                 <div class="f-step-item">
                                     <div class="f-step-num">2</div>
                                     <div class="f-step-text">
-                                        <strong data-i18n="funnel_step2_title">Aniq smeta va muddat beramiz</strong>
-                                        <p data-i18n="funnel_step2_desc">Ortiqcha xarajatsiz faqat kerakli qismlarga to'laysiz.</p>
+                                        <strong data-i18n="funnel_step2_title">Aniq smeta va muddat</strong>
+                                        <p data-i18n="funnel_step2_desc">Hech qanday kutilmagan to'lovlar bo'lmaydi.</p>
                                     </div>
                                 </div>
                                 <div class="f-step-item">
                                     <div class="f-step-num">3</div>
                                     <div class="f-step-text">
-                                        <strong data-i18n="funnel_step3_title">Rasmiy shartnoma bilan ish boshlaymiz</strong>
-                                        <p data-i18n="funnel_step3_desc">Shartnomada muddat kechikishi uchun penya kafolatlanadi.</p>
+                                        <strong data-i18n="funnel_step3_title">To'liq xavfsiz hamkorlik</strong>
+                                        <p data-i18n="funnel_step3_desc">Istasangiz rasmiy shartnoma yoki NDA asosida ishlaymiz.</p>
                                     </div>
                                 </div>
                             </div>
@@ -814,31 +837,23 @@
                                 
                                 <div class="order-mode-tabs" role="tablist">
                                     <button class="order-mode-tab active" id="tabFullOrderBtn" data-mode="full" data-i18n="tab_full">
-                                        📝 Loyiha bo'yicha zakas
+                                        Loyiha bo'yicha ma'lumot
                                     </button>
                                     <button class="order-mode-tab" id="tabExpressOrderBtn" data-mode="express" data-i18n="tab_express">
-                                        ⚡ Tezkor qo'ng'iroq (15 soniya)
+                                        Tezkor qayta qo'ng'iroq
                                     </button>
                                 </div>
 
                                 <!-- Form Full -->
                                 <form id="formFullOrder" class="order-form active">
-                                    
-                                    <!-- Auto-synced Banner -->
-                                    <div class="auto-sync-banner hidden" id="autoSyncBanner">
-                                        <div class="banner-content">
-                                            <span class="banner-icon">📌</span>
-                                            <div class="banner-text">
-                                                <strong data-i18n="selected_label">Tanlangan:</strong>
-                                                <span id="syncedPackageText">Sotuvchi Web-Sayt</span>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn-clear-sync" id="btnClearSync" title="Tozalash">&times;</button>
+                                    <div class="calc-sync-banner hidden" id="calcSyncBanner">
+                                        <span class="sync-icon">✔</span>
+                                        <span class="sync-text" data-i18n="calc_synced_banner">Kalkulyatordagi smeta formaga muvaffaqiyatli o'tkazildi!</span>
                                     </div>
 
                                     <div class="form-field">
-                                        <label for="fullName" data-i18n="label_name">Ismingiz yoki Kompaniyangiz *</label>
-                                        <input type="text" id="fullName" name="fullName" data-i18n-placeholder="placeholder_name" placeholder="Masalan: Sardor — Tadbirkor" required>
+                                        <label for="clientName" data-i18n="label_name">Ismingiz *</label>
+                                        <input type="text" id="clientName" name="clientName" data-i18n-placeholder="placeholder_name" placeholder="Masalan: Sardor" required>
                                     </div>
 
                                     <div class="form-field">
@@ -849,11 +864,10 @@
                                     <div class="form-field">
                                         <label data-i18n="label_type">Loyiha turi:</label>
                                         <div class="chips-group" id="projectTypeChips">
-                                            <button type="button" class="chip-btn active" data-value="website" data-i18n="chip_web">🌐 Web-Sayt</button>
-                                            <button type="button" class="chip-btn" data-value="bot" data-i18n="chip_bot">🤖 Telegram Bot</button>
-                                            <button type="button" class="chip-btn" data-value="webapp" data-i18n="chip_crm">⚡ CRM Tizim</button>
-                                            <button type="button" class="chip-btn" data-value="mobile" data-i18n="chip_mobile">📱 Mobil Ilova</button>
-                                            <button type="button" class="chip-btn" data-value="other" data-i18n="chip_other">🧩 Boshqa</button>
+                                            <button type="button" class="chip-btn active" data-value="website" data-i18n="chip_web">Veb-Sayt</button>
+                                            <button type="button" class="chip-btn" data-value="bot" data-i18n="chip_bot">Telegram Bot</button>
+                                            <button type="button" class="chip-btn" data-value="webapp" data-i18n="chip_crm">CRM Tizim</button>
+                                            <button type="button" class="chip-btn" data-value="other" data-i18n="chip_other">Boshqa</button>
                                         </div>
                                     </div>
 
@@ -866,18 +880,17 @@
                                         <label class="custom-checkbox-label">
                                             <input type="checkbox" id="ndaCheckbox" name="ndaCheckbox" checked>
                                             <span class="custom-check-sq"></span>
-                                            <span data-i18n="checkbox_nda">🔒 Loyiham maxfiyligi (NDA) saqlansin</span>
+                                            <span data-i18n="checkbox_nda">Loyiham maxfiyligi (NDA) saqlansin</span>
                                         </label>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary btn-xl w-full btn-order-submit">
-                                        <span class="btn-glow-pulse"></span>
-                                        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                                        <span data-i18n="btn_submit_full">Zakasni Yuborish va Bepul Maslahat Olish</span>
+                                        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                        <span data-i18n="btn_submit_full">Loyihani Muhokama Qilish</span>
                                     </button>
 
                                     <div class="form-security-footer">
-                                        <span data-i18n="form_security">🛡️ Hech qanday spam yuborilmaydi. Ma'lumotlaringiz xavfsiz.</span>
+                                        <span data-i18n="form_security">Spam yuborilmaydi. Ma'lumotlaringiz xavfsiz.</span>
                                     </div>
                                 </form>
 
@@ -885,7 +898,7 @@
                                 <form id="formExpressOrder" class="order-form">
                                     <div class="express-intro">
                                         <h3 data-i18n="express_title">Vaqtingiz kammi?</h3>
-                                        <p data-i18n="express_desc">Raqamingizni qoldiring, 15 daqiqada o'zimiz qo'ng'iroq qilamiz.</p>
+                                        <p data-i18n="express_desc">Raqamingizni qoldiring, 15 daqiqada o'zim qo'ng'iroq qilaman yoki Telegramdan yozaman.</p>
                                     </div>
 
                                     <div class="form-field">
@@ -895,11 +908,12 @@
 
                                     <div class="form-field">
                                         <label for="expressPhone" data-i18n="label_phone_simple">Telefon yoki Telegram manzilingiz *</label>
-                                        <input type="text" id="expressPhone" name="expressPhone" data-i18n-placeholder="placeholder_phone_simple" placeholder="+998 (90) 000-00-00" required>
+                                        <input type="text" id="expressPhone" name="expressPhone" data-i18n-placeholder="placeholder_phone_simple" placeholder="+998 (90) 000-00-00 yoki @username" required>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary btn-xl w-full btn-order-submit mt-4">
-                                        <span data-i18n="btn_submit_express">📞 Menga 15 daqiqada qo'ng'iroq qiling</span>
+                                    <button type="submit" class="btn btn-primary btn-xl w-full btn-order-submit">
+                                        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        <span data-i18n="btn_submit_express">Menga 15 daqiqada aloqaga chiqing</span>
                                     </button>
                                 </form>
 
@@ -918,12 +932,12 @@
         <div class="container footer-container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="#" class="brand-logo">
+                    <a href="#hero" class="brand-logo">
                         <div class="brand-icon"><span class="code-symbol">&gt;_</span></div>
-                        <span class="brand-name">lazizfullstack<span class="brand-tld">.dev</span></span>
+                        <span class="brand-name">laziz<span class="brand-tld">.dev</span></span>
                     </a>
                     <p class="footer-tagline" data-i18n="footer_tagline">
-                        Senior Full-Stack Engineer &amp; Ishonchli Texnologik Hamkor. Har bir loyihada mijoz biznesining maksimal foydasiga ishlaymiz.
+                        Full-Stack Dasturchi &amp; Ishonchli Texnologik Hamkor. Toshkent, O'zbekiston.
                     </p>
                 </div>
 
@@ -931,20 +945,20 @@
                     <h4 data-i18n="footer_nav_title">Sahifalar</h4>
                     <ul>
                         <li><a href="#hero" data-i18n="nav_home">Bosh sahifa</a></li>
+                        <li><a href="#afzalliklar" data-i18n="nav_guarantees">Afzalliklar</a></li>
                         <li><a href="#xizmatlar" data-i18n="nav_services">Xizmatlar &amp; Narxlar</a></li>
-                        <li><a href="#portfolio" data-i18n="nav_portfolio">Natijalar (Keyslar)</a></li>
-                        <li><a href="#kalkulyator" data-i18n="nav_calculator">Narx Kalkulyatori</a></li>
-                        <li><a href="#kafolatlar" data-i18n="nav_guarantees">Kafolatlar</a></li>
+                        <li><a href="#portfolio" data-i18n="nav_portfolio">Bajargan ishlarim</a></li>
+                        <li><a href="#kalkulyator" data-i18n="nav_calculator">Narx kalkulyatori</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 data-i18n="footer_serv_title">Xizmatlar</h4>
                     <ul>
-                        <li><a href="#xizmatlar" data-i18n="s1_title">Sotuvchi Web-Saytlar</a></li>
-                        <li><a href="#xizmatlar" data-i18n="s2_title">Telegram Do'kon &amp; Botlar</a></li>
+                        <li><a href="#xizmatlar" data-i18n="s1_title">Tezkor Veb-Saytlar</a></li>
+                        <li><a href="#xizmatlar" data-i18n="s2_title">Telegram Bot &amp; WebApp</a></li>
                         <li><a href="#xizmatlar" data-i18n="s3_title">CRM &amp; Boshqaruv Tizimlari</a></li>
-                        <li><a href="#xizmatlar" data-i18n="s4_title">Mobil Ilovalar</a></li>
+                        <li><a href="#xizmatlar" data-i18n="s4_title">API &amp; Integratsiyalar</a></li>
                     </ul>
                 </div>
 
@@ -960,9 +974,9 @@
             </div>
 
             <div class="footer-bottom">
-                <p data-i18n="footer_rights">&copy; 2026 lazizfullstack.dev. Barcha huquqlar himoyalangan. Rasmiy shartnoma asosida ishlaymiz.</p>
+                <p data-i18n="footer_rights">&copy; 2026 lazizfullstack.dev. Barcha huquqlar himoyalangan.</p>
                 <div class="footer-links">
-                    <button class="footer-modal-link" id="btnFooterContract" data-i18n="footer_contract">Shartnoma Namunasi</button>
+                    <button class="footer-modal-link" id="btnFooterContract" data-i18n="footer_contract">Kafolat shartlari</button>
                     <span class="separator">&bull;</span>
                     <a href="#hero" class="footer-modal-link" data-i18n="footer_top">Yuqoriga qaytish &uarr;</a>
                 </div>
@@ -970,86 +984,80 @@
         </div>
     </footer>
 
-    <!-- MODAL 1: Order Success Modal with Telegram redirect -->
-    <div class="modal-backdrop" id="modalOrderSuccess" role="dialog" aria-modal="true" aria-hidden="true">
-        <div class="modal-container bento-card">
+    <!-- MODAL 1: ORDER SUCCESS & TELEGRAM DISPATCH -->
+    <div class="modal-overlay" id="modalOrderSuccess" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card bento-card">
             <button class="modal-close-btn" id="btnCloseOrderSuccessModal" aria-label="Yopish">&times;</button>
             <div class="modal-body text-center">
                 <div class="success-icon-wrap">
-                    <svg class="success-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg class="check-success-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <div class="order-id-badge" id="modalOrderIdBadge">#LFS-2026-941</div>
                 <h3 class="modal-title" data-i18n="modal_success_title">Arizangiz qabul qilindi!</h3>
                 <p class="modal-desc">
-                    <span data-i18n="modal_dear">Hurmatli</span> <strong id="modalClientName">Hamkor</strong>, <span data-i18n="modal_success_desc">arizangiz saqlandi. 15 daqiqa ichida siz bilan bog'lanamiz.</span>
+                    <span data-i18n="modal_dear">Rahmat</span>, <strong id="modalSuccessClientName">Mijoz</strong>! <span data-i18n="modal_success_desc">Arizangiz saqlandi. 15 daqiqa ichida siz bilan bog'lanaman.</span>
                 </p>
 
-                <div class="order-summary-box">
-                    <div class="summary-line"><span data-i18n="modal_summary_type">Loyiha turi:</span> <strong id="modalSummaryType">Web-Sayt</strong></div>
-                    <div class="summary-line"><span data-i18n="modal_summary_contact">Aloqa:</span> <strong id="modalSummaryContact">+998 ...</strong></div>
+                <div class="modal-summary-box">
+                    <div class="m-sum-row">
+                        <span class="m-sum-label">ID:</span>
+                        <strong class="m-sum-val" id="modalOrderIdBadge">#LB-2026-001</strong>
+                    </div>
+                    <div class="m-sum-row">
+                        <span class="m-sum-label" data-i18n="modal_summary_type">Loyiha turi:</span>
+                        <strong class="m-sum-val" id="modalOrderTypeBadge">Veb-Sayt</strong>
+                    </div>
+                    <div class="m-sum-row">
+                        <span class="m-sum-label" data-i18n="modal_summary_contact">Aloqa:</span>
+                        <strong class="m-sum-val" id="modalOrderContactBadge">+998...</strong>
+                    </div>
                 </div>
 
                 <div class="modal-actions">
-                    <a href="#" id="btnTelegramDirect" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg w-full">
-                        <span data-i18n="btn_telegram_direct">💬 Kutmasdan Telegramda yozish &rarr;</span>
+                    <a href="#" id="modalDirectTelegramLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        <span data-i18n="btn_telegram_direct">Kutmasdan Telegramda yozish &rarr;</span>
                     </a>
-                    <button class="btn btn-outline btn-md w-full mt-2" id="btnCloseOrderSuccessModalBtn" data-i18n="btn_close">
-                        Yopish
-                    </button>
+                    <button class="btn btn-ghost w-full mt-2" id="btnCloseOrderSuccessModalBtn" data-i18n="btn_close">Yopish</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- MODAL 2: Legal NDA & Contract Preview -->
-    <div class="modal-backdrop" id="modalContractPreview" role="dialog" aria-modal="true" aria-hidden="true">
-        <div class="modal-container modal-lg bento-card">
+    <!-- MODAL 2: CONTRACT & GUARANTEE PREVIEW -->
+    <div class="modal-overlay" id="modalContractPreview" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card bento-card modal-card-large">
             <button class="modal-close-btn" id="btnCloseContractModal" aria-label="Yopish">&times;</button>
-            <div class="modal-body">
-                <div class="contract-modal-header">
-                    <div class="contract-icon">📄</div>
-                    <div>
-                        <h3 class="modal-title" data-i18n="contract_modal_title">Rasmiy Shartnomaning Asosiy Kafolat Bandlari</h3>
-                        <p class="modal-desc" data-i18n="contract_modal_desc">Sizning mablag'ingiz va vaqtingizni himoya qiluvchi qonuniy majburiyatlarimiz:</p>
-                    </div>
+            <div class="modal-header">
+                <div class="modal-badge">ISHLASH SHARTLARI</div>
+                <h3 class="modal-title" data-i18n="contract_modal_title">Asosiy Kafolat va Ishlash Bandlari</h3>
+                <p class="modal-subtitle" data-i18n="contract_modal_desc">Sizning mablag'ingiz va vaqtingizni himoya qiluvchi shartlar:</p>
+            </div>
+            
+            <div class="modal-contract-body">
+                <div class="contract-clause">
+                    <h4 data-i18n="c_c1_title">1. Manba kodi to'liq sizning nomingizga o'tadi</h4>
+                    <p data-i18n="c_c1_desc">Loyiha topshirilgandan keyin barcha kodlar (GitHub, server fayllari va ma'lumotlar bazasi) 100% buyurtmachi mulkiga aylanadi. Hech qanday doimiy majburiy to'lovlar qolmaydi.</p>
                 </div>
 
-                <div class="contract-text-scroll">
-                    <div class="contract-clause">
-                        <h4 data-i18n="c_c1_title">1. Manba kodi to'liq sizning nomingizga o'tadi</h4>
-                        <p data-i18n="c_c1_desc">
-                            Loyiha topshirilgandan keyin barcha kodlar (GitHub, server fayllari va bazalar) 100% buyurtmachi mulkiga aylanadi. Hech qanday litsenziya yoki doimiy to'lovlar majburiyati qolmaydi.
-                        </p>
-                    </div>
-
-                    <div class="contract-clause">
-                        <h4 data-i18n="c_c2_title">2. Maxfiylik va Tijorat Sirlari (NDA)</h4>
-                        <p data-i18n="c_c2_desc">
-                            G'oyangiz, biznes mexanizmlaringiz va mijozlaringiz haqidagi ma'lumotlar uchinchi shaxslarga berilmasligi bo'yicha qat'iy yuridik majburiyat olinadi.
-                        </p>
-                    </div>
-
-                    <div class="contract-clause">
-                        <h4 data-i18n="c_c3_title">3. Kechikish uchun Penya Kafolati</h4>
-                        <p data-i18n="c_c3_desc">
-                            Agar ijrochi aybi bilan kelishilgan topshirish muddati kechiktirilsa, har bir kechikkan ish kuni uchun shartnoma bo'yicha moliyaviy penya to'lanadi.
-                        </p>
-                    </div>
-
-                    <div class="contract-clause">
-                        <h4 data-i18n="c_c4_title">4. 30 Kun Bepul Texnik Kafolat</h4>
-                        <p data-i18n="c_c4_desc">
-                            Loyiha ishga tushgach, 1 oy davomida har qanday texnik xatoliklar (baglar) mutlaqo bepul va zudlik bilan to'g'irlanadi.
-                        </p>
-                    </div>
+                <div class="contract-clause">
+                    <h4 data-i18n="c_c2_title">2. Maxfiylik va Tijorat Sirlari (NDA)</h4>
+                    <p data-i18n="c_c2_desc">G'oyangiz, biznes mexanizmlaringiz va mijozlaringiz haqidagi ma'lumotlar uchinchi shaxslarga berilmasligi kafolatlanadi.</p>
                 </div>
 
-                <div class="contract-modal-footer">
-                    <button class="btn btn-outline" id="btnCloseContractBottom" data-i18n="btn_understood_close">Tushunarli, yopish</button>
-                    <a href="#zakas-section" class="btn btn-primary" id="btnContractGoToOrder">
-                        <span data-i18n="btn_go_to_order">Zakas formasiga o'tish &rarr;</span>
-                    </a>
+                <div class="contract-clause">
+                    <h4 data-i18n="c_c3_title">3. Aniq Muddat Majburiyati</h4>
+                    <p data-i18n="c_c3_desc">Ish boshlanishidan avval aniq muddat belgilanadi. Oraliq bosqichlar doimiy ravishda mijozga ko'rsatib boriladi.</p>
                 </div>
+
+                <div class="contract-clause">
+                    <h4 data-i18n="c_c4_title">4. 30 Kun Bepul Texnik Yordam</h4>
+                    <p data-i18n="c_c4_desc">Loyiha ishga tushgach, 1 oy davomida har qanday texnik savollar va xatoliklarni bartaraf etish mutlaqo bepul amalga oshiriladi.</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btnCloseContractModalBtn" data-i18n="btn_understood_close">Tushunarli, yopish</button>
+                <a href="#zakas-section" class="btn btn-primary" id="btnContractGoToOrder" data-i18n="btn_go_to_order">Loyihani boshlash &rarr;</a>
             </div>
         </div>
     </div>

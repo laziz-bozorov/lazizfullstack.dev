@@ -1,6 +1,7 @@
 /**
  * ==========================================================================
- * LAZIZFULLSTACK.DEV — MULTILINGUAL (UZ / RU / EN) HIGH-CONVERSION ENGINE
+ * LAZIZ.DEV — HUMAN-CENTRIC PERSONAL PORTFOLIO & IT PARTNER PLATFORM
+ * Multi-Language (UZ / RU / EN) • Transparent Calculator • Instant Telegram
  * ==========================================================================
  */
 
@@ -12,702 +13,672 @@ document.addEventListener('DOMContentLoaded', () => {
        -------------------------------------------------------------------------- */
     const translations = {
         uz: {
-            title: "LazizFullStack — Biznesingiz uchun Yuqori Daromadli Web & Telegram Tizimlar",
-            scarcity_status: "Yangi loyihalar qabul qilinmoqda",
-            scarcity_text: "Har bir loyihaga 100% vaqt va sifat ajratish maqsadida oyiga faqat 2-3 ta sifatli loyiha olamiz.",
-            scarcity_link: "Navbatni band qilish →",
-            brand_role: "Full-Stack Engineer & Tech Partner",
+            title: "Laziz Bozorov — Full-Stack Dasturchi & IT Hamkor | Toshkent",
+            scarcity_status: "Yangi loyihalar uchun ochiq",
+            scarcity_text: "Har bir loyihaga to'liq e'tibor berish uchun bir vaqtda faqat 2-3 ta asosiy loyiha bilan ishlayman.",
+            scarcity_link: "Bog'lanish →",
+            brand_role: "Full-Stack Dasturchi",
             nav_services: "Xizmatlar",
-            nav_portfolio: "Natijalar",
+            nav_portfolio: "Portfolio",
             nav_calculator: "Kalkulyator",
-            nav_guarantees: "Kafolatlar",
+            nav_guarantees: "Afzalliklar",
             nav_process: "Jarayon",
+            nav_contact: "Aloqa",
             nav_home: "Bosh sahifa",
             lang_label: "Tilni tanlang:",
-            btn_contract_sample: "Shartnoma namunasi",
-            btn_start_project: "Loyiha boshlash",
-            btn_submit_order: "Zakas qoldirish",
+            btn_contract_sample: "Kafolat shartlari",
+            btn_start_project: "Telegramda yozish",
+            btn_submit_order: "Telegramda yozish",
 
-            hero_pill: "Rasmiy Shartnoma • Aniq Muddat • 30 Kun Bepul Yordam",
-            hero_h1: "Biznesingizga <span class=\"gradient-text-cyan-indigo\">yangi mijoz keltiruvchi</span> va xarajatni kamaytiruvchi IT tizimlar yaratamiz.",
-            hero_lead: "Ortiqcha va keraksiz funksiyalarsiz. Mijozingiz sarflagan har 1 so'mi o'zini oqlashi uchun faqat real sotuv keltiradigan Web-saytlar, Telegram do'konlar va CRM tizimlar quramiz.",
-            hero_btn_calc: "Narxni hisoblash va Zakas berish",
-            hero_btn_cases: "Oldingi ishlarni ko'rish →",
-            proof_15min: "15 daqiqada bepul konsultatsiya",
+            hero_pill: "Yangi loyihalar uchun ochiq • Toshkent, O'zbekiston",
+            hero_h1: "Salom, men <span class=\"gradient-text-cyan-indigo\">Laziz Bozorovman</span>. Biznesingiz uchun sifatli veb-saytlar va Telegram tizimlari yarataman.",
+            hero_lead: "Agentliklardagi byurokratiya va ortiqcha vositachilarsiz — to'g'ridan-to'g'ri dasturchi bilan ishlaysiz. Toza kod, aniq muddat va samimiy hamkorlik.",
+            hero_btn_calc: "Telegram orqali bog'lanish",
+            hero_btn_cases: "Narxni hisoblash",
+            hero_btn_portfolio: "Ishlarni ko'rish →",
+            proof_15min: "Vositalarsiz to'g'ridan-to'g'ri aloqa",
             proof_ownership: "Barcha kodlar sizning mulkingiz",
-            proof_payment: "Bosqichma-bosqich xavfsiz to'lov",
+            proof_payment: "Topshirilgach 30 kun bepul yordam",
 
-            hero_box_badge: "MIJOZ UCHUN ANIQ FOYDA",
-            hero_box_status: "100% AMALDA",
-            benefit1_title: "Tez va Sotuvchi Web-Sayt",
-            benefit1_desc: "Reklamaga ketgan pulingiz havoga uchmaydi. Sayt 1.5 soniyada yuklanadi va har bir tashrifchini ariza qoldirishga undaydi.",
-            benefit2_title: "Telegram WebApp Do'kon",
-            benefit2_desc: "Eng tez daromad keltiruvchi vosita. Mijoz ortiqcha ilova o'rnatmasdan Telegramda tovar tanlaydi va to'lov qiladi.",
-            benefit3_title: "Biznesni Avtomatlashtirish (CRM)",
-            benefit3_desc: "Menejerlar mijozlarni yo'qotmaydi, barcha moliya va hisobotlar yagona ekranda nazorat qilinadi.",
-            hero_penalty_note: "Agar belgilangan muddatdan kechiksak, shartnoma bo'yicha penya to'laymiz.",
+            dev_card_role: "Full-Stack Dasturchi & Tech Hamkor",
+            dev_card_bio: "\"Agentliklardagi byurokratiyani yoqtirmayman. Har bir loyiha ustida to'g'ridan-to'g'ri o'zim ishlayman, har kuni aloqada bo'laman va biznesingizga rostdan foyda keltiradigan sifatli kod yozaman.\"",
+            dev_stack_label: "Texnologik stek:",
+            dev_perk_1: "100% to'g'ridan-to'g'ri muloqot",
+            dev_perk_2: "Toza va tushunarli manba kodi",
+            dev_perk_3: "Topshirilgach 30 kun bepul yordam",
+            btn_tg_direct_hero: "Telegram orqali to'g'ridan-to'g'ri yozish",
 
-            stat1_title: "Yakunlangan Loyihalar",
-            stat1_desc: "Real biznes egalari foydalanayotgan dasturlar",
-            stat2_title: "Amaliy Tajriba",
-            stat2_desc: "Frontend, Backend va Tizimlar Arxitekturasi",
-            stat3_title: "Tezkor Aloqa",
-            stat3_desc: "Savollaringizga tezda javob beramiz",
-            stat4_title: "Mulk Huquqi Sizniki",
-            stat4_desc: "Barcha manba kodlari mijoz nomiga o'tadi",
+            stat1_title: "To'g'ridan-to'g'ri aloqa",
+            stat1_desc: "O'rtada menejersiz, faqat dasturchi bilan ishlaysiz",
+            stat2_title: "Tezkor javob",
+            stat2_desc: "Telegram orqali savollaringizga zudlik bilan javob",
+            stat3_title: "Kod to'liq sizniki",
+            stat3_desc: "Barcha manba kodlari mijoz nomiga rasmiylashtiriladi",
+            stat4_title: "Bepul kafolatlangan yordam",
+            stat4_desc: "Ish topshirilgach ham texnik nazorat va ko'mak",
 
-            guar_badge: "XOTIRJAMLIK KAFOLATI",
-            guar_title: "Siz to'lagan pul <span class=\"gradient-text-cyan-indigo\">100% himoyalangan</span>",
-            guar_subtitle: "Ish chala qolishi yoki muddat cho'zilishidan charchadingizmi? Bizda hammasi rasmiy va qonuniy:",
-            g1_title: "1. Rasmiy Shartnoma va NDA (Maxfiylik)",
-            g1_desc: "Biznes g'oyangiz va mijozlar bazangiz hech qachon uchinchi shaxslarga chiqmaydi. Rasmiy yuridik shartnoma tuzamiz, xohlasangiz hisob-kitob schyotga pul o'tkazasiz.",
-            g1_btn: "Shartnoma bandlarini o'qish →",
-            g2_title: "2. Temir Deadline (Muddat Kafolati)",
-            g2_desc: "Vaqtingiz bekor ketmaydi. Agar shartnomadagi muddatdan 1 kun kechiksak, shartnoma bo'yicha har bir kechikkan kun uchun moliyaviy penya to'laymiz.",
-            g3_title: "3. To'liq Kod Egaligi (100% Sizniki)",
-            g3_desc: "Loyiha tayyor bo'lgach, barcha dastur kodlari (GitHub va Server) to'liq sizning nomingizga topshiriladi. Bizga bog'lanib qolmaysiz, loyihaning to'liq egasi o'zingiz bo'lasiz.",
-            g4_title: "4. 30 Kun Bepul VIP Texnik Yordam",
-            g4_desc: "Sayt topshirilgandan keyin ham sizni tashlab ketmaymiz. 1 oy davomida server nazorati, mayda tuzatishlar va xodimlaringizga o'rgatish mutlaqo bepul.",
+            guar_badge: "ISHLASH TAMOYILLARI",
+            guar_title: "Nega agentlik emas, aynan <span class=\"gradient-text-cyan-indigo\">men bilan ishlash qulay?</span>",
+            guar_subtitle: "Agentliklardagi byurokratiya, ortiqcha ustama narxlar va aloqa uzilishlarisiz — shaffof hamkorlik:",
+            g1_title: "1. To'g'ridan-to'g'ri Muloqot (Vositalarsiz)",
+            g1_desc: "Agentliklarda har bir gap menejerdan dasturchiga yetguncha o'zgaradi. Men bilan esa birinchi kundanoq to'g'ridan-to'g'ri texnik yechimni muhokama qilasiz va har kuni jarayondan xabardor bo'lasiz.",
+            g1_btn: "Kafolat shartlarini ko'rish →",
+            g2_title: "2. Aniq Muddat va Doimiy Demo",
+            g2_desc: "Vaqtingiz bekor ketmaydi. Loyihani bosqichma-bosqich ishlab, oraliq natijalarni ko'rsatib boraman. Belgilangan muddatga qat'iy rioya qilinadi.",
+            g3_title: "3. Toza Kod va To'liq Mulk Huquqi",
+            g3_desc: "Loyiha yakunida barcha dastur kodlari (GitHub va Server) to'liq sizning nomingizga topshiriladi. Hech qanday yashirin to'lovlar yoki sun'iy bog'liqlik bo'lmaydi.",
+            g4_title: "4. Ishga Tushgach 30 Kun Bepul Yordam",
+            g4_desc: "Sayt yoki bot topshirilgach ham sizni tashlab ketmayman. 1 oy davomida texnik nazorat, xatoliklarni bartaraf etish va foydalanishni o'rgatish mutlaqo bepul.",
 
-            serv_badge: "XIZMATLAR & ANIQ NARXLAR",
-            serv_title: "Har bir tiyin biznesingizga <span class=\"gradient-text-cyan-indigo\">maksimal natija</span> bersin",
-            serv_subtitle: "Faqat o'zimiz professional bajara oladigan, sinovdan o'tgan xizmatlar. Birgina tugma bilan xizmatni tanlab zakas qoldirishingiz mumkin:",
+            serv_badge: "XIZMATLAR & NARXLAR",
+            serv_title: "Biznesingiz uchun <span class=\"gradient-text-cyan-indigo\">real foyda keltiruvchi</span> xizmatlar",
+            serv_subtitle: "Faqat o'zim professional bajara oladigan, sinovdan o'tgan yechimlar. 1-klikda xizmatni tanlab muhokama qilishingiz mumkin:",
             s1_time: "5–10 ish kuni",
-            s1_title: "Sotuvchi Landing Page & Sayt",
-            s1_goal: "Keltiradigan foydasi: Reklamangizdan tushadigan arizalar soni 2-3 barobar oshadi. Sayt telefon va kompyuterda bir zumda ochiladi.",
+            s1_title: "Tezkor Veb-Sayt & Landing Page",
+            s1_goal: "Keltiradigan foydasi: Reklamangizdan tushadigan arizalar soni oshadi. Sayt telefon va kompyuterda 1 soniyada ochiladi.",
             s1_f1: "Zamonaviy va ishonch uyg'otuvchi dizayn",
             s1_f2: "Arizalar to'g'ridan-to'g'ri Telegramingizga keladi",
-            s1_f3: "Google va Yandex'da qidiruv optimizatsiyasi (SEO)",
-            s1_f4: "O'zingiz boshqara oladigan qulay panel",
+            s1_f3: "Qidiruv tizimlari (SEO) uchun to'liq optimizatsiya",
+            s1_f4: "Moslashuvchan mobil moslik",
             s2_time: "4–8 ish kuni",
             s2_title: "Telegram Bot & WebApp Do'kon",
-            s2_goal: "Keltiradigan foydasi: Mijozlaringiz alohida ilova o'rnatmaydi. Telegram ichida katalog ko'radi va to'lov qiladi.",
+            s2_goal: "Keltiradigan foydasi: Xaridorlar ilova yuklab olmasdan Telegram ichida mahsulot tanlaydi va Click/Payme orqali to'laydi.",
             s2_f1: "Telegram ichida qulay vizual mini-do'kon",
-            s2_f2: "Payme, Click, Stripe to'lovlari avtomatik tushadi",
-            s2_f3: "Buyurtmalarni nazorat qilish boti",
+            s2_f2: "Payme va Click to'lovlari avtomatik tushadi",
+            s2_f3: "Buyurtmalarni guruh yoki admin botga yuborish",
             s2_f4: "Mijozlarga avtomatik xabar va eslatma yuborish",
-            s3_time: "15–25 ish kuni",
+            s3_time: "12–20 ish kuni",
             s3_title: "CRM & Boshqaruv Tizimi",
-            s3_goal: "Keltiradigan foydasi: Xodimlaringiz mijozlarni unutmaydi, pul yo'qolishi to'xtaydi, biznesingiz tizimli holatga keladi.",
-            s3_f1: "Mijozlar bazasi va sotuv voronkasi",
-            s3_f2: "Kassa, daromad va sof foyda hisoboti",
-            s3_f3: "Xodimlar uchun ruxsatlar va rollar tizimi",
-            s3_f4: "Excel ga bir tugma bilan eksport va hisobot",
-            s4_time: "20–35 ish kuni",
-            s4_title: "Mobil Ilova (iOS & Android)",
-            s4_goal: "Keltiradigan foydasi: Doimiy mijozlaringiz cho'ntagida bo'lasiz. Push-xabarlar orqali takroriy sotuvlar bepul oshadi.",
-            s4_f1: "Bitta kod bilan iPhone va Android'da 100% sifatli ish",
-            s4_f2: "App Store va Google Play'ga chiqarib berish",
-            s4_f3: "SMS kod bilan tezkor ro'yxatdan o'tish",
-            s4_f4: "Tez va qulay buyurtma berish mexanizmi",
-            price_label: "Narxi:",
+            s3_goal: "Keltiradigan foydasi: Buyurtmalar va hisobotlar daftarda emas, yagona xavfsiz panelda nazorat qilinadi.",
+            s3_f1: "Mijozlar bazasi va buyurtmalar holati",
+            s3_f2: "Kassa, daromad va oylik hisobotlar",
+            s3_f3: "Xodimlar uchun alohida kirish huquqlari",
+            s3_f4: "Excel ga bir tugma bilan eksport qilish",
+            s4_time: "3–7 ish kuni",
+            s4_title: "API & Texnik Integratsiya",
+            s4_goal: "Keltiradigan foydasi: Mavjud saytingiz yoki botingizga to'lov, SMS yoki boshqa tizimlarni to'siqlarsiz ulash.",
+            s4_f1: "Payme, Click, Uzum to'lov tizimlarini ulash",
+            s4_f2: "SMS xabarnomalar va avtomatik bildirishnomalar",
+            s4_f3: "Mavjud sayt tezligini 2-3 barobar oshirish",
+            s4_f4: "Server va ma'lumotlar bazasini sozlash",
+            price_label: "Taxminiy narxi:",
             btn_choose_service: "Ushbu xizmatni tanlash →",
-            popular_badge: "Eng Ko'p Daromad Keltiruvchi",
+            popular_badge: "Eng Ko'p Buyurtma Qilinadigan",
 
-            cases_badge: "REAL KEYS-STADILAR",
-            cases_title: "Mijozlarimiz olgan <span class=\"gradient-text-cyan-indigo\">haqiqiy natijalar</span>",
-            cases_subtitle: "Faqat quruq rasm emas — biznes qanday muammo bilan keldi va tizim orqali qanday foyda ko'rdi:",
-            case1_tag: "Sotuvchi Web-Sayt",
-            case1_time: "7 kunda topshirildi",
-            case1_title: "Konversiyali B2B Landing Page",
-            comp_before: "Avvalgi holat:",
-            case1_before: "Eski saytda arizalar kam edi, har 100 tashrifchidan faqat 1 tasi telefon qilar edi (1% konversiya).",
-            comp_after: "Biz yaratgan natija:",
-            case1_after: "Yangi tezkor sayt va qulay forma orqali arizalar 3.8% ga chiqdi. Reklamaga ketgan pul 2 barobar ko'proq mijoz keltirmoqda.",
-            case2_tag: "Telegram WebApp Do'kon",
-            case2_time: "5 kunda topshirildi",
-            case2_title: "Telegram Avtomatik Savdo Tizimi",
-            case2_before: "Menejerlar lichkada kech javob bergani uchun mijozlar boshqa joyga ketib qolardi.",
-            case2_after: "Telegram bot ichida rasm, razmer va onlayn to'lov ulandi. Savdolarning 65% i kechasi ham avtomatik tushmoqda.",
-            case3_tag: "Biznes CRM Tizimi",
-            case3_time: "18 kunda topshirildi",
-            case3_title: "Xizmatlar Kompaniyasi uchun CRM",
-            case3_before: "Barcha hisob-kitoblar qog'oz va daftarda yuritilardi. Oylik hisobot chiqarish 3 kun vaqt olardi.",
-            case3_after: "Barcha filiallar va kassa bitta ekranda. Rahbar istalgan daqiqada foydani ko'radi, hisobotlar 1 soniyada chiqadi.",
-            btn_order_similar: "Shunday tizim zakas qilish →",
+            cases_badge: "AMALIY TAJRIBA",
+            cases_title: "Mijozlar bilan erishilgan <span class=\"gradient-text-cyan-indigo\">amaliy natijalar</span>",
+            cases_subtitle: "Faqat quruq rasm emas — biznes qanday muammo bilan keldi va tizim orqali qanday natijaga erishdi:",
+            case1_tag: "Telegram WebApp Do'kon",
+            case1_time: "5 kunda topshirildi",
+            case1_title: "Telegram Avtomatik Savdo Tizimi",
+            comp_before: "Avvalgi muammo:",
+            case1_before: "Mijozlar mahsulot rasmi va narxini alohida so'rar, administrator javob berguncha xaridor boshqa joyga ketib qolar edi.",
+            comp_after: "Qilingan ish va natija:",
+            case1_after: "Telegram ichida interaktiv katalog, savatcha va Payme/Click ulandi. Buyurtmalar kechasi ham to'liq avtomatik tarzda tushmoqda.",
+            case2_tag: "Veb-Sayt & Landing Page",
+            case2_time: "7 kunda topshirildi",
+            case2_title: "Xizmatlar Kompaniyasi uchun Tezkor Sayt",
+            case2_before: "Eski sayt telefonlarda sekin ochilar, arizalar deyarli tushmas va reklama byudjeti o'zini oqlamas edi.",
+            case2_after: "Toza Next.js da qayta qurildi, yuklanish tezligi 1.2 soniyaga tushirildi va arizalar zudlik bilan Telegram guruhga ulandi.",
+            case3_tag: "Biznes Boshqaruvi (CRM)",
+            case3_time: "15 kunda topshirildi",
+            case3_title: "Buyurtmalarni Boshqarish Paneli (Mini CRM)",
+            case3_before: "Barcha hisob-kitoblar qog'oz va daftarda yuritilar, buyurtmalar chalkashib ketar va hisobot chiqarish soatlab vaqt olar edi.",
+            case3_after: "Mijozlar bazasi, buyurtmalar statusi va kassa tushumini ko'rsatuvchi sodda veb-panel qurildi. Oylik hisobot 1 klikda chiqadi.",
+            btn_order_similar: "Shu kabi tizimni muhokama qilish →",
 
-            calc_badge: "ANIQ SMETA",
-            calc_title: "Loyihangiz narxini <span class=\"gradient-text-cyan-indigo\">1 daqiqada hisoblang</span>",
+            calc_badge: "KALKULYATOR",
+            calc_title: "Loyiha byudjeti va muddatini <span class=\"gradient-text-cyan-indigo\">taxminiy hisoblang</span>",
             calc_subtitle: "Yashirin to'lovlarsiz. Nima kerakligini tanlang va taxminiy narxni ko'ring:",
             calc_step1: "Qanday tizim kerak?",
             calc_step2: "Kerakli qo'shimcha imkoniyatlar:",
-            calc_type_web: "Sotuvchi Web-Sayt",
-            calc_type_bot: "Telegram Do'kon / Bot",
-            calc_type_crm: "CRM / Ichki Tizim",
-            calc_type_mobile: "Mobil Ilova (iOS/Android)",
+            calc_type_web: "Veb-Sayt / Landing",
+            calc_type_bot: "Telegram Bot / WebApp",
+            calc_type_crm: "CRM / Boshqaruv Tizimi",
+            calc_type_mobile: "API / Integratsiya",
             from_text: "dan",
             days_text: "ish kuni",
-            feat_billing_title: "💳 Onlayn To'lov Tizimi",
-            feat_billing_desc: "Payme, Click, Stripe to'g'ridan-to'g'ri hisobga (+$100)",
-            feat_admin_title: "📊 Boshqaruv Paneli (Admin)",
-            feat_admin_desc: "O'zingiz tovar va narxlarni boshqarasiz (+$150)",
-            feat_lang_title: "🌐 Ko'p tillilik (UZ / RU / EN)",
-            feat_lang_desc: "Bir nechta tilda to'liq ishlash (+$80)",
-            feat_notify_title: "📲 SMS / Telegram Xabarnoma",
-            feat_notify_desc: "Har bir zakas bo'yicha tezkor eslatma (+$70)",
+            feat_billing_title: "Onlayn To'lov Tizimi",
+            feat_billing_desc: "Payme, Click to'lovlarini ulash (+$100)",
+            feat_admin_title: "Boshqaruv Paneli (Admin)",
+            feat_admin_desc: "O'zingiz tovar va narxlarni boshqarasiz (+$120)",
+            feat_lang_title: "Ko'p tillilik (UZ / RU / EN)",
+            feat_lang_desc: "Bir nechta tilda to'liq ishlash (+$60)",
+            feat_notify_title: "Telegram / SMS Xabarnoma",
+            feat_notify_desc: "Har bir arizada tezkor xabar kelishi (+$50)",
             calc_box_badge: "HISOBLANGAN SMETA",
             calc_est_price: "Taxminiy Narx:",
-            calc_fixed_note: "* Shartnoma tuzilgach narx o'zgarmaydi",
+            calc_fixed_note: "* Yakuniy narx loyiha talabiga ko'ra o'zaro kelishiladi",
             calc_est_time: "Bajarilish muddati:",
-            calc_bonuses_title: "Narx ichiga kiritilgan bepul narsalar:",
-            bonus_1: "Rasmiy yuridik shartnoma",
+            calc_bonuses_title: "Narx ichiga kiritilgan:",
+            bonus_1: "To'g'ridan-to'g'ri dasturchi bilan maslahat",
             bonus_2: "30 kun bepul texnik yordam va kafolat",
-            bonus_3: "Barcha dastur kodi va server huquqlari",
-            btn_calc_submit: "Shu narx bo'yicha zakas berish →",
+            bonus_3: "Barcha dastur kodi to'liq sizning nomingizga",
+            btn_calc_submit: "Shu hisob bo'yicha bog'lanish →",
 
             proc_badge: "ISH TARTIBI",
             proc_title: "Boshidan oxirigacha <span class=\"gradient-text-cyan-indigo\">qanday ishlaymiz?</span>",
             proc_subtitle: "Hech qanday tushunarsiz joyi yo'q. Qadam-baqadam shaffof hamkorlik:",
-            proc_step1_badge: "1-QADAM",
-            proc_step1_title: "Suhbat & Reja (TZ)",
-            proc_step1_desc: "Biznesingizni eshitamiz, nima kerakligini aniqlaymiz va aniq narx hamda muddatni yozma tasdiqlaymiz.",
-            proc_step1_time: "1 kun • Mutlaqo bepul",
-            proc_step2_badge: "2-QADAM",
-            proc_step2_title: "Shartnoma & Dizayn",
-            proc_step2_desc: "Rasmiy shartnoma tuzamiz. Saytning chiroyli dizaynini ko'rsatamiz — siz ma'qullaganingizdan keyingina kod yozish boshlanadi.",
-            proc_step2_time: "2–3 kun",
-            proc_step3_badge: "3-QADAM",
+            proc_step1_title: "Suhbat & Reja",
+            proc_step1_desc: "G'oyangiz va talablaringizni eshitaman. Ortiqcha xarajatlarsiz eng ma'qul texnik yechim va aniq smetani taklif qilaman.",
+            proc_step2_title: "Dizayn & Kelishuv",
+            proc_step2_desc: "Sayt yoki botning asosiy sahifalari ko'rinishini tasdiqlab olamiz. Har bir narsa sizga yoqqach ishni boshlaymiz.",
             proc_step3_title: "Dasturlash & Demo",
-            proc_step3_desc: "Tizimni sifatli dasturlaymiz. Sizga har bir bosqichda ishlayotgan loyihani ko'rsatib boramiz.",
-            proc_step3_time: "Kelishilgan muddatda",
-            proc_step4_badge: "4-QADAM",
-            proc_step4_title: "Topshirish & 30 Kun Kafolat",
-            proc_step4_desc: "Serverga o'rnatib, to'liq ishga tushirib beramiz. 30 kun davomida texnik nazorat va yordam bepul bo'ladi.",
-            proc_step4_time: "To'liq xotirjamlik",
+            proc_step3_desc: "Toza kod yoziladi, to'lov tizimlari ulanadi. Oraliq natijalarni ko'rsatib, fikringizni olib boraman.",
+            proc_step4_title: "Topshirish & Bepul Yordam",
+            proc_step4_desc: "Loyiha serverga joylanadi, kodlar to'liq topshiriladi va keyingi 30 kun davomida bepul texnik ko'mak beriladi.",
 
-            funnel_badge: "🔒 RASMIY SHARTNOMA ASOSIDA",
-            funnel_heading: "Loyihangizni professional qo'llarga topshirishga <span class=\"gradient-text-cyan-indigo\">tayyormisiz?</span>",
-            funnel_lead: "O'ng tarafdagi formani to'ldiring. <strong>15 daqiqa ichida</strong> siz bilan shaxsan bog'lanib, loyihangiz bo'yicha bepul maslahat va aniq smetani beramiz.",
-            funnel_step1_title: "15 daqiqada aloqaga chiqamiz",
-            funnel_step1_desc: "Telegram yoki telefon orqali loyihani muhokama qilamiz.",
-            funnel_step2_title: "Aniq smeta va muddat beramiz",
-            funnel_step2_desc: "Ortiqcha xarajatsiz faqat kerakli qismlarga to'laysiz.",
-            funnel_step3_title: "Rasmiy shartnoma bilan ish boshlaymiz",
-            funnel_step3_desc: "Shartnomada muddat kechikishi uchun penya kafolatlanadi.",
+            funnel_badge: "ALOQA VA BUYURTMA",
+            funnel_heading: "Loyihangiz bormi? <span class=\"gradient-text-cyan-indigo\">Keling, muhokama qilamiz</span>",
+            funnel_lead: "Ortiqcha qog'ozbozliksiz. Qisqacha yozing yoki Telegram orqali to'g'ridan-to'g'ri bog'laning.",
+            funnel_step1_title: "15 daqiqada javob",
+            funnel_step1_desc: "Arizangiz bo'yicha tezkor bog'lanib, bepul maslahat beraman.",
+            funnel_step2_title: "Aniq smeta va muddat",
+            funnel_step2_desc: "Hech qanday kutilmagan to'lovlar bo'lmaydi.",
+            funnel_step3_title: "To'liq xavfsiz hamkorlik",
+            funnel_step3_desc: "Istasangiz rasmiy shartnoma yoki NDA asosida ishlaymiz.",
+
             direct_contact_label: "Kutmasdan to'g'ridan-to'g'ri bog'lanish:",
             tg_fast: "Telegram (Tezkor javob)",
-            phone_text: "Telefon",
-
-            tab_full: "📝 Loyiha bo'yicha zakas",
-            tab_express: "⚡ Tezkor qo'ng'iroq (15 soniya)",
-            selected_label: "Tanlangan:",
-            label_name: "Ismingiz yoki Kompaniyangiz *",
-            placeholder_name: "Masalan: Sardor — Tadbirkor",
+            tab_full: "Loyiha bo'yicha ma'lumot",
+            tab_express: "Tezkor qayta qo'ng'iroq",
+            calc_synced_banner: "Kalkulyatordagi smeta formaga muvaffaqiyatli o'tkazildi!",
+            label_name: "Ismingiz *",
+            placeholder_name: "Masalan: Sardor",
             label_contact: "Telefon raqamingiz yoki Telegram @username *",
             placeholder_contact: "+998 (90) 123-45-67 yoki @username",
             label_type: "Loyiha turi:",
-            chip_web: "🌐 Web-Sayt",
-            chip_bot: "🤖 Telegram Bot",
-            chip_crm: "⚡ CRM Tizim",
-            chip_mobile: "📱 Mobil Ilova",
-            chip_other: "🧩 Boshqa",
+            chip_web: "Veb-Sayt",
+            chip_bot: "Telegram Bot",
+            chip_crm: "CRM Tizim",
+            chip_other: "Boshqa",
             label_details: "Loyiha haqida qisqacha (yoki maqsadingiz):",
             placeholder_details: "Masalan: Bizga yangi mahsulot sotish uchun tez ochiladigan landing page kerak...",
-            checkbox_nda: "🔒 Loyiham maxfiyligi (NDA) saqlansin",
-            btn_submit_full: "Zakasni Yuborish va Bepul Maslahat Olish",
-            form_security: "🛡️ Hech qanday spam yuborilmaydi. Ma'lumotlaringiz xavfsiz.",
+            checkbox_nda: "Loyiham maxfiyligi (NDA) saqlansin",
+            btn_submit_full: "Loyihani Muhokama Qilish",
+            form_security: "Spam yuborilmaydi. Ma'lumotlaringiz xavfsiz.",
             express_title: "Vaqtingiz kammi?",
-            express_desc: "Raqamingizni qoldiring, 15 daqiqada o'zimiz qo'ng'iroq qilamiz.",
+            express_desc: "Raqamingizni qoldiring, 15 daqiqada o'zim qo'ng'iroq qilaman yoki Telegramdan yozaman.",
             label_name_simple: "Ismingiz *",
             placeholder_name_simple: "Ismingizni kiriting",
             label_phone_simple: "Telefon yoki Telegram manzilingiz *",
             placeholder_phone_simple: "+998 (90) 000-00-00",
-            btn_submit_express: "📞 Menga 15 daqiqada qo'ng'iroq qiling",
+            btn_submit_express: "Menga 15 daqiqada aloqaga chiqing",
 
-            footer_tagline: "Senior Full-Stack Engineer & Ishonchli Texnologik Hamkor. Har bir loyihada mijoz biznesining maksimal foydasiga ishlaymiz.",
+            footer_tagline: "Full-Stack Dasturchi & Ishonchli Texnologik Hamkor. Toshkent, O'zbekiston.",
             footer_nav_title: "Sahifalar",
             footer_serv_title: "Xizmatlar",
             footer_contact_title: "To'g'ridan-to'g'ri aloqa",
-            footer_rights: "© 2026 lazizfullstack.dev. Barcha huquqlar himoyalangan. Rasmiy shartnoma asosida ishlaymiz.",
-            footer_contract: "Shartnoma Namunasi",
+            footer_rights: "© 2026 lazizfullstack.dev. Barcha huquqlar himoyalangan.",
+            footer_contract: "Kafolat shartlari",
             footer_top: "Yuqoriga qaytish ↑",
 
             modal_success_title: "Arizangiz qabul qilindi!",
-            modal_dear: "Hurmatli",
-            modal_success_desc: "arizangiz saqlandi. 15 daqiqa ichida siz bilan bog'lanamiz.",
+            modal_dear: "Rahmat",
+            modal_success_desc: "arizangiz saqlandi. 15 daqiqa ichida siz bilan bog'lanaman.",
             modal_summary_type: "Loyiha turi:",
             modal_summary_contact: "Aloqa:",
-            btn_telegram_direct: "💬 Kutmasdan Telegramda yozish →",
+            btn_telegram_direct: "Kutmasdan Telegramda yozish →",
             btn_close: "Yopish",
 
-            contract_modal_title: "Rasmiy Shartnomaning Asosiy Kafolat Bandlari",
-            contract_modal_desc: "Sizning mablag'ingiz va vaqtingizni himoya qiluvchi qonuniy majburiyatlarimiz:",
+            contract_modal_title: "Asosiy Kafolat va Ishlash Bandlari",
+            contract_modal_desc: "Sizning mablag'ingiz va vaqtingizni himoya qiluvchi shartlar:",
             c_c1_title: "1. Manba kodi to'liq sizning nomingizga o'tadi",
-            c_c1_desc: "Loyiha topshirilgandan keyin barcha kodlar (GitHub, server fayllari va bazalar) 100% buyurtmachi mulkiga aylanadi. Hech qanday litsenziya yoki doimiy to'lovlar majburiyati qolmaydi.",
+            c_c1_desc: "Loyiha topshirilgandan keyin barcha kodlar (GitHub, server fayllari va ma'lumotlar bazasi) 100% buyurtmachi mulkiga aylanadi. Hech qanday doimiy majburiy to'lovlar qolmaydi.",
             c_c2_title: "2. Maxfiylik va Tijorat Sirlari (NDA)",
-            c_c2_desc: "G'oyangiz, biznes mexanizmlaringiz va mijozlaringiz haqidagi ma'lumotlar uchinchi shaxslarga berilmasligi bo'yicha qat'iy yuridik majburiyat olinadi.",
-            c_c3_title: "3. Kechikish uchun Penya Kafolati",
-            c_c3_desc: "Agar ijrochi aybi bilan kelishilgan topshirish muddati kechiktirilsa, har bir kechikkan ish kuni uchun shartnoma bo'yicha moliyaviy penya to'lanadi.",
-            c_c4_title: "4. 30 Kun Bepul Texnik Kafolat",
-            c_c4_desc: "Loyiha ishga tushgach, 1 oy davomida har qanday texnik xatoliklar (baglar) mutlaqo bepul va zudlik bilan to'g'irlanadi.",
+            c_c2_desc: "G'oyangiz, biznes mexanizmlaringiz va mijozlaringiz haqidagi ma'lumotlar uchinchi shaxslarga berilmasligi kafolatlanadi.",
+            c_c3_title: "3. Aniq Muddat Majburiyati",
+            c_c3_desc: "Ish boshlanishidan avval aniq muddat belgilanadi. Oraliq bosqichlar doimiy ravishda mijozga ko'rsatib boriladi.",
+            c_c4_title: "4. 30 Kun Bepul Texnik Yordam",
+            c_c4_desc: "Loyiha ishga tushgach, 1 oy davomida har qanday texnik savollar va xatoliklarni bartaraf etish mutlaqo bepul amalga oshiriladi.",
             btn_understood_close: "Tushunarli, yopish",
-            btn_go_to_order: "Zakas formasiga o'tish →"
+            btn_go_to_order: "Loyihani boshlash →"
         },
 
         ru: {
-            title: "LazizFullStack — Высокодоходные Web и Telegram Решения для Бизнеса",
-            scarcity_status: "Прием новых проектов открыт",
-            scarcity_text: "Чтобы гарантировать 100% качество и внимание к деталям, берем максимум 2-3 проекта в месяц.",
-            scarcity_link: "Забронировать место →",
-            brand_role: "Full-Stack Инженер & Технологический Партнер",
+            title: "Лазиз Бозоров — Full-Stack Разработчик & IT Партнер | Ташкент",
+            scarcity_status: "Открыт для новых проектов",
+            scarcity_text: "Чтобы гарантировать 100% качество и внимание к деталям, веду не более 2-3 проектов одновременно.",
+            scarcity_link: "Связаться →",
+            brand_role: "Full-Stack Разработчик",
             nav_services: "Услуги",
-            nav_portfolio: "Кейсы",
+            nav_portfolio: "Портфолио",
             nav_calculator: "Калькулятор",
-            nav_guarantees: "Гарантии",
+            nav_guarantees: "Преимущества",
             nav_process: "Процесс",
+            nav_contact: "Контакты",
             nav_home: "Главная",
             lang_label: "Выберите язык:",
-            btn_contract_sample: "Образец договора",
-            btn_start_project: "Начать проект",
-            btn_submit_order: "Оставить заявку",
+            btn_contract_sample: "Условия гарантии",
+            btn_start_project: "Написать в Telegram",
+            btn_submit_order: "Написать в Telegram",
 
-            hero_pill: "Официальный Договор • Четкий Срок • 30 Дней Гарантии",
-            hero_h1: "Создаем IT-системы, которые <span class=\"gradient-text-cyan-indigo\">привлекают клиентов</span> и снижают расходы бизнеса.",
-            hero_lead: "Без лишних ненужных функций. Разрабатываем только то, что окупает каждый вложенный доллар: продающие Web-сайты, Telegram WebApp магазины и надежные CRM-системы.",
-            hero_btn_calc: "Рассчитать стоимость и заказать",
-            hero_btn_cases: "Смотреть выполненные кейсы →",
-            proof_15min: "Бесплатная консультация за 15 минут",
-            proof_ownership: "Весь код переходит в вашу собственность",
-            proof_payment: "Безопасная поэтапная оплата",
+            hero_pill: "Открыт для проектов • Ташкент, Узбекистан",
+            hero_h1: "Привет, я <span class=\"gradient-text-cyan-indigo\">Лазиз Бозоров</span>. Разрабатываю быстрые сайты и Telegram-системы для бизнеса.",
+            hero_lead: "Никаких лишних менеджеров и пустых обещаний — вы общаетесь напрямую с разработчиком. Воплощаю ваши идеи в чистый код и надежный результат.",
+            hero_btn_calc: "Написать в Telegram",
+            hero_btn_cases: "Рассчитать стоимость",
+            hero_btn_portfolio: "Смотреть кейсы →",
+            proof_15min: "Прямая связь без посредников",
+            proof_ownership: "100% кода переходит вам",
+            proof_payment: "30 дней поддержки после сдачи",
 
-            hero_box_badge: "РЕАЛЬНАЯ ПОЛЬЗА ДЛЯ БИЗНЕСА",
-            hero_box_status: "100% В ДЕЛЕ",
-            benefit1_title: "Быстрый и Продающий Web-Сайт",
-            benefit1_desc: "Бюджет на рекламу не сгорает впустую. Сайт открывается за 1.5 секунды и превращает посетителей в прямые заявки.",
-            benefit2_title: "Telegram WebApp Магазин",
-            benefit2_desc: "Самый быстроокупаемый канал продаж. Клиенты выбирают товары и оплачивают прямо в Telegram без скачивания приложений.",
-            benefit3_title: "Автоматизация Бизнеса (CRM)",
-            benefit3_desc: "Менеджеры больше не теряют лиды. Все финансы, заказы и аналитика собраны на одном удобном экране.",
-            hero_penalty_note: "При срыве сроков выплачиваем финансовую неустойку по договору.",
+            dev_card_role: "Full-Stack Разработчик & IT Партнер",
+            dev_card_bio: "\"Не люблю бюрократию агентств. Работаю над каждым проектом лично, остаюсь на связи каждый день и пишу код, который приносит реальную пользу вашему делу.\"",
+            dev_stack_label: "Стек технологий:",
+            dev_perk_1: "100% прямое общение",
+            dev_perk_2: "Чистый и понятный код",
+            dev_perk_3: "30 дней бесплатной поддержки",
+            btn_tg_direct_hero: "Написать напрямую в Telegram",
 
-            stat1_title: "Успешных Проектов",
-            stat1_desc: "Работающие системы реального бизнеса",
-            stat2_title: "Опыт Разработки",
-            stat2_desc: "Frontend, Backend и Архитектура Систем",
-            stat3_title: "Быстрый Ответ",
-            stat3_desc: "Оперативно отвечаем на любые вопросы",
-            stat4_title: "Код Принадлежит Вам",
-            stat4_desc: "100% передача исходного кода клиенту",
+            stat1_title: "Прямой контакт",
+            stat1_desc: "Без посредников и менеджеров, напрямую с инженером",
+            stat2_title: "Быстрый ответ",
+            stat2_desc: "Оперативная связь в Telegram без задержек",
+            stat3_title: "Код полностью ваш",
+            stat3_desc: "Все исходники и доступ передаются клиенту",
+            stat4_title: "Гарантия и поддержка",
+            stat4_desc: "Бесплатная техническая помощь 30 дней после запуска",
 
-            guar_badge: "ГАРАНТИЯ СПОКОЙСТВИЯ",
-            guar_title: "Ваши вложения <span class=\"gradient-text-cyan-indigo\">защищены на 100%</span>",
-            guar_subtitle: "Устали от безответственных фрилансеров и затянутых сроков? У нас все прозрачно и официально:",
-            g1_title: "1. Официальный Договор и NDA (Конфиденциальность)",
-            g1_desc: "Ваша бизнес-идея и база клиентов под надежной защитой. Заключаем юридически обязывающий договор, возможна безналичная оплата на р/с.",
-            g1_btn: "Читать пункты договора →",
-            g2_title: "2. Железный Дедлайн (Гарантия Сроков)",
-            g2_desc: "Ваше время бесценно. Если мы задержим сдачу хотя бы на 1 день, выплачиваем официальную неустойку (пеню) за каждый день просрочки.",
-            g3_title: "3. Полные Права на Код (100% Ваша Собственность)",
-            g3_desc: "После завершения проекта весь исходный код (GitHub и сервер) передается на ваше имя. Никаких скрытых подписок или зависимости от нас.",
-            g4_title: "4. 30 Дней Бесплатной VIP Поддержки",
-            g4_desc: "Мы не бросаем проект после запуска. В течение месяца бесплатно контролируем сервер, устраняем любые нюансы и обучаем ваших сотрудников.",
+            guar_badge: "ПРИНЦИПЫ РАБОТЫ",
+            guar_title: "Почему со мной работать <span class=\"gradient-text-cyan-indigo\">удобнее, чем с агентством?</span>",
+            guar_subtitle: "Без корпоративной волокиты, лишних наценок и испорченного телефона:",
+            g1_title: "1. Прямая связь (Без посредников)",
+            g1_desc: "В агентствах информация проходит через несколько менеджеров. Со мной вы обсуждаете задачу напрямую с тем, кто пишет код.",
+            g1_btn: "Смотреть условия →",
+            g2_title: "2. Четкие сроки и промежуточные демо",
+            g2_desc: "Ваше время ценно. Разрабатываю проект поэтапно, регулярно показывая результат.",
+            g3_title: "3. Чистый код и полные права",
+            g3_desc: "После завершения весь код (GitHub, сервера, базы) передается вам без скрытых привязок.",
+            g4_title: "4. 30 дней поддержки после запуска",
+            g4_desc: "Не исчезаю после сдачи проекта. Помогаю освоиться, контролирую работу сервера и устраняю любые нюансы бесплатно.",
 
-            serv_badge: "УСЛУГИ И ЧЕСТНЫЕ ЦЕНЫ",
-            serv_title: "Каждый доллар должен приносить <span class=\"gradient-text-cyan-indigo\">максимальный результат</span>",
-            serv_subtitle: "Только те направления, в которых мы сильны на 100%. Выберите услугу в 1 клик для оформления заказа:",
-            s1_time: "5–10 рабочих дней",
-            s1_title: "Продающий Landing Page & Сайт",
-            s1_goal: "Результат: Количество заявок с рекламы увеличивается в 2-3 раза. Сайт мгновенно открывается на смартфонах и ПК.",
-            s1_f1: "Современный дизайн, вызывающий доверие",
-            s1_f2: "Заявки моментально приходят вам в Telegram / CRM",
-            s1_f3: "Базовая оптимизация под Google и Яндекс (SEO)",
-            s1_f4: "Удобная панель управления текстом и ценами",
-            s2_time: "4–8 рабочих дней",
-            s2_title: "Telegram Bot & WebApp Магазин",
-            s2_goal: "Результат: Клиентам не нужно ставить приложение. Они выбирают каталог и сразу оплачивают онлайн внутри Telegram.",
+            serv_badge: "УСЛУГИ И ЦЕНЫ",
+            serv_title: "Решения, которые приносят <span class=\"gradient-text-cyan-indigo\">реальную пользу бизнесу</span>",
+            serv_subtitle: "Только то, в чем разбираюсь профессионально. Выберите услугу в 1 клик для обсуждения:",
+            s1_time: "5–10 раб. дней",
+            s1_title: "Быстрый Сайт & Landing Page",
+            s1_goal: "Польза: Сайт открывается за 1 секунду на смартфонах и привлекает целевые заявки.",
+            s1_f1: "Современный продуманный дизайн",
+            s1_f2: "Заявки моментально приходят в Telegram",
+            s1_f3: "SEO-оптимизация для поисковиков",
+            s1_f4: "Идеальная адаптивность для мобильных",
+            s2_time: "4–8 раб. дней",
+            s2_title: "Telegram Бот & WebApp Магазин",
+            s2_goal: "Польза: Клиенты выбирают товары и оплачивают прямо в Telegram без скачивания приложений.",
             s2_f1: "Визуальный мини-магазин внутри Telegram",
-            s2_f2: "Прием платежей: Payme, Click, Stripe, Visa/Mastercard",
-            s2_f3: "Бот управления заказами для менеджеров и курьеров",
-            s2_f4: "Автоматические рассылки и напоминания клиентам",
-            s3_time: "15–25 рабочих дней",
-            s3_title: "CRM & Системы Управления",
-            s3_goal: "Результат: Менеджеры не забывают клиентов, утечки средств исключены, бизнес работает как часы.",
-            s3_f1: "База клиентов и наглядная воронка продаж",
-            s3_f2: "Отчеты по кассе, доходам и чистой прибыли",
-            s3_f3: "Разделение прав доступа (кассир, менеджер, директор)",
-            s3_f4: "Мгновенный экспорт отчетов в Excel в один клик",
-            s4_time: "20–35 рабочих дней",
-            s4_title: "Мобильное Приложение (iOS & Android)",
-            s4_goal: "Результат: Ваш бренд всегда в кармане клиента. Бесплатные Push-уведомления стимулируют повторные продажи.",
-            s4_f1: "Единый код и безупречная работа на iPhone и Android",
-            s4_f2: "Публикация в App Store и Google Play",
-            s4_f3: "Быстрая авторизация по номеру телефона и SMS",
-            s4_f4: "Удобный и быстрый чекаут заказов",
-            price_label: "Стоимость:",
+            s2_f2: "Прием платежей через Click, Payme",
+            s2_f3: "Уведомления администраторам о заказах",
+            s2_f4: "Автоматические рассылки и напоминания",
+            s3_time: "12–20 раб. дней",
+            s3_title: "CRM & Панели Управления",
+            s3_goal: "Польза: Все заказы, клиенты и финансы под контролем на одном удобном экране.",
+            s3_f1: "База клиентов и статусы заказов",
+            s3_f2: "Учет доходов и расходов",
+            s3_f3: "Разграничение прав для сотрудников",
+            s3_f4: "Экспорт отчетов в Excel в 1 клик",
+            s4_time: "3–7 раб. дней",
+            s4_title: "API & Технические Интеграции",
+            s4_goal: "Польза: Подключение оплат, SMS и оптимизация работы существующих систем.",
+            s4_f1: "Интеграция платежных систем Payme, Click",
+            s4_f2: "SMS и Telegram уведомления",
+            s4_f3: "Ускорение работы текущего сайта",
+            s4_f4: "Настройка серверов и баз данных",
+            price_label: "Ориентир цены:",
             btn_choose_service: "Выбрать эту услугу →",
-            popular_badge: "Максимальный Доход",
+            popular_badge: "Самый Популярный",
 
-            cases_badge: "РЕАЛЬНЫЕ КЕЙСЫ",
-            cases_title: "Ощутимые результаты <span class=\"gradient-text-cyan-indigo\">наших клиентов</span>",
-            cases_subtitle: "Не просто красивые картинки, а конкретная проблема бизнеса и её практическое решение:",
-            case1_tag: "Продающий Web-Сайт",
-            case1_time: "Сдан за 7 дней",
-            case1_title: "Конверсионный B2B Landing Page",
-            comp_before: "Что было до нас:",
-            case1_before: "На старом сайте конверсия была всего 1% — из 100 посетителей звонил лишь один.",
-            comp_after: "Результат после запуска:",
-            case1_after: "Благодаря высокой скорости и продуманным блокам конверсия выросла до 3.8%. Рекламный бюджет стал окупаться вдвое быстрее.",
-            case2_tag: "Telegram WebApp Магазин",
-            case2_time: "Сдан за 5 дней",
-            case2_title: "Автоматизация Продаж в Telegram",
-            case2_before: "Менеджеры долго отвечали в личке, из-за чего клиенты уходили к конкурентам.",
-            case2_after: "Запустили WebApp с каталогом и быстрой оплатой. 65% покупок теперь проходят автоматически, даже ночью.",
-            case3_tag: "Система Управления CRM",
-            case3_time: "Сдана за 18 дней",
-            case3_title: "CRM для Сферы Услуг",
-            case3_before: "Учет велся в разрозненных блокнотах. На сведение отчетов уходило до 3 дней в конце месяца.",
-            case3_after: "Все филиалы и кассы объединены. Руководитель видит прибыль в реальном времени, а отчеты формируются за 1 секунду.",
-            btn_order_similar: "Заказать такую систему →",
+            cases_badge: "ПРАКТИЧЕСКИЙ ОПЫТ",
+            cases_title: "Практические результаты <span class=\"gradient-text-cyan-indigo\">наших клиентов</span>",
+            cases_subtitle: "Не просто дизайн, а решение конкретных бизнес-задач:",
+            case1_tag: "Telegram WebApp Магазин",
+            case1_time: "Сдан за 5 дней",
+            case1_title: "Автоматическая Торговля в Telegram",
+            comp_before: "Проблема клиента:",
+            case1_before: "Менеджеры долго отвечали в переписке, и часть покупателей уходила к конкурентам.",
+            comp_after: "Результат:",
+            case1_after: "Запущен каталог с корзиной и оплатой Payme/Click. Заказы оформляются автоматически даже ночью.",
+            case2_tag: "Сайт & Landing Page",
+            case2_time: "Сдан за 7 дней",
+            case2_title: "Быстрый Сайт для Сервисной Компании",
+            case2_before: "Старый сайт медленно грузился на телефонах, заявки почти не поступали.",
+            case2_after: "Сайт переписан на Next.js, скорость загрузки 1.2с, заявки моментально приходят в Telegram-группу.",
+            case3_tag: "Управление Бизнесом (CRM)",
+            case3_time: "Сдан за 15 дней",
+            case3_title: "Панель Управления Заказами (Mini CRM)",
+            case3_before: "Все заказы велись в бумажных блокнотах, сведение отчетов занимало часы.",
+            case3_after: "Создана веб-панель со статусами заказов и выручкой. Месячный отчет формируется за 1 клик.",
+            btn_order_similar: "Обсудить похожий проект →",
 
-            calc_badge: "ТОЧНЫЙ РАСЧЕТ",
-            calc_title: "Узнайте стоимость проекта <span class=\"gradient-text-cyan-indigo\">за 1 минуту</span>",
-            calc_subtitle: "Без скрытых доплат. Выберите то, что вам нужно, и получите честную оценку:",
-            calc_step1: "Какая система требуется?",
-            calc_step2: "Необходимый функционал:",
-            calc_type_web: "Продающий Web-Сайт",
-            calc_type_bot: "Telegram Магазин / Бот",
-            calc_type_crm: "CRM / Внутренняя система",
-            calc_type_mobile: "Мобильное Приложение",
+            calc_badge: "КАЛЬКУЛЯТОР",
+            calc_title: "Рассчитайте примерную стоимость <span class=\"gradient-text-cyan-indigo\">вашего проекта</span>",
+            calc_subtitle: "Без скрытых платежей. Выберите нужные параметры:",
+            calc_step1: "Что требуется разработать?",
+            calc_step2: "Дополнительные возможности:",
+            calc_type_web: "Сайт / Landing",
+            calc_type_bot: "Telegram Бот / WebApp",
+            calc_type_crm: "CRM / Панель Управления",
+            calc_type_mobile: "API / Интеграция",
             from_text: "от",
             days_text: "раб. дней",
-            feat_billing_title: "💳 Онлайн Оплата",
-            feat_billing_desc: "Payme, Click, Stripe, Visa на расчетный счет (+$100)",
-            feat_admin_title: "📊 Панель Управления (Admin)",
-            feat_admin_desc: "Самостоятельное управление товарами и ценами (+$150)",
-            feat_lang_title: "🌐 Мультиязычность (UZ / RU / EN)",
-            feat_lang_desc: "Полноценная работа на нескольких языках (+$80)",
-            feat_notify_title: "📲 SMS / Telegram Уведомления",
-            feat_notify_desc: "Мгновенные оповещения по каждому заказу (+$70)",
-            calc_box_badge: "РАССЧИТАННАЯ СМЕТА",
-            calc_est_price: "Ориентировочная Цена:",
-            calc_fixed_note: "* После фиксации в договоре цена не меняется",
+            feat_billing_title: "Прием Онлайн Оплаты",
+            feat_billing_desc: "Подключение Payme, Click (+$100)",
+            feat_admin_title: "Панель Управления (Admin)",
+            feat_admin_desc: "Самостоятельное управление ценами и товарами (+$120)",
+            feat_lang_title: "Мультиязычность (UZ / RU / EN)",
+            feat_lang_desc: "Работа на нескольких языках (+$60)",
+            feat_notify_title: "Telegram / SMS Оповещения",
+            feat_notify_desc: "Уведомления о каждом новом заказе (+$50)",
+            calc_box_badge: "РАСЧЕТНАЯ СТОИМОСТЬ",
+            calc_est_price: "Примерная Стоимость:",
+            calc_fixed_note: "* Финальная стоимость согласовывается после ТЗ",
             calc_est_time: "Срок выполнения:",
-            calc_bonuses_title: "Бесплатно входит в стоимость:",
-            bonus_1: "Официальный юридический договор",
-            bonus_2: "30 дней бесплатной поддержки и гарантии",
-            bonus_3: "Все исходные коды и доступы к серверам",
-            btn_calc_submit: "Заказать по этой смете →",
+            calc_bonuses_title: "Включено в стоимость:",
+            bonus_1: "Прямая консультация с разработчиком",
+            bonus_2: "30 дней бесплатной техподдержки",
+            bonus_3: "Все исходники передаются вам",
+            btn_calc_submit: "Обсудить этот расчет →",
 
             proc_badge: "ПОРЯДОК РАБОТЫ",
-            proc_title: "Как мы работаем <span class=\"gradient-text-cyan-indigo\">от старта до релиза?</span>",
-            proc_subtitle: "Никаких подводных камней. Четкие и прозрачные этапы сотрудничества:",
-            proc_step1_badge: "ЭТАП 1",
-            proc_step1_title: "Обсуждение & ТЗ",
-            proc_step1_desc: "Внимательно изучаем ваш бизнес, фиксируем задачи и письменно утверждаем точную стоимость и сроки.",
-            proc_step1_time: "1 день • Бесплатно",
-            proc_step2_badge: "ЭТАП 2",
-            proc_step2_title: "Договор & Дизайн",
-            proc_step2_desc: "Подписываем договор. Создаем удобный прототип и дизайн — верстка начинается только после вашего утверждения.",
-            proc_step2_time: "2–3 дня",
-            proc_step3_badge: "ЭТАП 3",
-            proc_step3_title: "Разработка & Демо",
-            proc_step3_desc: "Пишем чистый и быстрый код. На каждом этапе демонстрируем вам живой рабочий проект на тестовом сервере.",
-            proc_step3_time: "По графику",
-            proc_step4_badge: "ЭТАП 4",
-            proc_step4_title: "Сдача & 30 Дней Гарантии",
-            proc_step4_desc: "Разворачиваем проект на рабочем сервере. В течение 30 дней бесплатно сопровождаем и обучаем вашу команду.",
-            proc_step4_time: "Полное спокойствие",
+            proc_title: "Как проходит процесс <span class=\"gradient-text-cyan-indigo\">разработки?</span>",
+            proc_subtitle: "Все понятно, пошагово и без сюрпризов:",
+            proc_step1_title: "Обсуждение и План",
+            proc_step1_desc: "Выслушиваю ваши задачи и предлагаю наиболее экономичное и быстрое решение.",
+            proc_step2_title: "Дизайн и Согласование",
+            proc_step2_desc: "Утверждаем внешний вид ключевых страниц перед написанием кода.",
+            proc_step3_title: "Разработка и Демо",
+            proc_step3_desc: "Пишу чистый код, настраиваю систему и показываю промежуточный прогресс.",
+            proc_step4_title: "Сдача и Поддержка",
+            proc_step4_desc: "Разворачиваем проект на сервере, передаю все права и помогаю 30 дней бесплатно.",
 
-            funnel_badge: "🔒 ОФИЦИАЛЬНЫЙ ДОГОВОР",
-            funnel_heading: "Готовы доверить проект <span class=\"gradient-text-cyan-indigo\">надежным рукам?</span>",
-            funnel_lead: "Заполните форму справа. В течение <strong>15 минут</strong> мы свяжемся с вами, бесплатно проконсультируем и предоставим прозрачную смету.",
-            funnel_step1_title: "Свяжемся за 15 минут",
-            funnel_step1_desc: "Обсудим проект в Telegram или по телефону.",
-            funnel_step2_title: "Дадим честную смету и срок",
-            funnel_step2_desc: "Никаких скрытых доплат — только нужный результат.",
-            funnel_step3_title: "Работаем по договору",
-            funnel_step3_desc: "Финансовая ответственность за срыв сроков прописана юридически.",
-            direct_contact_label: "Прямая связь без ожидания:",
+            funnel_badge: "КОНТАКТЫ",
+            funnel_heading: "Есть проект? <span class=\"gradient-text-cyan-indigo\">Давайте обсудим</span>",
+            funnel_lead: "Без лишних формальностей. Напишите пару строк или свяжитесь в Telegram напрямую.",
+            funnel_step1_title: "Ответ за 15 минут",
+            funnel_step1_desc: "Быстро отвечу и подскажу наилучший вариант.",
+            funnel_step2_title: "Понятная смета и сроки",
+            funnel_step2_desc: "Никаких неожиданных доплат в процессе.",
+            funnel_step3_title: "Безопасное сотрудничество",
+            funnel_step3_desc: "Возможно составление договора и NDA.",
+
+            direct_contact_label: "Быстрая связь напрямую:",
             tg_fast: "Telegram (Быстрый ответ)",
-            phone_text: "Телефон",
-
-            tab_full: "📝 Детальная заявка",
-            tab_express: "⚡ Быстрый звонок (15 сек)",
-            selected_label: "Выбрано:",
-            label_name: "Ваше имя или компания *",
-            placeholder_name: "Например: Сардор — Предприниматель",
-            label_contact: "Телефон или Telegram @username *",
+            tab_full: "Информация о проекте",
+            tab_express: "Быстрый звонок",
+            calc_synced_banner: "Смета из калькулятора перенесена в форму!",
+            label_name: "Ваше имя *",
+            placeholder_name: "Например: Сардор",
+            label_contact: "Телефон или Telegram username *",
             placeholder_contact: "+998 (90) 123-45-67 или @username",
             label_type: "Тип проекта:",
-            chip_web: "🌐 Web-Сайт",
-            chip_bot: "🤖 Telegram Бот",
-            chip_crm: "⚡ CRM Система",
-            chip_mobile: "📱 Мобильное Приложение",
-            chip_other: "🧩 Другое",
-            label_details: "Кратко о задаче (или пожелания):",
-            placeholder_details: "Например: Нужен быстрый landing page для продажи услуг...",
-            checkbox_nda: "🔒 Требуется сохранение конфиденциальности (NDA)",
-            btn_submit_full: "Отправить заявку и получить расчет",
-            form_security: "🛡️ Спам исключен. Ваши контактные данные в безопасности.",
+            chip_web: "Сайт",
+            chip_bot: "Telegram Бот",
+            chip_crm: "CRM Система",
+            chip_other: "Другое",
+            label_details: "Кратко о проекте или задаче:",
+            placeholder_details: "Например: Нужен быстрый лендинг для продажи нового товара...",
+            checkbox_nda: "Сохранить конфиденциальность (NDA)",
+            btn_submit_full: "Обсудить проект",
+            form_security: "Никакого спама. Ваши данные в безопасности.",
             express_title: "Мало времени?",
-            express_desc: "Оставьте контакт, и мы перезвоним в течение 15 минут.",
+            express_desc: "Оставьте контакт, я напишу или перезвоню в течение 15 минут.",
             label_name_simple: "Ваше имя *",
-            placeholder_name_simple: "Введите ваше имя",
+            placeholder_name_simple: "Введите имя",
             label_phone_simple: "Телефон или Telegram *",
             placeholder_phone_simple: "+998 (90) 000-00-00",
-            btn_submit_express: "📞 Перезвоните мне за 15 минут",
+            btn_submit_express: "Связаться со мной",
 
-            footer_tagline: "Senior Full-Stack Engineer & Технологический Партнер. В каждом проекте работаем на максимальную окупаемость бизнеса клиента.",
-            footer_nav_title: "Страницы",
+            footer_tagline: "Full-Stack Разработчик & Технический Партнер. Ташкент, Узбекистан.",
+            footer_nav_title: "Навигация",
             footer_serv_title: "Услуги",
-            footer_contact_title: "Прямая связь",
-            footer_rights: "© 2026 lazizfullstack.dev. Все права защищены. Работаем по официальному договору.",
-            footer_contract: "Образец Договора",
+            footer_contact_title: "Контакты",
+            footer_rights: "© 2026 lazizfullstack.dev. Все права защищены.",
+            footer_contract: "Условия гарантии",
             footer_top: "Наверх ↑",
 
-            modal_success_title: "Заявка успешно принята!",
-            modal_dear: "Уважаемый",
-            modal_success_desc: "ваша заявка зарегистрирована. Мы свяжемся с вами в течение 15 минут.",
+            modal_success_title: "Заявка отправлена!",
+            modal_dear: "Спасибо",
+            modal_success_desc: "ваше сообщение получено. Я свяжусь с вами в течение 15 минут.",
             modal_summary_type: "Тип проекта:",
             modal_summary_contact: "Контакт:",
-            btn_telegram_direct: "💬 Написать в Telegram напрямую →",
+            btn_telegram_direct: "Написать сразу в Telegram →",
             btn_close: "Закрыть",
 
-            contract_modal_title: "Ключевые Гарантии Официального Договора",
-            contract_modal_desc: "Юридические обязательства, защищающие ваши средства и время:",
-            c_c1_title: "1. 100% Передача Исходного Кода Клиенту",
-            c_c1_desc: "После завершения работ весь код (репозиторий GitHub, файлы и базы данных) переходят в полную собственность заказчика без скрытых условий.",
-            c_c2_title: "2. Конфиденциальность и Коммерческая Тайна (NDA)",
-            c_c2_desc: "Ваши бизнес-идеи, технологии и клиентские базы защищены от разглашения третьим лицам с полной юридической ответственностью.",
-            c_c3_title: "3. Гарантия Сроков с Выплатой Пени",
-            c_c3_desc: "Если сдача проекта задерживается по вине исполнителя, за каждый день просрочки выплачивается неустойка по условиям договора.",
-            c_c4_title: "4. 30 Дней Бесплатного Гарантийного Сервиса",
-            c_c4_desc: "После запуска в течение одного месяца любые выявленные технические сбои и баги устраняются оперативно и абсолютно бесплатно.",
+            contract_modal_title: "Основные Условия и Гарантии",
+            contract_modal_desc: "Принципы, защищающие ваши вложения и время:",
+            c_c1_title: "1. 100% передача исходного кода",
+            c_c1_desc: "Все исходники, базы данных и доступы передаются в вашу полную собственность без скрытых подписок.",
+            c_c2_title: "2. Конфиденциальность (NDA)",
+            c_c2_desc: "Ваша бизнес-идея, данные клиентов и процессы защищены от передачи третьим лицам.",
+            c_c3_title: "3. Соблюдение сроков",
+            c_c3_desc: "Сроки фиксируются заранее. Все промежуточные этапы демонстрируются регулярно.",
+            c_c4_title: "4. 30 дней бесплатной поддержки",
+            c_c4_desc: "После запуска бесплатно сопровождаю проект, устраняя любые технические вопросы.",
             btn_understood_close: "Понятно, закрыть",
-            btn_go_to_order: "Перейти к заказу →"
+            btn_go_to_order: "Начать проект →"
         },
 
         en: {
-            title: "LazizFullStack — High-Converting Web & Telegram Systems for Businesses",
-            scarcity_status: "Accepting new high-impact projects",
-            scarcity_text: "To ensure 100% engineering quality and dedicated focus, we take only 2-3 projects per month.",
-            scarcity_link: "Reserve your slot →",
-            brand_role: "Full-Stack Engineer & Tech Partner",
+            title: "Laziz Bozorov — Full-Stack Developer & Tech Partner | Tashkent",
+            scarcity_status: "Open for new projects",
+            scarcity_text: "To ensure 100% focus and code quality, I only take on 2-3 key client projects at a time.",
+            scarcity_link: "Get in touch →",
+            brand_role: "Full-Stack Developer",
             nav_services: "Services",
-            nav_portfolio: "Case Studies",
-            nav_calculator: "Calculator",
-            nav_guarantees: "Guarantees",
-            nav_process: "Workflow",
+            nav_portfolio: "Portfolio",
+            nav_calculator: "Estimator",
+            nav_guarantees: "Why Me",
+            nav_process: "Process",
+            nav_contact: "Contact",
             nav_home: "Home",
-            lang_label: "Select Language:",
-            btn_contract_sample: "Contract sample",
-            btn_start_project: "Start a project",
-            btn_submit_order: "Submit order",
+            lang_label: "Choose language:",
+            btn_contract_sample: "Guarantees",
+            btn_start_project: "Chat on Telegram",
+            btn_submit_order: "Chat on Telegram",
 
-            hero_pill: "Official Contract • Strict Deadlines • 30 Days Free Warranty",
-            hero_h1: "We build IT systems that <span class=\"gradient-text-cyan-indigo\">bring paying customers</span> and cut operational costs.",
-            hero_lead: "No bloated code or useless features. We build what actually drives business ROI: high-converting websites, Telegram WebApp commerce, and custom CRM systems.",
-            hero_btn_calc: "Calculate Price & Order",
-            hero_btn_cases: "Explore Recent Case Studies →",
-            proof_15min: "Free 15-minute consultation",
-            proof_ownership: "100% full source code ownership",
-            proof_payment: "Secure milestone-based payments",
+            hero_pill: "Available for projects • Tashkent, Uzbekistan",
+            hero_h1: "Hi, I'm <span class=\"gradient-text-cyan-indigo\">Laziz Bozorov</span>. I build high-performance websites &amp; Telegram systems.",
+            hero_lead: "No agencies, no middle managers. You work directly with the engineer who builds your product — transparent communication, clean code, and fast delivery.",
+            hero_btn_calc: "Chat on Telegram",
+            hero_btn_cases: "Estimate project",
+            hero_btn_portfolio: "View projects →",
+            proof_15min: "Direct communication (0% middlemen)",
+            proof_ownership: "100% IP & source code ownership",
+            proof_payment: "30-day post-launch warranty",
 
-            hero_box_badge: "CONCRETE BUSINESS ROI",
-            hero_box_status: "PROVEN RESULTS",
-            benefit1_title: "Ultra-Fast High-Converting Websites",
-            benefit1_desc: "Your ad spend won't be wasted. Sites load in under 1.5 seconds and turn visitors into qualified leads.",
-            benefit2_title: "Telegram WebApp Commerce",
-            benefit2_desc: "Fastest ROI channel in modern markets. Customers browse and pay directly inside Telegram without installing an app.",
-            benefit3_title: "Custom CRM & Workflow Automation",
-            benefit3_desc: "Sales reps never lose leads. Financial metrics, pipeline, and inventory are controlled on a unified real-time dashboard.",
-            hero_penalty_note: "Guaranteed deadline: We pay financial penalties for every day of delay.",
+            dev_card_role: "Full-Stack Developer & Tech Partner",
+            dev_card_bio: "\"I dislike agency bureaucracy. I build every project myself, stay in touch daily, and deliver clean, robust code that genuinely helps your business grow.\"",
+            dev_stack_label: "Tech stack:",
+            dev_perk_1: "100% direct developer access",
+            dev_perk_2: "Clean, maintainable source code",
+            dev_perk_3: "30 days free post-launch support",
+            btn_tg_direct_hero: "Chat directly on Telegram",
 
-            stat1_title: "Delivered Projects",
-            stat1_desc: "Live production software powering real businesses",
-            stat2_title: "Years of Experience",
-            stat2_desc: "Full-Stack engineering & scalable architecture",
-            stat3_title: "Fast Response",
-            stat3_desc: "We reply to client inquiries in 15 minutes",
-            stat4_title: "Zero Vendor Lock-in",
-            stat4_desc: "All source code is 100% owned by the client",
+            stat1_title: "Direct Access",
+            stat1_desc: "Zero middlemen, direct line with the engineer",
+            stat2_title: "Fast Response",
+            stat2_desc: "Instant communication on Telegram",
+            stat3_title: "100% Code Ownership",
+            stat3_desc: "All source code and servers belong to you",
+            stat4_title: "30-Day Warranty",
+            stat4_desc: "Free technical support after launch",
 
-            guar_badge: "IRONCLAD GUARANTEES",
-            guar_title: "Your investment is <span class=\"gradient-text-cyan-indigo\">100% protected</span>",
-            guar_subtitle: "Tired of unreliable freelancers and broken deadlines? Here is how we ensure your complete peace of mind:",
-            g1_title: "1. Official Binding Contract & Strict NDA",
-            g1_desc: "Your business secrets, concepts, and customer data are legally secured. Official legal contracts with full invoice options.",
-            g1_btn: "View contract clauses →",
-            g2_title: "2. Ironclad Deadline (Penalty Clause)",
-            g2_desc: "Your time is money. If delivery is delayed by even one business day, we pay pre-agreed contract penalty fees.",
-            g3_title: "3. 100% Full Source Code Ownership (Full IP)",
-            g3_desc: "Upon completion, all source code (GitHub, databases, and server configurations) is transferred directly to your name.",
-            g4_title: "4. 30-Day Free VIP Technical Warranty",
-            g4_desc: "We don't disappear after launch. For 30 calendar days, all server monitoring, bug fixes, and team training are completely free.",
+            guar_badge: "WORKING PRINCIPLES",
+            guar_title: "Why work with me <span class=\"gradient-text-cyan-indigo\">instead of an agency?</span>",
+            guar_subtitle: "No overhead, no markup, no broken telephone:",
+            g1_title: "1. Direct Communication",
+            g1_desc: "At agencies, instructions get lost between managers. Here, you discuss technical decisions directly with the builder.",
+            g1_btn: "View guarantees →",
+            g2_title: "2. Predictable Timelines & Demos",
+            g2_desc: "Your time matters. I work in milestone sprints and provide regular live demos.",
+            g3_title: "3. Clean Code & 100% IP Ownership",
+            g3_desc: "Upon delivery, all repository code and databases are transferred entirely to you. No vendor lock-in.",
+            g4_title: "4. 30 Days Free Warranty",
+            g4_desc: "I don't disappear after handover. Enjoy 30 days of free bug fixes and operational guidance.",
 
-            serv_badge: "SERVICES & TRANSPARENT PRICING",
-            serv_title: "Every dollar invested must yield <span class=\"gradient-text-cyan-indigo\">maximum ROI</span>",
-            serv_subtitle: "Only battle-tested solutions that we master completely. Pick any service with a single click to start:",
+            serv_badge: "SERVICES & ESTIMATES",
+            serv_title: "High-ROI services <span class=\"gradient-text-cyan-indigo\">tailored for business growth</span>",
+            serv_subtitle: "Battle-tested solutions built with clean modern architecture. Select in 1 click:",
             s1_time: "5–10 business days",
-            s1_title: "High-Converting Landing Pages & Sites",
-            s1_goal: "Business outcome: Boost lead conversion rates by 2-3x. Sites load instantly on both mobile and desktop devices.",
-            s1_f1: "Trust-inducing modern visual design",
-            s1_f2: "Direct instant lead forwarding to Telegram / CRM",
-            s1_f3: "Google & Search Engine Optimization (SEO)",
-            s1_f4: "Intuitive admin panel to edit copy and prices",
+            s1_title: "Fast Website & Landing Page",
+            s1_goal: "Value: Loads in under 1 second on mobile devices, capturing high-intent leads.",
+            s1_f1: "Clean, high-trust custom design",
+            s1_f2: "Direct instant Telegram notifications",
+            s1_f3: "Built-in SEO architecture",
+            s1_f4: "Fully responsive on mobile",
             s2_time: "4–8 business days",
-            s2_title: "Telegram Bot & WebApp E-Commerce",
-            s2_goal: "Business outcome: Frictionless checkout. Customers browse catalogs and pay directly inside Telegram with zero friction.",
-            s2_f1: "Smooth visual store interface inside Telegram",
-            s2_f2: "Online payment integration (Stripe, Payme, Click)",
-            s2_f3: "Dedicated management bot for orders & courier routing",
-            s2_f4: "Automated customer notifications and promotions",
-            s3_time: "15–25 business days",
-            s3_title: "Custom CRM & Management Platforms",
-            s3_goal: "Business outcome: Eliminate lost leads, prevent revenue leakage, and systematize team workflows.",
-            s3_f1: "Customer database with visual sales funnel",
-            s3_f2: "Cash-flow, revenue, and net profit analytics",
-            s3_f3: "Role-based permissions (Cashier, Manager, Executive)",
-            s3_f4: "1-click data export to Excel and financial reports",
-            s4_time: "20–35 business days",
-            s4_title: "Cross-Platform Mobile Apps (iOS & Android)",
-            s4_goal: "Business outcome: Stay right inside your customer's pocket. Push notifications drive continuous repeat purchases.",
-            s4_f1: "Single high-performance codebase for iOS and Android",
-            s4_f2: "Guaranteed publication on App Store & Google Play",
-            s4_f3: "Frictionless SMS OTP phone authentication",
-            s4_f4: "Lightning-fast and intuitive checkout UX",
+            s2_title: "Telegram Bot & WebApp Store",
+            s2_goal: "Value: Customers browse items and check out inside Telegram with Click/Payme.",
+            s2_f1: "Interactive in-app mini catalog",
+            s2_f2: "Automated payment gateways",
+            s2_f3: "Instant order forwarding to admins",
+            s2_f4: "Automated customer notifications",
+            s3_time: "12–20 business days",
+            s3_title: "CRM & Internal Dashboard",
+            s3_goal: "Value: Streamline operations and monitor revenue in a single, secure control room.",
+            s3_f1: "Customer directory & order pipeline",
+            s3_f2: "Revenue and cashflow reporting",
+            s3_f3: "Role-based access permissions",
+            s3_f4: "1-click Excel export",
+            s4_time: "3–7 business days",
+            s4_title: "API & Technical Integrations",
+            s4_goal: "Value: Connect payments, SMS alerts, or speed up your existing applications.",
+            s4_f1: "Payme, Click & card payment integration",
+            s4_f2: "SMS & Telegram automated alerts",
+            s4_f3: "Website speed & performance optimization",
+            s4_f4: "Database and cloud server setup",
             price_label: "Starting at:",
             btn_choose_service: "Select this service →",
-            popular_badge: "Maximum Profit Driver",
+            popular_badge: "Most Requested",
 
-            cases_badge: "PROVEN CASE STUDIES",
-            cases_title: "Concrete business results <span class=\"gradient-text-cyan-indigo\">our clients achieved</span>",
-            cases_subtitle: "Not just visual mocks — here is the business obstacle we solved and the real profit delivered:",
-            case1_tag: "High-Converting Website",
-            case1_time: "Delivered in 7 days",
-            case1_title: "Conversion-Focused B2B Landing Page",
-            comp_before: "Before launch:",
-            case1_before: "Old website had a dismal 1% conversion rate — out of 100 paid ad clicks, only 1 user called.",
-            comp_after: "Measured outcome:",
-            case1_after: "With lightning page speed and tailored conversion triggers, lead rate jumped to 3.8%. Ad budget ROI doubled immediately.",
-            case2_tag: "Telegram WebApp Store",
-            case2_time: "Delivered in 5 days",
-            case2_title: "Automated Telegram Commerce System",
-            case2_before: "Sales reps replied late in manual chats, losing impatient buyers to competitors.",
-            case2_after: "Launched an interactive WebApp with instant payments. Over 65% of orders now process automatically, even overnight.",
-            case3_tag: "Business CRM System",
-            case3_time: "Delivered in 18 days",
-            case3_title: "Custom CRM for Services Company",
-            case3_before: "Accounting was handled on paper notebooks. Reconciling monthly revenue took 3 full days.",
-            case3_after: "All branches and cash registers are unified on one screen. The CEO checks net profit in real time, reports take 1 second.",
-            btn_order_similar: "Order a similar system →",
+            cases_badge: "PROVEN RESULTS",
+            cases_title: "Real outcomes delivered <span class=\"gradient-text-cyan-indigo\">for real clients</span>",
+            cases_subtitle: "Not just screenshots — real problems solved with scalable code:",
+            case1_tag: "Telegram WebApp Store",
+            case1_time: "Delivered in 5 days",
+            case1_title: "Automated Telegram E-Commerce",
+            comp_before: "Client Challenge:",
+            case1_before: "Staff replied slowly to chats, losing impatient buyers to other shops.",
+            comp_after: "Delivered Solution:",
+            case1_after: "Built a Telegram mini-store with instant Payme/Click checkout. Orders now process 24/7 automatically.",
+            case2_tag: "Website & Landing Page",
+            case2_time: "Delivered in 7 days",
+            case2_title: "High-Speed Corporate Web Presence",
+            case2_before: "The old site was sluggish on mobile, yielding minimal inbound leads.",
+            case2_after: "Rebuilt with Next.js (1.2s load time). Inquiries land instantly in the staff Telegram group.",
+            case3_tag: "Internal Tools (CRM)",
+            case3_time: "Delivered in 15 days",
+            case3_title: "Order Management Dashboard (Mini CRM)",
+            case3_before: "All transactions were scribbled in notebooks; monthly audits took days.",
+            case3_after: "Built a clean web dashboard for tracking order statuses and cash flow. 1-click audit reports.",
+            btn_order_similar: "Discuss a similar project →",
 
-            calc_badge: "ACCURATE QUOTE",
-            calc_title: "Estimate your project cost <span class=\"gradient-text-cyan-indigo\">in 1 minute</span>",
-            calc_subtitle: "Zero hidden charges. Pick what your business requires and get a realistic quote:",
-            calc_step1: "What type of software do you need?",
-            calc_step2: "Select add-on capabilities:",
-            calc_type_web: "High-Converting Website",
-            calc_type_bot: "Telegram Store / Bot",
-            calc_type_crm: "CRM / Internal System",
-            calc_type_mobile: "Mobile App (iOS/Android)",
+            calc_badge: "ESTIMATOR",
+            calc_title: "Estimate project budget <span class=\"gradient-text-cyan-indigo\">&amp; timeline</span>",
+            calc_subtitle: "No hidden charges. Choose your requirements to see an honest estimate:",
+            calc_step1: "What do you need built?",
+            calc_step2: "Optional capabilities:",
+            calc_type_web: "Website / Landing",
+            calc_type_bot: "Telegram Bot / WebApp",
+            calc_type_crm: "CRM / Management Tool",
+            calc_type_mobile: "API / Integration",
             from_text: "from",
-            days_text: "business days",
-            feat_billing_title: "💳 Online Payment Gateway",
-            feat_billing_desc: "Direct bank settlement via Stripe, Payme, Cards (+$100)",
-            feat_admin_title: "📊 Custom Admin Dashboard",
-            feat_admin_desc: "Easily update products, content, and prices (+$150)",
-            feat_lang_title: "🌐 Multilingual (UZ / RU / EN)",
-            feat_lang_desc: "Seamless localization across multiple languages (+$80)",
-            feat_notify_title: "📲 SMS / Telegram Notifications",
-            feat_notify_desc: "Instant automated alerts for every new order (+$70)",
+            days_text: "work days",
+            feat_billing_title: "Online Payment Gateway",
+            feat_billing_desc: "Payme, Click integration (+$100)",
+            feat_admin_title: "Admin Dashboard",
+            feat_admin_desc: "Manage products & prices yourself (+$120)",
+            feat_lang_title: "Multi-Language (UZ / RU / EN)",
+            feat_lang_desc: "Full localization support (+$60)",
+            feat_notify_title: "Telegram / SMS Alerts",
+            feat_notify_desc: "Real-time order notifications (+$50)",
             calc_box_badge: "PROJECT ESTIMATE",
-            calc_est_price: "Estimated Price:",
-            calc_fixed_note: "* Price is legally fixed once written into contract",
+            calc_est_price: "Estimated Cost:",
+            calc_fixed_note: "* Final price confirmed based on project specs",
             calc_est_time: "Estimated Timeline:",
-            calc_bonuses_title: "Included for FREE in your package:",
-            bonus_1: "Official legally binding contract",
-            bonus_2: "30 days of free technical warranty & support",
-            bonus_3: "100% full source code and server access",
-            btn_calc_submit: "Order with this estimate →",
+            calc_bonuses_title: "Included at zero extra cost:",
+            bonus_1: "Direct consultation with the developer",
+            bonus_2: "30 days free post-launch support",
+            bonus_3: "Full source code and ownership transfer",
+            btn_calc_submit: "Inquire with this estimate →",
 
             proc_badge: "WORKFLOW",
-            proc_title: "How we work <span class=\"gradient-text-cyan-indigo\">from discovery to launch?</span>",
-            proc_subtitle: "Zero ambiguity. Step-by-step transparent collaboration:",
-            proc_step1_badge: "STEP 1",
-            proc_step1_title: "Discovery & Scope",
-            proc_step1_desc: "We understand your business goals, outline exact requirements, and write down fixed prices and deadlines.",
-            proc_step1_time: "1 day • 100% Free",
-            proc_step2_badge: "STEP 2",
-            proc_step2_title: "Contract & UI/UX",
-            proc_step2_desc: "We sign the contract and craft high-fidelity prototypes. Coding starts only after your full approval.",
-            proc_step2_time: "2–3 days",
-            proc_step3_badge: "STEP 3",
-            proc_step3_title: "Development & Demo",
-            proc_step3_desc: "We engineer clean, secure code and provide you with weekly live demos on staging servers.",
-            proc_step3_time: "On schedule",
-            proc_step4_badge: "STEP 4",
-            proc_step4_title: "Launch & 30-Day Warranty",
-            proc_step4_desc: "We deploy to your live production server and provide 30 days of free monitoring, tweaks, and team training.",
-            proc_step4_time: "Complete peace of mind",
+            proc_title: "How we collaborate <span class=\"gradient-text-cyan-indigo\">step by step</span>",
+            proc_subtitle: "Clear, structured, and completely transparent:",
+            proc_step1_title: "Discovery & Plan",
+            proc_step1_desc: "We discuss your goals and choose the most cost-effective architecture.",
+            proc_step2_title: "Design & Agreement",
+            proc_step2_desc: "We align on layouts and scope before writing production code.",
+            proc_step3_title: "Build & Milestones",
+            proc_step3_desc: "I write clean code, integrate APIs, and provide regular interactive demos.",
+            proc_step4_title: "Launch & Support",
+            proc_step4_desc: "Deployment to production, full repository transfer, and 30 days of warranty.",
 
-            funnel_badge: "🔒 OFFICIAL BINDING CONTRACT",
-            funnel_heading: "Ready to place your project in <span class=\"gradient-text-cyan-indigo\">reliable hands?</span>",
-            funnel_lead: "Fill out the form on the right. Within <strong>15 minutes</strong>, we will personally connect with you to provide a free consultation and exact project estimate.",
-            funnel_step1_title: "We connect in 15 minutes",
-            funnel_step1_desc: "We discuss your project via Telegram or direct phone call.",
-            funnel_step2_title: "Honest timeline & quote",
-            funnel_step2_desc: "Pay only for what generates value. No hidden bloat.",
-            funnel_step3_title: "Legally secured contract",
-            funnel_step3_desc: "Strict deadline penalty clauses written into law.",
-            direct_contact_label: "Direct immediate contact:",
-            tg_fast: "Telegram (Fastest reply)",
-            phone_text: "Phone",
+            funnel_badge: "START A PROJECT",
+            funnel_heading: "Have a project in mind? <span class=\"gradient-text-cyan-indigo\">Let's talk</span>",
+            funnel_lead: "No red tape. Drop a quick note or message me directly on Telegram.",
+            funnel_step1_title: "15-minute response",
+            funnel_step1_desc: "Quick feedback on feasibility and costs.",
+            funnel_step2_title: "Clear quote & deadline",
+            funnel_step2_desc: "No unexpected add-ons or scope creep.",
+            funnel_step3_title: "Safe collaboration",
+            funnel_step3_desc: "NDA and formal contracts available upon request.",
 
-            tab_full: "📝 Detailed Project Order",
-            tab_express: "⚡ 15-Sec Callback Request",
-            selected_label: "Selected:",
-            label_name: "Your Name or Company *",
-            placeholder_name: "e.g. Alex Morgan — Founder",
-            label_contact: "Phone number or Telegram @username *",
-            placeholder_contact: "+1 (555) 000-0000 or @username",
-            label_type: "Project type:",
-            chip_web: "🌐 Website",
-            chip_bot: "🤖 Telegram Bot",
-            chip_crm: "⚡ CRM System",
-            chip_mobile: "📱 Mobile App",
-            chip_other: "🧩 Other",
-            label_details: "Brief project overview or goals:",
-            placeholder_details: "e.g. We need a high-converting landing page to sell our B2B SaaS...",
-            checkbox_nda: "🔒 Require strict Non-Disclosure Agreement (NDA)",
-            btn_submit_full: "Submit Order & Get Free Quote",
-            form_security: "🛡️ Zero spam. Your contact info is strictly confidential.",
+            direct_contact_label: "Direct immediate reach:",
+            tg_fast: "Telegram (Fastest response)",
+            tab_full: "Detailed Project Spec",
+            tab_express: "Quick Callback",
+            calc_synced_banner: "Estimate transferred to form successfully!",
+            label_name: "Your Name *",
+            placeholder_name: "e.g. Sardor",
+            label_contact: "Phone or Telegram handle *",
+            placeholder_contact: "+998 (90) 123-45-67 or @username",
+            label_type: "Project Type:",
+            chip_web: "Website",
+            chip_bot: "Telegram Bot",
+            chip_crm: "CRM Tool",
+            chip_other: "Other",
+            label_details: "Project details or goals:",
+            placeholder_details: "e.g. We need a clean landing page for a new product launch...",
+            checkbox_nda: "Keep my project confidential (NDA)",
+            btn_submit_full: "Discuss Project",
+            form_security: "Zero spam. Your data remains strictly confidential.",
             express_title: "Short on time?",
-            express_desc: "Leave your contact and we will call you back within 15 minutes.",
+            express_desc: "Leave your contact and I'll reach out within 15 minutes.",
             label_name_simple: "Your Name *",
             placeholder_name_simple: "Enter your name",
-            label_phone_simple: "Phone or Telegram handle *",
-            placeholder_phone_simple: "+1 (555) 000-0000",
-            btn_submit_express: "📞 Call me back in 15 minutes",
+            label_phone_simple: "Phone or Telegram *",
+            placeholder_phone_simple: "+998 (90) 000-00-00",
+            btn_submit_express: "Request 15-Minute Call",
 
-            footer_tagline: "Senior Full-Stack Engineer & Trusted Tech Partner. In every project, we work to maximize the client's business revenue.",
-            footer_nav_title: "Pages",
+            footer_tagline: "Full-Stack Developer & Tech Partner. Tashkent, Uzbekistan.",
+            footer_nav_title: "Navigation",
             footer_serv_title: "Services",
-            footer_contact_title: "Direct Contact",
-            footer_rights: "© 2026 lazizfullstack.dev. All rights reserved. Operating under official contracts.",
-            footer_contract: "Contract Sample",
+            footer_contact_title: "Contact",
+            footer_rights: "© 2026 lazizfullstack.dev. All rights reserved.",
+            footer_contract: "Guarantees",
             footer_top: "Back to top ↑",
 
-            modal_success_title: "Application Received!",
-            modal_dear: "Dear",
-            modal_success_desc: "your project request is registered. We will contact you within 15 minutes.",
+            modal_success_title: "Inquiry Received!",
+            modal_dear: "Thank you",
+            modal_success_desc: "your message has been saved. I'll reach out within 15 minutes.",
             modal_summary_type: "Project Type:",
             modal_summary_contact: "Contact:",
-            btn_telegram_direct: "💬 Message directly on Telegram →",
+            btn_telegram_direct: "Chat directly on Telegram →",
             btn_close: "Close",
 
-            contract_modal_title: "Key Guarantees of the Official Contract",
-            contract_modal_desc: "Legally enforceable clauses protecting your capital, time, and intellectual property:",
-            c_c1_title: "1. 100% Source Code Ownership (Zero Lock-in)",
-            c_c1_desc: "Upon delivery, all source code, GitHub repositories, databases, and assets become the client's sole exclusive property.",
-            c_c2_title: "2. Confidentiality & Non-Disclosure (NDA)",
-            c_c2_desc: "Your proprietary ideas, business logic, and customer databases are legally protected against any third-party disclosure.",
-            c_c3_title: "3. Enforceable Deadline Penalty Clause",
-            c_c3_desc: "If project delivery is delayed by the engineer, a daily financial penalty is paid according to contract terms.",
-            c_c4_title: "4. 30 Days Free Technical Warranty",
-            c_c4_desc: "For one month post-launch, all technical bugs, performance tuning, and team onboarding are handled completely free of charge.",
+            contract_modal_title: "Working Terms & Guarantees",
+            contract_modal_desc: "Core commitments safeguarding your time and capital:",
+            c_c1_title: "1. 100% IP & Code Ownership",
+            c_c1_desc: "All source code, server setups, and databases become your sole property with zero recurring license traps.",
+            c_c2_title: "2. Confidentiality & NDA",
+            c_c2_desc: "Your ideas, customer lists, and proprietary operations are never shared with third parties.",
+            c_c3_title: "3. Predictable Timelines",
+            c_c3_desc: "Deadlines are defined upfront and milestones are delivered transparently.",
+            c_c4_title: "4. 30-Day Free Warranty",
+            c_c4_desc: "Free operational support and bug resolution for 30 days after public release.",
             btn_understood_close: "Understood, close",
-            btn_go_to_order: "Go to order form →"
+            btn_go_to_order: "Start project →"
         }
     };
 
@@ -724,10 +695,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dict = translations[lang];
 
-        // 1. Update Title
         if (dict.title) document.title = dict.title;
 
-        // 2. Update all elements with [data-i18n]
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) {
@@ -735,7 +704,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 3. Update all placeholders with [data-i18n-placeholder]
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
             if (dict[key]) {
@@ -743,18 +711,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 4. Update language switcher buttons active state
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
 
-        // 5. Re-run calculator to adapt day counts and units
-        if (typeof calculate === 'function') {
-            calculate();
-        }
+        updateCalculator();
     };
 
-    // Attach click listener to all language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -764,255 +727,168 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* --------------------------------------------------------------------------
-       3. MOUSE SPOTLIGHT (Bento Cards)
+       3. MOBILE DRAWER NAVIGATION
        -------------------------------------------------------------------------- */
-    const cards = document.querySelectorAll('.bento-card');
-    window.addEventListener('mousemove', (e) => {
-        cards.forEach(card => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            if (x > -100 && x < rect.width + 100 && y > -100 && y < rect.height + 100) {
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            }
-        });
-    }, { passive: true });
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
 
-    /* --------------------------------------------------------------------------
-       4. MOBILE DRAWER TOGGLE
-       -------------------------------------------------------------------------- */
-    const toggleBtn = document.getElementById('mobileMenuToggle');
-    const drawer = document.getElementById('mobileDrawer');
-    if (toggleBtn && drawer) {
-        toggleBtn.addEventListener('click', () => {
-            drawer.classList.toggle('active');
+    if (mobileToggle && mobileDrawer) {
+        mobileToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('active');
         });
 
-        drawer.querySelectorAll('.mobile-link, #btnOpenContractMobile').forEach(el => {
-            el.addEventListener('click', () => {
-                drawer.classList.remove('active');
+        mobileDrawer.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('active');
             });
         });
     }
 
     /* --------------------------------------------------------------------------
-       5. ANIMATED COUNTERS (Hero Stats)
+       4. INTERACTIVE CALCULATOR (ESTIMATOR)
        -------------------------------------------------------------------------- */
-    const counters = document.querySelectorAll('.counter[data-target]');
-    if (counters.length) {
-        let hasRun = false;
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !hasRun) {
-                    hasRun = true;
-                    counters.forEach(counter => {
-                        const target = parseInt(counter.getAttribute('data-target'), 10);
-                        const duration = 1400;
-                        const stepTime = 25;
-                        const steps = duration / stepTime;
-                        const increment = target / steps;
-                        let current = 0;
+    const baseEstimates = {
+        website: { price: 300, daysUz: "5–10 ish kuni", daysRu: "5–10 раб. дней", daysEn: "5–10 work days" },
+        bot:     { price: 250, daysUz: "4–8 ish kuni",  daysRu: "4–8 раб. дней",  daysEn: "4–8 work days" },
+        crm:     { price: 700, daysUz: "12–20 ish kuni",daysRu: "12–20 раб. дней",daysEn: "12–20 work days" },
+        other:   { price: 150, daysUz: "3–7 ish kuni",  daysRu: "3–7 раб. дней",  daysEn: "3–7 work days" }
+    };
 
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= target) {
-                                counter.textContent = target;
-                                clearInterval(timer);
-                            } else {
-                                counter.textContent = Math.floor(current);
-                            }
-                        }, stepTime);
-                    });
-                    observer.disconnect();
-                }
-            });
-        }, { threshold: 0.2 });
-
-        const statsSection = document.querySelector('.hero-stats-bento');
-        if (statsSection) observer.observe(statsSection);
-    }
-
-    /* --------------------------------------------------------------------------
-       6. INTERACTIVE CALCULATOR (Multilingual & High-Trust)
-       -------------------------------------------------------------------------- */
-    const typeInputs = document.querySelectorAll('input[name="calcProjectType"]');
+    const calcPriceEl = document.getElementById('calcEstimatedPrice');
+    const calcDaysEl = document.getElementById('calcEstimatedDays');
     const typeCards = document.querySelectorAll('.calc-type-card');
-    const featureCheckboxes = document.querySelectorAll('input[name="calcFeatures"]');
-    const minPriceEl = document.getElementById('calcMinPrice');
-    const maxPriceEl = document.getElementById('calcMaxPrice');
-    const daysDisplayEl = document.getElementById('calcDaysDisplay');
-    const btnTransferCalc = document.getElementById('btnTransferCalc');
+    const featBilling = document.getElementById('calcFeatBilling');
+    const featAdmin = document.getElementById('calcFeatAdmin');
+    const featLang = document.getElementById('calcFeatLang');
+    const featNotify = document.getElementById('calcFeatNotify');
+    const btnApplyCalc = document.getElementById('btnApplyCalcToOrder');
 
-    const projectTypes = {
-        website: { basePrice: 350, baseDays: 7, chipVal: "website" },
-        bot: { basePrice: 250, baseDays: 5, chipVal: "bot" },
-        webapp: { basePrice: 800, baseDays: 18, chipVal: "webapp" },
-        mobile: { basePrice: 1200, baseDays: 25, chipVal: "mobile" }
-    };
-
-    const featureItems = {
-        billing: { price: 100, days: 2 },
-        admin: { price: 150, days: 3 },
-        multilang: { price: 80, days: 2 },
-        sms: { price: 70, days: 1 }
-    };
-
-    const calculate = () => {
-        let selectedKey = 'website';
-        typeInputs.forEach(i => {
-            if (i.checked) selectedKey = i.value;
-        });
-
-        typeCards.forEach(c => {
-            const r = c.querySelector('input[type="radio"]');
-            c.classList.toggle('active', r.checked);
-        });
-
-        const cfg = projectTypes[selectedKey] || projectTypes.website;
-        let totalPrice = cfg.basePrice;
-        let totalDays = cfg.baseDays;
-
-        featureCheckboxes.forEach(cb => {
-            if (cb.checked) {
-                const feat = featureItems[cb.value];
-                if (feat) {
-                    totalPrice += feat.price;
-                    totalDays += feat.days;
-                }
-            }
-        });
-
-        const minEstimate = totalPrice;
-        const maxEstimate = Math.round(totalPrice * 1.3);
-
-        const dict = translations[currentLang] || translations.uz;
-        const daysUnit = dict.days_text || "ish kuni";
-
-        if (minPriceEl) minPriceEl.textContent = `$${minEstimate}`;
-        if (maxPriceEl) maxPriceEl.textContent = `$${maxEstimate}`;
-        if (daysDisplayEl) daysDisplayEl.textContent = `${totalDays} ${daysUnit}`;
-
-        // Get localized name of type
-        let localizedTypeName = dict.calc_type_web;
-        if (selectedKey === 'bot') localizedTypeName = dict.calc_type_bot;
-        if (selectedKey === 'webapp') localizedTypeName = dict.calc_type_crm;
-        if (selectedKey === 'mobile') localizedTypeName = dict.calc_type_mobile;
-
-        return {
-            typeKey: selectedKey,
-            typeName: localizedTypeName,
-            chipVal: cfg.chipVal,
-            minPrice: minEstimate,
-            maxPrice: maxEstimate,
-            days: totalDays
-        };
-    };
-
-    typeInputs.forEach(i => i.addEventListener('change', calculate));
-    featureCheckboxes.forEach(i => i.addEventListener('change', calculate));
-
-    if (btnTransferCalc) {
-        btnTransferCalc.addEventListener('click', () => {
-            const smeta = calculate();
-            transferToForm({
-                key: smeta.typeKey,
-                name: smeta.typeName,
-                chipVal: smeta.chipVal,
-                price: smeta.minPrice,
-                maxPrice: smeta.maxPrice,
-                days: smeta.days
-            });
-        });
+    function getSelectedType() {
+        const checked = document.querySelector('input[name="calcType"]:checked');
+        return checked ? checked.value : 'website';
     }
 
-    /* --------------------------------------------------------------------------
-       7. 1-CLICK SERVICE SELECT TO ORDER FORM
-       -------------------------------------------------------------------------- */
-    const selectButtons = document.querySelectorAll('.btn-select-service');
-    selectButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const serviceKey = btn.getAttribute('data-service-key') || 'website';
-            const servicePrice = parseInt(btn.getAttribute('data-service-price') || '350', 10);
-            
-            const dict = translations[currentLang] || translations.uz;
-            let serviceTitle = dict.s1_title;
-            if (serviceKey === 'bot') serviceTitle = dict.s2_title;
-            if (serviceKey === 'webapp') serviceTitle = dict.s3_title;
-            if (serviceKey === 'mobile') serviceTitle = dict.s4_title;
+    function updateCalculator() {
+        const typeKey = getSelectedType();
+        const base = baseEstimates[typeKey] || baseEstimates.website;
 
-            transferToForm({
-                key: serviceKey,
-                name: serviceTitle,
-                chipVal: serviceKey,
-                price: servicePrice,
-                maxPrice: Math.round(servicePrice * 1.35),
-                days: 10
-            });
+        let total = base.price;
+        if (featBilling && featBilling.checked) total += parseInt(featBilling.value, 10);
+        if (featAdmin && featAdmin.checked) total += parseInt(featAdmin.value, 10);
+        if (featLang && featLang.checked) total += parseInt(featLang.value, 10);
+        if (featNotify && featNotify.checked) total += parseInt(featNotify.value, 10);
+
+        if (calcPriceEl) {
+            calcPriceEl.textContent = `$${total}`;
+        }
+
+        if (calcDaysEl) {
+            if (currentLang === 'ru') calcDaysEl.textContent = base.daysRu;
+            else if (currentLang === 'en') calcDaysEl.textContent = base.daysEn;
+            else calcDaysEl.textContent = base.daysUz;
+        }
+    }
+
+    typeCards.forEach(card => {
+        card.addEventListener('click', () => {
+            typeCards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+            const radio = card.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                updateCalculator();
+            }
         });
     });
 
-    const transferToForm = ({ key, name, chipVal, price, maxPrice, days }) => {
-        // Activate full order tab
-        const tabFull = document.getElementById('tabFullOrderBtn');
-        const tabExpress = document.getElementById('tabExpressOrderBtn');
-        const formFull = document.getElementById('formFullOrder');
-        const formExpress = document.getElementById('formExpressOrder');
+    [featBilling, featAdmin, featLang, featNotify].forEach(cb => {
+        if (cb) cb.addEventListener('change', updateCalculator);
+    });
 
-        if (tabFull && formFull) {
-            tabFull.classList.add('active');
-            tabExpress?.classList.remove('active');
-            formFull.classList.add('active');
-            formExpress?.classList.remove('active');
-        }
+    if (btnApplyCalc) {
+        btnApplyCalc.addEventListener('click', () => {
+            const typeKey = getSelectedType();
+            const price = calcPriceEl ? calcPriceEl.textContent : '$300';
+            const days = calcDaysEl ? calcDaysEl.textContent : '5-10';
 
-        // Show banner
-        const banner = document.getElementById('autoSyncBanner');
-        const bannerText = document.getElementById('syncedPackageText');
-        if (banner && bannerText) {
-            bannerText.textContent = `${name} ($${price} - $${maxPrice})`;
-            banner.classList.remove('hidden');
-        }
+            const chip = document.querySelector(`.chip-btn[data-value="${typeKey}"]`);
+            if (chip) chip.click();
 
-        // Select chip
-        const chips = document.querySelectorAll('#projectTypeChips .chip-btn');
-        chips.forEach(chip => {
-            chip.classList.toggle('active', chip.getAttribute('data-value') === chipVal);
-        });
-
-        // Set textarea in current language
-        const textarea = document.getElementById('projectDetails');
-        if (textarea) {
-            const dict = translations[currentLang] || translations.uz;
-            if (currentLang === 'ru') {
-                textarea.value = `[ЗАКАЗ] ${name}. Смета: $${price} - $${maxPrice}. Срок: ${days} дн. Дополнительные требования: `;
-            } else if (currentLang === 'en') {
-                textarea.value = `[ORDER] ${name}. Estimated: $${price} - $${maxPrice}. Timeline: ${days} days. My requirements: `;
-            } else {
-                textarea.value = `[ZAKAS] ${name}. Taxminiy: $${price} - $${maxPrice}. Muddat: ${days} kun. Qo'shimcha talablarim: `;
+            const details = document.getElementById('projectDetails');
+            if (details) {
+                if (currentLang === 'ru') {
+                    details.value = `Расчет из калькулятора:\n- Услуга: ${typeKey.toUpperCase()}\n- Примерная стоимость: ${price}\n- Сроки: ${days}\n\nЗдравствуйте Лазиз, хочу обсудить этот проект!`;
+                } else if (currentLang === 'en') {
+                    details.value = `Estimate summary:\n- Service: ${typeKey.toUpperCase()}\n- Approx Budget: ${price}\n- Timeline: ${days}\n\nHi Laziz, I would like to discuss this project!`;
+                } else {
+                    details.value = `Kalkulyator smetasi:\n- Xizmat: ${typeKey.toUpperCase()}\n- Taxminiy narx: ${price}\n- Muddat: ${days}\n\nAssalomu alaykum Laziz, ushbu loyiha bo'yicha bog'lanmoqchiman!`;
+                }
             }
-        }
 
-        // Scroll to form smoothly
-        const orderSection = document.getElementById('zakas-section');
-        if (orderSection) {
-            orderSection.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                document.getElementById('fullName')?.focus();
-            }, 600);
-        }
-    };
+            const banner = document.getElementById('calcSyncBanner');
+            if (banner) {
+                banner.classList.remove('hidden');
+                setTimeout(() => banner.classList.add('hidden'), 5000);
+            }
+
+            const targetSection = document.getElementById('zakas-section');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                const nameInput = document.getElementById('clientName');
+                if (nameInput) setTimeout(() => nameInput.focus(), 600);
+            }
+        });
+    }
 
     /* --------------------------------------------------------------------------
-       8. DUAL-MODE FORM TABS & CHIPS
+       5. 1-CLICK SERVICE SELECTOR
+       -------------------------------------------------------------------------- */
+    document.querySelectorAll('.btn-select-service').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-service-key') || 'website';
+            const chip = document.querySelector(`.chip-btn[data-value="${key}"]`);
+            if (chip) chip.click();
+
+            const details = document.getElementById('projectDetails');
+            if (details && !details.value) {
+                if (currentLang === 'ru') {
+                    details.value = `Здравствуйте! Меня интересует разработка услуги: ${key.toUpperCase()}. Хотел бы обсудить подробности.`;
+                } else if (currentLang === 'en') {
+                    details.value = `Hi! I am interested in building: ${key.toUpperCase()}. Let's discuss details.`;
+                } else {
+                    details.value = `Assalomu alaykum! Men quyidagi xizmat bo'yicha bog'lanmoqdaman: ${key.toUpperCase()}. Batafsil gaplashsak degandim.`;
+                }
+            }
+
+            const targetSection = document.getElementById('zakas-section');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                const nameInput = document.getElementById('clientName');
+                if (nameInput) setTimeout(() => nameInput.focus(), 600);
+            }
+        });
+    });
+
+    /* --------------------------------------------------------------------------
+       6. CHIPS SELECTOR FOR ORDER FORM
+       -------------------------------------------------------------------------- */
+    const chips = document.querySelectorAll('#projectTypeChips .chip-btn');
+    chips.forEach(c => {
+        c.addEventListener('click', () => {
+            chips.forEach(item => item.classList.remove('active'));
+            c.classList.add('active');
+        });
+    });
+
+    /* --------------------------------------------------------------------------
+       7. DUAL TAB ORDER FORM CONTROLLER
        -------------------------------------------------------------------------- */
     const tabFull = document.getElementById('tabFullOrderBtn');
     const tabExpress = document.getElementById('tabExpressOrderBtn');
     const formFull = document.getElementById('formFullOrder');
     const formExpress = document.getElementById('formExpressOrder');
 
-    if (tabFull && tabExpress) {
+    if (tabFull && tabExpress && formFull && formExpress) {
         tabFull.addEventListener('click', () => {
             tabFull.classList.add('active');
             tabExpress.classList.remove('active');
@@ -1028,164 +904,122 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const btnClearSync = document.getElementById('btnClearSync');
-    if (btnClearSync) {
-        btnClearSync.addEventListener('click', () => {
-            document.getElementById('autoSyncBanner')?.classList.add('hidden');
-            const textarea = document.getElementById('projectDetails');
-            if (textarea) textarea.value = '';
-        });
-    }
-
-    const chips = document.querySelectorAll('#projectTypeChips .chip-btn');
-    chips.forEach(c => {
-        c.addEventListener('click', () => {
-            chips.forEach(chip => chip.classList.remove('active'));
-            c.classList.add('active');
-        });
-    });
-
     /* --------------------------------------------------------------------------
-       9. FORM SUBMISSIONS & MODALS
+       8. MODAL HANDLERS & TELEGRAM DIRECT URL GENERATOR
        -------------------------------------------------------------------------- */
     const modalSuccess = document.getElementById('modalOrderSuccess');
-    const clientNameEl = document.getElementById('modalClientName');
-    const summaryTypeEl = document.getElementById('modalSummaryType');
-    const summaryContactEl = document.getElementById('modalSummaryContact');
-    const orderIdBadge = document.getElementById('modalOrderIdBadge');
-    const btnTelegramDirect = document.getElementById('btnTelegramDirect');
+    const modalContract = document.getElementById('modalContractPreview');
+    const clientNameEl = document.getElementById('modalSuccessClientName');
+    const orderIdEl = document.getElementById('modalOrderIdBadge');
+    const orderTypeEl = document.getElementById('modalOrderTypeBadge');
+    const orderContactEl = document.getElementById('modalOrderContactBadge');
+    const directTelegramLink = document.getElementById('modalDirectTelegramLink');
 
-    const handleSuccess = (data) => {
-        const id = `#LFS-2026-${Math.floor(100 + Math.random() * 900)}`;
-        if (orderIdBadge) orderIdBadge.textContent = id;
-        if (clientNameEl) clientNameEl.textContent = data.name;
-        if (summaryTypeEl) summaryTypeEl.textContent = data.type;
-        if (summaryContactEl) summaryContactEl.textContent = data.contact;
+    function openModal(modal) {
+        if (!modal) return;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+    }
 
-        if (btnTelegramDirect) {
-            let tgMsg = "";
-            if (currentLang === 'ru') {
-                tgMsg = `Здравствуйте Лазиз! Я оставил заявку на lazizfullstack.dev.\n\n` +
-                        `🆔 Номер заказа: ${id}\n` +
-                        `👤 Имя: ${data.name}\n` +
-                        `📞 Контакт: ${data.contact}\n` +
-                        `🚀 Проект: ${data.type}\n` +
-                        `📝 Детали: ${data.details || "Стандартная заявка"}\n\n` +
-                        `Готов обсудить детали сотрудничества!`;
-            } else if (currentLang === 'en') {
-                tgMsg = `Hello Laziz! I just submitted an order on lazizfullstack.dev.\n\n` +
-                        `🆔 Order ID: ${id}\n` +
-                        `👤 Name: ${data.name}\n` +
-                        `📞 Contact: ${data.contact}\n` +
-                        `🚀 Project: ${data.type}\n` +
-                        `📝 Details: ${data.details || "Direct inquiry"}\n\n` +
-                        `Looking forward to discussing the project!`;
-            } else {
-                tgMsg = `Salom Laziz! Men lazizfullstack.dev orqali ariza qoldirdim.\n\n` +
-                        `🆔 Zakas ID: ${id}\n` +
-                        `👤 Ism: ${data.name}\n` +
-                        `📞 Aloqa: ${data.contact}\n` +
-                        `🚀 Tizim: ${data.type}\n` +
-                        `📝 Tafsilotlar: ${data.details || "Mavjud emas"}\n\n` +
-                        `Loyihani tezroq muhokama qilaylik!`;
-            }
-            btnTelegramDirect.href = `https://t.me/lazizfullstack?text=${encodeURIComponent(tgMsg)}`;
+    function closeModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // Success modal close triggers
+    const closeSuccessBtn = document.getElementById('btnCloseOrderSuccessModal');
+    const closeSuccessBtnBottom = document.getElementById('btnCloseOrderSuccessModalBtn');
+    if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', () => closeModal(modalSuccess));
+    if (closeSuccessBtnBottom) closeSuccessBtnBottom.addEventListener('click', () => closeModal(modalSuccess));
+
+    // Contract modal triggers
+    const openContractBtns = [
+        document.getElementById('btnOpenContractModal'),
+        document.getElementById('btnOpenContractMobile'),
+        document.getElementById('btnFooterContract')
+    ];
+    document.querySelectorAll('.btn-open-contract-modal').forEach(b => openContractBtns.push(b));
+
+    openContractBtns.forEach(b => {
+        if (b) b.addEventListener('click', () => openModal(modalContract));
+    });
+
+    const closeContractBtn = document.getElementById('btnCloseContractModal');
+    const closeContractBtnBottom = document.getElementById('btnCloseContractModalBtn');
+    const contractGoOrder = document.getElementById('btnContractGoToOrder');
+
+    if (closeContractBtn) closeContractBtn.addEventListener('click', () => closeModal(modalContract));
+    if (closeContractBtnBottom) closeContractBtnBottom.addEventListener('click', () => closeModal(modalContract));
+    if (contractGoOrder) contractGoOrder.addEventListener('click', () => closeModal(modalContract));
+
+    // Close modals on clicking overlay background
+    [modalSuccess, modalContract].forEach(m => {
+        if (m) {
+            m.addEventListener('click', (e) => {
+                if (e.target === m) closeModal(m);
+            });
+        }
+    });
+
+    // Form Submissions
+    function handleOrderSubmission(clientName, contact, type, details) {
+        const randomId = '#LB-' + Math.floor(100 + Math.random() * 900);
+
+        if (clientNameEl) clientNameEl.textContent = clientName || 'Mijoz';
+        if (orderIdEl) orderIdEl.textContent = randomId;
+        if (orderTypeEl) orderTypeEl.textContent = type;
+        if (orderContactEl) orderContactEl.textContent = contact;
+
+        const tgMessage = `Assalomu alaykum Laziz!\n\nYangi loyiha arizasi (${randomId}):\n👤 Ism: ${clientName}\n📞 Aloqa: ${contact}\n🎯 Turi: ${type}\n📝 Ma'lumot: ${details || 'Tezkor murojaat'}`;
+        const tgUrl = `https://t.me/lazizfullstack?text=${encodeURIComponent(tgMessage)}`;
+
+        if (directTelegramLink) {
+            directTelegramLink.href = tgUrl;
         }
 
-        modalSuccess?.classList.add('active');
-    };
+        openModal(modalSuccess);
+    }
 
     if (formFull) {
         formFull.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = document.getElementById('fullName')?.value || 'Client';
-            const contact = document.getElementById('contactInfo')?.value || '';
+            const name = document.getElementById('clientName').value.trim();
+            const contact = document.getElementById('contactInfo').value.trim();
             const activeChip = document.querySelector('#projectTypeChips .chip-btn.active');
-            const activeType = activeChip ? activeChip.textContent.trim() : 'Web-Sayt';
-            const details = document.getElementById('projectDetails')?.value || '';
+            const type = activeChip ? activeChip.textContent.trim() : 'Veb-Sayt';
+            const details = document.getElementById('projectDetails').value.trim();
 
-            const btn = formFull.querySelector('button[type="submit"]');
-            const orig = btn.innerHTML;
-            btn.disabled = true;
-            btn.innerHTML = '<span>⏳ ...</span>';
-
-            setTimeout(() => {
-                btn.disabled = false;
-                btn.innerHTML = orig;
-                formFull.reset();
-                handleSuccess({ name, contact, type: activeType, details });
-            }, 500);
+            handleOrderSubmission(name, contact, type, details);
+            formFull.reset();
         });
     }
 
     if (formExpress) {
         formExpress.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = document.getElementById('expressName')?.value || 'Client';
-            const contact = document.getElementById('expressPhone')?.value || '';
+            const name = document.getElementById('expressName').value.trim();
+            const contact = document.getElementById('expressPhone').value.trim();
 
-            const btn = formExpress.querySelector('button[type="submit"]');
-            const orig = btn.innerHTML;
-            btn.disabled = true;
-            btn.innerHTML = '<span>⏳ ...</span>';
-
-            setTimeout(() => {
-                btn.disabled = false;
-                btn.innerHTML = orig;
-                formExpress.reset();
-                const callbackType = currentLang === 'ru' ? "Быстрый звонок" : (currentLang === 'en' ? "15-min Callback" : "15-soniyalik Qo'ng'iroq");
-                handleSuccess({ name, contact, type: callbackType, details: "Express request" });
-            }, 400);
+            handleOrderSubmission(name, contact, 'Tezkor Aloqa (15 daqiqa)', 'Mijoz 15 daqiqada qayta aloqaga chiqishni so\'radi.');
+            formExpress.reset();
         });
     }
 
-    // Modal Close logic
-    const closeSuccessBtn = document.getElementById('btnCloseOrderSuccessModal');
-    const closeSuccessBtnBottom = document.getElementById('btnCloseOrderSuccessModalBtn');
-    const closeSuccess = () => modalSuccess?.classList.remove('active');
-
-    closeSuccessBtn?.addEventListener('click', closeSuccess);
-    closeSuccessBtnBottom?.addEventListener('click', closeSuccess);
-    modalSuccess?.addEventListener('click', (e) => {
-        if (e.target === modalSuccess) closeSuccess();
+    /* --------------------------------------------------------------------------
+       9. SUBTLE MOUSE SPOTLIGHT TRACKING (BENTO CARDS)
+       -------------------------------------------------------------------------- */
+    const bentoCards = document.querySelectorAll('.bento-card');
+    bentoCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
     });
 
-    // Contract Modal
-    const modalContract = document.getElementById('modalContractPreview');
-    const openContractBtns = [
-        document.getElementById('btnOpenContractModal'),
-        document.getElementById('btnOpenContractMobile'),
-        document.getElementById('btnNdaModalTrigger'),
-        document.getElementById('btnFooterContract')
-    ];
-    const closeContractBtns = [
-        document.getElementById('btnCloseContractModal'),
-        document.getElementById('btnCloseContractBottom'),
-        document.getElementById('btnContractGoToOrder')
-    ];
-
-    openContractBtns.forEach(b => b?.addEventListener('click', (e) => {
-        e.preventDefault();
-        modalContract?.classList.add('active');
-    }));
-
-    closeContractBtns.forEach(b => b?.addEventListener('click', () => {
-        modalContract?.classList.remove('active');
-    }));
-
-    modalContract?.addEventListener('click', (e) => {
-        if (e.target === modalContract) modalContract.classList.remove('active');
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            modalSuccess?.classList.remove('active');
-            modalContract?.classList.remove('active');
-        }
-    });
-
-    // Initialize with saved or default language
+    // Initialize with preferred or default language
     setLanguage(currentLang);
-
-    console.log(`✅ lazizfullstack.dev initialized in language: ${currentLang}`);
 });
