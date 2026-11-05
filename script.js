@@ -1,7 +1,8 @@
 /**
  * ==========================================================================
- * LAZIZ.DEV — HANDCRAFTED STORYBOOK & GREEN CODE RIBBON LOGIC
- * Authentic • Multi-Language (UZ / RU / EN) • Zero Fake Modals
+ * LAZIZ.DEV — BESPOKE CREATIVE DEVELOPER ENGINE
+ * Inspired by Mike Wilcock Design & SiriusXM Culture Trends
+ * Live Tashkent Clock • Kinetic Code Ribbon • Scope Chips • Telegram Dispatch
  * ==========================================================================
  */
 
@@ -9,318 +10,478 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     /* --------------------------------------------------------------------------
-       1. I18N STORYBOOK TRANSLATIONS (UZ / RU / EN)
+       1. MULTILINGUAL TRANSLATION DICTIONARY (UZ / RU / EN)
        -------------------------------------------------------------------------- */
     const translations = {
         uz: {
-            title: "Laziz Bozorov — Dasturchi Hikoyasi | Veb-saytlar va Telegram Tizimlar",
-            header_status: "Yangi loyihalar uchun ochiq",
-            btn_header_tg: "Telegramda yozish",
-            nav_prologue: "Muqaddima",
-            nav_price: "1. Narx Masalasi",
-            nav_services: "2. Nimalar Qilaman",
-            nav_stories: "3. Hayotiy Tajriba",
-            nav_rules: "4. Qoidalar",
-            nav_contact: "5. Bog'lanish",
+            title: "Laziz Bozorov — Creative Full-Stack Dasturchi & IT Hamkor",
+            clock_available: "• Yangi loyihalar uchun ochiq",
+            btn_header_action: "Telegramda yozish",
+            nav_intro: "Muqaddima",
+            nav_pricing: "Narx Falsafasi",
+            nav_services: "Imkoniyatlar",
+            nav_work: "Loyihalar",
+            nav_rules: "Qoidalar",
+            nav_contact: "Bog'lanish",
 
-            // Prologue
-            ch0_tag: "MUQADDIMA",
-            ch0_title: "Salom! Men Lazizman. Bizneslar uchun ishlaydigan veb-saytlar va Telegram tizimlari yarataman.",
-            ch0_p1: "Toshkentda yashayman. Bu yerda sun'iy marketing gaplari, qolipga solingan maqtovlar yoki agentlik byurokratiyasi yo'q. Faqat bir dasturchining nimalar qila olishi va sizga qanday yordam bera olishi haqida samimiy gaplashamiz.",
-            ch0_p2: "O'rtada vositachilar, menejerlar va tushunarsiz hisobotlar bo'lmaydi. Birinchi kundan boshlab to'g'ridan-to'g'ri kodingizni yozadigan odam bilan — o'zim bilan ishlaysiz.",
-            ch0_quote: "\"Mening vazifam — sizga shunchaki quruq kod sotish emas, balki biznesingizga yangi mijoz olib keladigan va vaqtingizni tejaydigan tizim qurib berish.\"",
-            ch0_skills_label: "Asosan ishlatadigan vositalarim:",
-            read_next_price: "1-Bob: Nega saytda tayyor narxlar yo'q? ↓",
+            c0_meta: "MUSTAQIL DASTURCHI • TOSHKENT",
+            c0_title: "Toza kod, aniq fikrlash va <span class=\"highlight-green\">haqiqiy natija</span> beruvchi IT yechimlar.",
+            c0_lead: "Salom, men <strong>Laziz Bozorovman</strong>. O'rtada qo'lma-qo'l qiluvchi agentliklar va byurokratiyasiz — to'g'ridan-to'g'ri biznesingizga yangi mijoz keltiradigan veb-saytlar, Telegram WebApp tizimlari va ichki boshqaruv dasturlarini yarataman.",
+            c0_cta_discuss: "Loyihangizni aytib bering →",
+            c0_cta_cases: "Haqiqiy ishlarni ko'rish",
+            c0_manifesto: "\"Men sun'iy marketing gaplarini va qolipdagi 'vibe coding' shablonlarini yoqtirmayman. Har bir satr kodni o'z qo'lim bilan, mehr va e'tibor bilan yozaman.\"",
+            c0_stack_label: "Asosiy Stek:",
 
-            // Chapter 1: Price
-            ch1_tag: "1-BOB: NARX MASALASI",
-            ch1_title: "Nega men saytga \"$300\" yoki \"$500\" deb qat'iy narx yozib qo'ymayman?",
-            ch1_p1: "Internetda ko'p ko'rgansiz: \"Sayt yasaymiz — 300 dollar\", \"Bot — 200 dollar\". Lekin hayotda har bir odamning ehtiyoji har xil bo'ladi.",
-            ch1_p2: "Birovga oddiy, 1 sahifali vizitka-sayt kerak — unda ortiqcha murakkablik yo'q va u arzon bo'ladi. Boshqa bir tadbirkorga esa minglab tovarlari bor, Click va Payme to'lovlari ulangan, omborni hisoblaydigan katta Telegram do'kon zarur. Bularning ikkalasini bitta qolipga tiqib, ko'rmasdan narx aytish — xaridorga nisbatan nohaqlik deb bilaman.",
-            ch1_box_title: "Men qanday ishlayman?",
-            ch1_step1_t: "1. Avval siz nima yasamoqchiligingizni aytasiz:",
-            ch1_step1_d: "Maqsadingiz nima, kimlar foydalanadi, qanday funksiyalar kerak.",
-            ch1_step2_t: "2. Men eng qulay va tejamkor yo'lni o'ylab topaman:",
-            ch1_step2_d: "Ortiqcha sarf-xarajatsiz, biznesingizga mos texnologiyani tanlaymiz.",
-            ch1_step3_t: "3. Shundan keyin aniq, halol narx va muddatni aytaman:",
-            ch1_step3_d: "Kelishilgan narx ish davomida o'zgarmaydi. Maslahatlashish esa mutlaqo bepul.",
-            ch1_note: "💡 Shuning uchun agar loyihangiz bo'lsa, narxini bilishning eng to'g'ri yo'li — g'oyangizni qisqacha aytishdir. 15 daqiqada sizga aniq narx va muddatni hisoblab beraman.",
-            read_next_serv: "2-Bob: Qo'limdan nimalar keladi? ↓",
+            c1_meta: "ADOLATLI NARX TAMOYILI",
+            c1_title: "Nega men bu yerga \"$300\" yoki \"$500\" deb oldindan narx yopishtirib qo'ymayman?",
+            c1_p1: "Ko'p saytlarda bir xil qolipdagi tariflarni ko'rgansiz: Landing — $300, Bot — $200. Lekin amalda har bir biznesning muammosi va maqsadi butunlay o'ziga xos.",
+            c1_p2: "Birovga oddiy, 1 sahifali mahsulot taqdimoti kerak — unda murakkab funksiya yo'q va u arzon bo'ladi. Boshqa bir tadbirkorga esa minglab tovarlari bor, Click va Payme to'lovlari ulangan, omborni hisoblaydigan katta Telegram WebApp tizimi zarur. Ikkala odamni bir xil qolipga tiqib, ko'rmasdan narx to'qish — xaridorga nisbatan nohaqlik.",
+            c1_f_title: "Mening adolatli 3 bosqichim:",
+            c1_s1_t: "G'oyangizni eshitaman:",
+            c1_s1_d: "Siz nima yasamoqchisiz, kimlar foydalanadi va asosiy vazifasi nima.",
+            c1_s2_t: "Eng tejamkor yechimni topaman:",
+            c1_s2_d: "Ortiqcha xarajatlarsiz, faqat amaliy ishlaydigan texnologiyani tanlaymiz.",
+            c1_s3_t: "Aniq va o'zgarmas narx aytaman:",
+            c1_s3_d: "Kelishilgan smeta va muddat ish jarayonida aslo oshmaydi. Maslahatlashish esa mutlaqo bepul.",
 
-            // Chapter 2: Services
-            ch2_tag: "2-BOB: IMKONIYATLAR",
-            ch2_title: "Qanday loyihalarni yaxshi bajara olaman? (Va nimalarni olmayman)",
-            ch2_p1: "Men hamma narsani bilaman deb da'vo qilmayman. Faqat o'zim yaxshi tushunadigan, amalda sinovdan o'tgan yo'nalishlar bilan shug'ullanaman:",
-            s1_t: "Tezkor Veb-Saytlar & Landing Sahifalar",
-            s1_d: "Telefonda ham, kompyuterda ham 1 soniyada ochiladigan, chiroyli va qulay saytlar. Reklamangizdan kirgan odam qiynalmasdan ariza qoldiradi, tushgan barcha ma'lumotlar esa zudlik bilan Telegramingizga keladi.",
-            s1_pill: "Muddat: taxminan 4–8 ish kuni (loyihaga qarab)",
-            s2_t: "Telegram Botlar & WebApp Do'konlar",
-            s2_d: "Mijoz alohida ilova yuklamaydi. Telegram ichida tovar katalogini ko'radi, savatchaga soladi va Payme/Click orqali to'laydi. Buyurtmalar esa avtomatik tarzda sizning kanalingiz yoki botingizga tushadi.",
-            s2_pill: "Muddat: taxminan 5–10 ish kuni (loyihaga qarab)",
-            s3_t: "Ichki Boshqaruv Tizimlari (Mini CRM / Dashboard)",
-            s3_d: "Qog'oz va daftardagi chalkashliklardan toliqdingizmi? Mijozlar bazasi, buyurtmalar statusi va tushgan pullarni bitta qulay ekranda nazorat qilish uchun sodda veb-panel qurib beraman.",
-            s3_pill: "Muddat: taxminan 10–20 ish kuni (loyihaga qarab)",
-            s4_t: "To'lov & Texnik Integratsiyalar",
-            s4_d: "Mavjud saytingiz yoki botingizga Payme, Click, SMS xabarnomalar ulash, sayt tezligini 2-3 barobar oshirish va serverlarni sozlash.",
-            s4_pill: "Muddat: taxminan 2–5 ish kuni",
-            ch2_not_title: "Nimalarni o'z zimmamga olmayman:",
-            ch2_not_desc: "O'zim yaxshi bilmaydigan yoki muddati real bo'lmagan ishlarga hech qachon rozi bo'lmayman. Agar loyihangiz mening yo'nalishimga to'g'ri kelmasa, buni boshidanoq ochiq aytaman.",
-            read_next_cases: "3-Bob: Tajribamdan bir necha hikoya ↓",
+            c2_meta: "IMKONIYATLAR VA STEK",
+            c2_title: "Qo'limdan nimalar keladi? (Va nimalarni olmayman)",
+            c2_subtitle: "\"Designed in Figma, built in code.\" Men hamma narsani bilaman deb yolg'on gapirmayman — faqat o'zim mukammal tushunadigan yo'nalishlar bilan shug'ullanaman:",
+            s1_title: "Tezkor Veb-Saytlar & Landing Sahifalar",
+            s1_desc: "Telefonda 1 soniyada ochiladigan, chiroyli va qulay veb-saytlar. Reklamadan kirgan mijoz qiynalmasdan ariza qoldiradi, barcha arizalar esa zudlik bilan Telegram guruh yoki botingizga boradi.",
+            s2_title: "Telegram Botlar & WebApp Do'konlar",
+            s2_desc: "Xaridor hech qanday ilova yuklamaydi. Telegram ichida tovar katalogini ko'radi, savatchaga soladi va Click yoki Payme orqali to'laydi. Buyurtmalar esa avtomatik tarzda admin panelga tushadi.",
+            s3_title: "Ichki Boshqaruv Tizimlari (Mini CRM / Dashboard)",
+            s3_desc: "Qog'oz va daftardagi chalkashliklardan xalos bo'ling. Mijozlar bazasi, buyurtmalar holati, kassa tushumi va oylik hisobotlarni yagona xavfsiz ekranda nazorat qilish uchun sodda veb-panel.",
+            s4_title: "API & To'lov Tizimlari Integratsiyasi",
+            s4_desc: "Mavjud saytingiz yoki botingizga Click, Payme, SMS xabarnomalar ulash, serverlarni sozlash va sekin ishlayotgan tizimlarni 2-3 barobargacha tezlashtirish.",
+            c2_not_label: "NIMALARNI QILMAYMAN:",
+            c2_not_text: "O'zim yaxshi tushunmaydigan yoki muddati real bo'lmagan ishlarga hech qachon rozi bo'lmayman. Agar loyihangiz mening yo'nalishimga to'g'ri kelmasa, buni vaqtingizni olmay, boshidanoq ochiq aytaman.",
 
-            // Chapter 3: Real Cases
-            ch3_tag: "3-BOB: HAYOTIY TAJRIBA",
-            ch3_title: "Haqiqiy loyihalar hikoyasi: bizneslar nima muammo bilan kelgandi?",
-            c1_badge: "1-Hikoya: Telegram do'kon",
-            c1_t: "Mijozlar lichkada kutib qolmasligi uchun nima qildik?",
-            c1_p1: "Bir do'kon egasi murojaat qildi: do'konida 100 dan ortiq tovar bor edi, lekin hamma mijoz lichkada narx va rasm so'rar, administrator ulgurmagani uchun xaridorlar boshqa joyga ketib qolardi.",
-            c1_p2: "Biz Telegram ichida ochiladigan qulay WebApp do'kon qurdik. Rasmlar, razmerlar va Click/Payme to'lovi to'g'ridan-to'g'ri ulandi.",
-            c1_res: "Natija: Hozir buyurtmalar kechasi ham to'liq avtomatik tarzda tushmoqda, menejerlar vaqti tejalyapti.",
-            c2_badge: "2-Hikoya: Reklama oqlanmagan sayt",
-            c2_t: "1 soniyada ochiladigan yangi sayt va Telegram bildirishnoma",
-            c2_p1: "Xizmat ko'rsatish kompaniyasi reklama uchun pul sarflar, lekin eski sayt telefonda 5-6 soniyada ochilgani uchun tashrifchilar kutmasdan chiqib ketardi.",
-            c2_p2: "Saytni toza Next.js da qayta qurdik, yuklanish tezligini 1.2 soniyaga tushirdik va foydalanuvchi ariza qoldirishi bilanoq ma'lumotlar xodimlarning Telegram guruhiga tushadigan qildik.",
-            c2_res: "Natija: Reklamaga sarflangan har bir so'm 2 barobar ko'proq arizalar keltirmoqda.",
-            c3_badge: "3-Hikoya: Daftardan qutulish",
-            c3_t: "Kichik servis uchun buyurtmalarni boshqarish paneli",
-            c3_p1: "Kompaniyada 4 nafar usta va kuniga 20-30 ta buyurtma bor edi. Barcha ma'lumotlar umumiy daftarga yozilar, qaysi buyurtma tayyor bo'lgani yoki pul qachon to'langani chalkashib ketardi.",
-            c3_p2: "Ular uchun telefonda ham qulay ochiladigan ixcham boshqaruv paneli qurib berdim. Har bir usta o'z ishini belgilaydi, rahbar esa kunlik tushumni bitta ekranda ko'radi.",
-            c3_res: "Natija: Chalkashliklar to'xtatildi, oylik hisobot chiqarish 3 kunlik ishdan 1 tugmaga aylandi.",
-            read_next_rules: "4-Bob: Men bilan ishlash qoidalari ↓",
+            c3_meta: "AMALIY NATIJALAR VA KEYSLAR",
+            c3_title: "Haqiqiy loyihalar: bizneslar qanday muammo bilan kelgandi?",
+            c3_subtitle: "Faqat quruq rasm emas — biznesning real muammosi, qilingan arxitektura va olingan natija:",
+            case1_h: "Mijozlar lichkada javob kutib qolmasligi uchun nima qildik?",
+            case_prob_lbl: "Muammo:",
+            case1_p1: "Do'kon egasiga kuniga yuzlab mijozlar yozardi, lekin administrator ulgurmagani uchun odamlar narx va razmerni kutib, boshqa do'konlarga o'tib ketardi.",
+            case_sol_lbl: "Yechim:",
+            case1_p2: "Telegramdan chiqmasdan ishlaydigan WebApp mini-do'kon yaratdik. Rasmlar, razmerlar va Payme/Click to'lovi ulandi.",
+            case1_m1_t: "Avtomatik savdo",
+            case1_m1_d: "Kechasi ham buyurtmalar o'z-o'zidan qabul qilinadi",
+            case1_m2_t: "Kutish vaqti",
+            case1_m2_d: "Xaridor lichkani kutmasdan, 30 soniyada buyurtma qiladi",
 
-            // Chapter 4: Rules
-            ch4_tag: "4-BOB: QOIDALAR",
-            ch4_title: "Hamkorlik tamoyillari: siz nimaga ishonishingiz mumkin?",
-            ch4_p1: "Dasturlash sohasida eng katta muammo — aloqaning yomonligi va va'dalarning bajarilmasligi. Men bilan bunday muammolar bo'lmasligi uchun quyidagi 4 ta aniq qoidaga amal qilaman:",
-            r1_t: "To'g'ridan-to'g'ri muloqot",
-            r1_d: "O'rtada vositachilar yo'q. Istalgan paytda Telegram orqali yozishingiz va loyihangiz qaysi bosqichda ekanligini so'rashingiz mumkin.",
-            r2_t: "Bosqichma-bosqich ko'rsatish",
-            r2_d: "Ishni oxirigacha yashirib o'tirmayman. Har bir qismini (dizayn, asosiy funksiyalar) tayyor bo'lishi bilan ko'rsatib, fikringizni olib boraman.",
-            r3_t: "Kod to'liq sizning mulkingiz",
-            r3_d: "Loyiha topshirilgach, barcha dastur kodlari (GitHub va server) sizga beriladi. Menga hech qanday sun'iy bog'liqlik bo'lib qolmaydi.",
-            r4_t: "Topshirilgach 30 kun yoningizdaman",
-            r4_d: "Ish bitishi bilan yo'qolib qolmayman. Sayt yoki bot ishga tushgach, 1 oy davomida har qanday texnik savollarga bepul yordam beraman.",
-            read_next_contact: "5-Bob: G'oyangizni ayting va gaplashamiz ↓",
+            case2_h: "Reklamadan kelgan mijozlar yo'qolmasligi uchun saytni qayta qurdik",
+            case2_p1: "Kompaniya reklamaga pul tikar, lekin eski sayt telefonda sekin (5-6 soniya) ochilgani sababli, odamlar kutmasdan chiqib ketardi.",
+            case2_p2: "Next.js da qayta qurib, tezlikni 1.1 soniyaga tushirdik va foydalanuvchi ariza qoldirishi bilan ma'lumotlar xodimlarning Telegramiga tushadigan qildik.",
+            case2_m1_t: "Arizalar o'sishi",
+            case2_m1_d: "Reklamaga sarflangan har 1 so'm 2 barobar ko'proq foyda keltirdi",
+            case2_m2_t: "Sahifa tezligi",
+            case2_m2_d: "Telefonlarda darhol ochiladi, hech qanday qotishlarsiz",
 
-            // Chapter 5: Contact
-            ch5_tag: "5-BOB: BOG'LANISH",
-            ch5_title: "G'oyangiz bormi? Keling, birgalikda muhokama qilamiz",
-            ch5_p1: "Hech qanday murakkab formalarsiz. Nima yasatmoqchiligingizni qisqacha yozing — men sizga qanday yechim ma'qul ekanini, qancha vaqt ketishini va adolatli narxini aytaman:",
-            label_idea: "Nima yasatmoqchisiz? (Qisqacha g'oyangiz):",
-            ph_idea: "Masalan: Menda kiyim do'koni bor, Telegramda to'lov qabul qiladigan mini-do'kon kerak...",
-            label_name: "Ismingiz:",
+            case3_h: "Daftardagi chalkashlikdan bitta ixcham boshqaruv paneliga",
+            case3_p1: "Kichik servisda kuniga 20-30 ta buyurtma kelar, barcha ma'lumotlar daftarga yozilib, kim to'lagani yoki buyurtma bitgani chalkashib ketardi.",
+            case3_p2: "Telefonda ham ochiladigan sodda veb-panel qurdik: ustalar ish statusini o'zgartiradi, rahbar esa kunlik tushumni 1 klikda ko'radi.",
+            case3_m1_t: "Tartibli hisobot",
+            case3_m1_d: "Hech bir mijoz yoki buyurtma yo'qolmaydi",
+            case3_m2_t: "Oylik hisobot",
+            case3_m2_d: "Qog'oz titib o'tirmasdan, bitta tugma bilan hisob chiqadi",
+
+            c4_meta: "HAMKORLIKNING 4 ASOSIY QOIDASI",
+            c4_title: "Siz nimaga ishonishingiz mumkin?",
+            r1_title: "To'g'ridan-to'g'ri Muloqot",
+            r1_desc: "O'rtada menejerlar yo'q. Loyihani birinchi kundanoq kod yozadigan odam bilan — o'zim bilan muhokama qilasiz va har kuni holatdan xabardor bo'lasiz.",
+            r2_title: "Bosqichma-bosqich Demo",
+            r2_desc: "Ishni oxirigacha yashirib o'tirmayman. Har bir qismi tayyor bo'lishi bilan sizga ko'rsatib, fikringizni olib boraman.",
+            r3_title: "Kod 100% Sizning Mulkingiz",
+            r3_desc: "Loyiha bitgach, barcha manba kodlari (GitHub va server) to'liq sizga topshiriladi. Hech qanday yashirin to'lovlar yoki bog'liqlik qolmaydi.",
+            r4_title: "Topshirilgach 30 Kun Bepul Yordam",
+            r4_desc: "Sayt yoki bot topshirilgandan keyin ham yo'qolib qolmayman. 1 oy davomida texnik nazorat va xatoliklarni bartaraf etish mutlaqo bepul.",
+
+            c5_meta: "LOYIHANI BOSHLASH",
+            c5_title: "G'oyangiz bormi? Keling, birgalikda muhokama qilamiz.",
+            c5_subtitle: "Hech qanday murakkab formalarsiz. Nima yasatmoqchiligingizni qisqacha yozing — men sizga optimal yechimni, qancha vaqt ketishini va adolatli narxini aytaman.",
+            inq_scope_lbl: "Qanday tizim kerak?:",
+            inq_details_lbl: "Loyiha haqida qisqacha (yoki maqsadingiz):",
+            ph_details: "Masalan: Menda kiyim do'koni bor, Telegramda to'lov qabul qiladigan mini-do'kon kerak...",
+            inq_name_lbl: "Ismingiz:",
             ph_name: "Ismingizni kiriting",
-            label_contact: "Telegramingiz yoki telefoningiz:",
+            inq_contact_lbl: "Telegramingiz yoki telefoningiz:",
             ph_contact: "@username yoki +998 (90) 000-00-00",
-            btn_send_tg: "Shu xabarni Telegramda yuborish →",
-            msg_sent: "Xabaringiz tayyorlandi va Telegram ochilmoqda. Tez orada o'zim siz bilan bog'lanaman!",
-            reach_direct: "Yoki menga to'g'ridan-to'g'ri yozing:",
-            footer_text: "© 2026 Laziz Bozorov (lazizfullstack.dev). Barcha kodlar qo'lda, mehr bilan yozilgan.",
-            footer_top: "Boshiga qaytish ↑"
+            btn_submit_tg: "Xabarni Telegramda Yuborish →",
+            reach_direct_lbl: "Yoki menga to'g'ridan-to'g'ri yozing:",
+            footer_copy: "© 2026 Laziz Bozorov. Designed with intention, engineered with clean code.",
+            footer_top: "Yuqoriga qaytish ↑"
         },
 
         ru: {
-            title: "Лазиз Бозоров — Записки Разработчика | Сайты и Telegram Системы",
-            header_status: "Открыт для новых проектов",
-            btn_header_tg: "Написать в Telegram",
-            nav_prologue: "Вступление",
-            nav_price: "1. О Ценах",
-            nav_services: "2. Что Я Делаю",
-            nav_stories: "3. Реальный Опыт",
-            nav_rules: "4. Правила",
-            nav_contact: "5. Связаться",
+            title: "Лазиз Бозоров — Creative Full-Stack Разработчик & IT Партнер",
+            clock_available: "• Открыт для новых проектов",
+            btn_header_action: "Написать в Telegram",
+            nav_intro: "Вступление",
+            nav_pricing: "О Ценах",
+            nav_services: "Возможности",
+            nav_work: "Кейсы",
+            nav_rules: "Правила",
+            nav_contact: "Связаться",
 
-            ch0_tag: "ВСТУПЛЕНИЕ",
-            ch0_title: "Привет! Я Лазиз. Создаю быстрые сайты и Telegram-системы для реального бизнеса.",
-            ch0_p1: "Живу в Ташкенте. Здесь нет шаблонных лозунгов, агентской бюрократии или пустых обещаний. Просто искренний рассказ о том, чем я могу быть полезен вашему делу.",
-            ch0_p2: "Никаких посредников и менеджеров. С первого дня вы общаетесь напрямую с человеком, который пишет ваш код — со мной.",
-            ch0_quote: "\"Моя цель — не просто продать строчки кода, а построить систему, которая приводит вам клиентов и экономит рабочее время.\"",
-            ch0_skills_label: "Инструменты, которые использую ежедневно:",
-            read_next_price: "Глава 1: Почему на сайте нет готовых цен? ↓",
+            c0_meta: "НЕЗАВИСИМЫЙ РАЗРАБОТЧИК • ТАШКЕНТ",
+            c0_title: "Чистый код, ясное мышление и <span class=\"highlight-green\">реальный результат</span> для бизнеса.",
+            c0_lead: "Привет, я <strong>Лазиз Бозоров</strong>. Без агентских наценок и бюрократии разрабатываю быстрые сайты, Telegram WebApp магазины и внутренние системы управления, которые привлекают клиентов.",
+            c0_cta_discuss: "Обсудить проект →",
+            c0_cta_cases: "Смотреть работы",
+            c0_manifesto: "\"Я не признаю шаблонного 'vibe coding' и пустых маркетинговых лозунгов. Каждую строчку кода проектирую и пишу лично, заботясь о надежности.\"",
+            c0_stack_label: "Основной Стек:",
 
-            ch1_tag: "ГЛАВА 1: О ЦЕНАХ",
-            ch1_title: "Почему я не пишу на сайте фикс: «Сайт за $300» или «Бот за $200»?",
-            ch1_p1: "В интернете полно предложений с готовыми ценниками. Но в реальной жизни у каждого бизнеса свои задачи.",
-            ch1_p2: "Одному человеку нужен лаконичный сайт-визитка — там нет сложного функционала, и он стоит недорого. Другому нужен крупный Telegram-магазин с каталогом на 1000 товаров, оплатой Click/Payme и синхронизацией склада. Загонять оба проекта под один ценник вслепую — считаю нечестным по отношению к клиенту.",
-            ch1_box_title: "Как устроен мой подход?",
-            ch1_step1_t: "1. Сначала вы рассказываете свою задачу:",
-            ch1_step1_d: "Для кого продукт, какие ключевые функции нужны, чего хотите достичь.",
-            ch1_step2_t: "2. Я подбираю самое простое и экономное решение:",
-            ch1_step2_d: "Без навязывания лишних модулей и ненужных затрат.",
-            ch1_step3_t: "3. После этого называю честную цену и точные сроки:",
-            ch1_step3_d: "Озвученная цена фиксируется и не растет в процессе. Консультация — бесплатно.",
-            ch1_note: "💡 Если у вас есть проект, лучший способ узнать стоимость — коротко описать задачу. За 15 минут я рассчитаю сроки и честную цену.",
-            read_next_serv: "Глава 2: Что именно я могу сделать? ↓",
+            c1_meta: "ПРИНЦИП ЧЕСТНЫХ ЦЕН",
+            c1_title: "Почему я не вешаю на сайт жесткие ценники: «Сайт за $300» или «Бот за $200»?",
+            c1_p1: "В интернете полно шаблонных тарифов. Но на практике задачи каждого бизнеса абсолютно индивидуальны.",
+            c1_p2: "Одному клиенту нужна быстрая визитка продукта — без сложной логики, и это стоит недорого. Другому требуется крупный WebApp магазин с приемом оплат Click/Payme, интеграцией со складом и базой на тысячи позиций. Называть одну цену вслепую — считаю непрофессиональным.",
+            c1_f_title: "Мой честный 3-шаговый подход:",
+            c1_s1_t: "Вникаю в вашу задачу:",
+            c1_s1_d: "Кто ваша аудитория, какие ключевые сценарии нужны и какую цель преследуем.",
+            c1_s2_t: "Подбираю самое экономное решение:",
+            c1_s2_d: "Без лишних плагинов и модулей — только то, что решает задачу.",
+            c1_s3_t: "Называю фиксированную цену и срок:",
+            c1_s3_d: "Бюджет не растет во время работы. Консультация бесплатна.",
 
-            ch2_tag: "ГЛАВА 2: ВОЗМОЖНОСТИ",
-            ch2_title: "Что я умею делать качественно (и за что не берусь)",
-            ch2_p1: "Я не претендую на то, что знаю абсолютно всё. Занимаюсь только проверенными направлениями, в которых разбираюсь отлично:",
-            s1_t: "Быстрые Сайты & Landing Page",
-            s1_d: "Сайты, которые открываются за 1 секунду на телефонах и компьютерах. Посетитель легко оставляет заявку, а данные сразу летят вам в Telegram.",
-            s1_pill: "Сроки: ориентировочно 4–8 рабочих дней",
-            s2_t: "Telegram Боты & WebApp Магазины",
-            s2_d: "Покупателю не нужно скачивать приложение. Он выбирает товары прямо в Telegram, добавляет в корзину и платит через Click/Payme. Заказы моментально видит ваш админ.",
-            s2_pill: "Сроки: ориентировочно 5–10 рабочих дней",
-            s3_t: "Внутренние Системы (Mini CRM / Панели)",
-            s3_d: "Устали от записей в тетрадях и потерянных лидов? Создам понятную веб-панель для контроля заказов, клиентов и кассы в одном месте.",
-            s3_pill: "Сроки: ориентировочно 10–20 рабочих дней",
-            s4_t: "Подключение Оплат & Интеграции",
-            s4_d: "Интеграция Click, Payme, SMS-оповещений, ускорение работы текущего сайта и настройка серверов.",
-            s4_pill: "Сроки: ориентировочно 2–5 рабочих дней",
-            ch2_not_title: "За что я не берусь:",
-            ch2_not_desc: "Никогда не соглашаюсь на то, в чем не уверен, или на нереалистичные сроки. Если ваш проект выходит за рамки моей компетенции — скажу об этом сразу и честно.",
-            read_next_cases: "Глава 3: Истории из реальной практики ↓",
+            c2_meta: "СТЕК И КОМПЕТЕНЦИИ",
+            c2_title: "Что я делаю на высшем уровне (и за что не берусь)",
+            c2_subtitle: "\"Designed in Figma, built in code.\" Я не берусь за всё подряд — работаю только в тех областях, где гарантирую результат:",
+            s1_title: "Быстрые Сайты & Landing Page",
+            s1_desc: "Сайты, которые открываются за 1 секунду на смартфонах. Посетитель без труда оставляет заявку, а данные сразу летят вам в Telegram.",
+            s2_title: "Telegram Боты & WebApp Магазины",
+            s2_desc: "Покупатель выбирает товары прямо в Telegram, добавляет в корзину и оплачивает через Click или Payme. Заказы моментально видит ваш менеджер.",
+            s3_title: "Внутренние Системы (Mini CRM / Панели)",
+            s3_desc: "Порядок в заказах, клиентах и финансах на одном удобном экране. Без хаоса в блокнотах и экселях.",
+            s4_title: "API & Подключение Платежей",
+            s4_desc: "Интеграция Click, Payme, SMS уведомлений, настройка серверов и ускорение существующих проектов.",
+            c2_not_label: "ЗА ЧТО НЕ БЕРУСЬ:",
+            c2_not_text: "Никогда не соглашаюсь на нереалистичные сроки или задачи, в которых не уверен на 100%. Если проект вам не подходит — прямо скажу об этом на первой встрече.",
 
-            ch3_tag: "ГЛАВА 3: РЕАЛЬНЫЙ ОПЫТ",
-            ch3_title: "Истории из практики: с какими проблемами приходили клиенты?",
-            c1_badge: "История 1: Telegram-магазин",
-            c1_t: "Как мы избавили менеджеров от рутины в переписке?",
-            c1_p1: "Владелец магазина одежды тратил часы, отвечая каждому в личке на вопросы о ценах и размерах. Клиенты уставали ждать и уходили к конкурентам.",
-            c1_p2: "Мы создали интерактивный WebApp магазин внутри Telegram с понятным выбором и оплатой Click/Payme.",
-            c1_res: "Результат: Заказы оформляются автоматически даже ночью, без участия менеджеров.",
-            c2_badge: "История 2: Слив рекламного бюджета",
-            c2_t: "Новый сайт со скоростью 1 секунда и уведомлениями в Telegram",
-            c2_p1: "Компания по услугам крутила рекламу, но старый сайт грузился 6 секунд. Большинство людей закрывали вкладку, не дождавшись.",
-            c2_p2: "Переписал сайт на Next.js, довел скорость до 1.2с и связал форму заявки с Telegram-группой сотрудников.",
-            c2_res: "Результат: Конверсия рекламы выросла вдвое, ни одна входящая заявка больше не теряется.",
-            c3_badge: "История 3: Прощай, блокнот",
-            c3_t: "Панель управления заказами для небольшой сервисной компании",
-            c3_p1: "Мастера вели все заказы в общей тетради. Регулярно путались статусы готовности и оплаты, а сведение отчетов занимало дни.",
-            c3_p2: "Создал компактную веб-панель: мастера отмечают статусы с телефона, а руководитель видит ежедневную выручку в один клик.",
-            c3_res: "Результат: Полный порядок в учете, месячный отчет формируется мгновенно.",
-            read_next_rules: "Глава 4: Мои правила сотрудничества ↓",
+            c3_meta: "ПРАКТИЧЕСКИЕ КЕЙСЫ",
+            c3_title: "Реальные истории: с чем приходили заказчики?",
+            c3_subtitle: "Не просто дизайн, а конкретные проблемы и их инженерные решения:",
+            case1_h: "Как мы избавили менеджеров от рутины в личных сообщениях?",
+            case_prob_lbl: "Проблема:",
+            case1_p1: "Владелец магазина одежды тратил часы, отвечая каждому в личке на вопросы о ценах и размерах. Клиенты уставали ждать и уходили к конкурентам.",
+            case_sol_lbl: "Решение:",
+            case1_p2: "Запустили интерактивный WebApp магазин прямо в Telegram с каталогом, фильтрами и моментальной оплатой Click/Payme.",
+            case1_m1_t: "24/7 Заказы",
+            case1_m1_d: "Покупки оформляются автоматически даже ночью",
+            case1_m2_t: "0 минут ожидания",
+            case1_m2_d: "Покупатель за 30 секунд оформляет заказ без переписки",
 
-            ch4_tag: "ГЛАВА 4: ПРАВИЛА",
-            ch4_title: "Принципы работы: на что вы можете твердо рассчитывать?",
-            ch4_p1: "В IT самая частая боль заказчиков — сорванные дедлайны и пропадающие фрилансеры. Я соблюдаю 4 железных правила:",
-            r1_t: "Прямой диалог",
-            r1_d: "Никаких посредников. В любой момент вы можете написать мне в Telegram и узнать текущий статус проекта.",
-            r2_t: "Поэтапная демонстрация",
-            r2_d: "Не прячу проект до финала. Показываю дизайн и работающие части по мере готовности, собирая вашу обратную связь.",
-            r3_t: "Код принадлежит вам",
-            r3_d: "Все исходники (GitHub, сервер, базы данных) после сдачи передаются вам без каких-либо скрытых привязок.",
-            r4_t: "30 дней поддержки после сдачи",
-            r4_d: "После запуска я остаюсь на связи. В течение 1 месяца бесплатно помогаю с техническими вопросами и нюансами.",
-            read_next_contact: "Глава 5: Расскажите о вашей идее ↓",
+            case2_h: "Переписали сайт, чтобы реклама приносила клиентов, а не сжигала бюджет",
+            case2_p1: "Компания крутила рекламу, но старый сайт грузился 6 секунд на телефонах. Большинство людей уходили, не дождавшись загрузки.",
+            case2_p2: "Переписал сайт на Next.js, снизил время загрузки до 1.1с и связал заявки с Telegram-группой сотрудников.",
+            case2_m1_t: "2.8x Рост заявок",
+            case2_m1_d: "Тот же рекламный бюджет стал давать вдвое больше лидов",
+            case2_m2_t: "1.1с Загрузка",
+            case2_m2_d: "Сайт открывается моментально на любых смартфонах",
 
-            ch5_tag: "ГЛАВА 5: СВЯЗАТЬСЯ",
-            ch5_title: "Есть задумка? Давайте обсудим её без лишней суеты",
-            ch5_p1: "Никаких сложных анкет. Просто напишите пару слов о том, что требуется — я подскажу лучшее решение, сроки и честную стоимость:",
-            label_idea: "Что требуется сделать? (Коротко о задаче):",
-            ph_idea: "Например: Нужен Telegram-бот для магазина обуви с приемом оплаты Click...",
-            label_name: "Ваше имя:",
+            case3_h: "Из хаоса в тетрадях — в единую компактную веб-панель",
+            case3_p1: "В автосервисе вели учет заказов в общей тетради. Постоянно путались статусы готовности и оплаты, а сведение отчетов занимало дни.",
+            case3_p2: "Собрал удобную веб-панель: мастера отмечают статусы с телефонов, а руководитель видит ежедневную выручку в один клик.",
+            case3_m1_t: "100% Учет",
+            case3_m1_d: "Ни один заказ или расчет больше не теряется",
+            case3_m2_t: "1 клик",
+            case3_m2_d: "Месячный отчет формируется за секунду вместо дней",
+
+            c4_meta: "4 ПРАВИЛА СОТРУДНИЧЕСТВА",
+            c4_title: "На что вы можете твердо рассчитывать?",
+            r1_title: "Прямой Диалог",
+            r1_desc: "Никаких посредников. С первого дня вы общаетесь с тем, кто пишет код, и всегда в курсе текущего этапа.",
+            r2_title: "Поэтапные Демо",
+            r2_desc: "Я не прячу работу до дедлайна. Показываю прототипы и рабочие страницы по мере готовности.",
+            r3_title: "100% Права на Код",
+            r3_desc: "Все исходники (GitHub, сервер, базы данных) после сдачи передаются вам без скрытых подписок.",
+            r4_title: "30 Дней Поддержки",
+            r4_desc: "После запуска я остаюсь на связи и бесплатно помогаю с любыми техническими вопросами в течение месяца.",
+
+            c5_meta: "НАЧАТЬ ПРОЕКТ",
+            c5_title: "Есть задумка? Давайте обсудим её.",
+            c5_subtitle: "Без сложных анкет. Просто напишите пару слов о задаче — я предложу лучшее решение, сроки и честную цену.",
+            inq_scope_lbl: "Что требуется сделать?:",
+            inq_details_lbl: "Кратко о задаче или целях:",
+            ph_details: "Например: Нужен Telegram WebApp магазин для обуви с приемом оплаты Click...",
+            inq_name_lbl: "Ваше имя:",
             ph_name: "Введите имя",
-            label_contact: "Telegram или телефон для связи:",
+            inq_contact_lbl: "Telegram или телефон для связи:",
             ph_contact: "@username или +998 (90) 000-00-00",
-            btn_send_tg: "Отправить это сообщение в Telegram →",
-            msg_sent: "Сообщение сформировано, открываем Telegram. Скоро я лично свяжусь с вами!",
-            reach_direct: "Или напишите мне напрямую:",
-            footer_text: "© 2026 Лазиз Бозоров (lazizfullstack.dev). Написано вручную и с душой.",
+            btn_submit_tg: "Отправить сообщение в Telegram →",
+            reach_direct_lbl: "Или напишите мне напрямую:",
+            footer_copy: "© 2026 Лазиз Бозоров. Designed with intention, engineered with clean code.",
             footer_top: "Наверх ↑"
         },
 
         en: {
-            title: "Laziz Bozorov — Developer Stories | Websites & Telegram Systems",
-            header_status: "Open for new projects",
-            btn_header_tg: "Message on Telegram",
-            nav_prologue: "Prologue",
-            nav_price: "1. The Pricing",
-            nav_services: "2. Capabilities",
-            nav_stories: "3. Real Cases",
-            nav_rules: "4. Principles",
-            nav_contact: "5. Get in Touch",
+            title: "Laziz Bozorov — Creative Full-Stack Engineer & Tech Partner",
+            clock_available: "• Open for select projects",
+            btn_header_action: "Chat on Telegram",
+            nav_intro: "Prologue",
+            nav_pricing: "Philosophy",
+            nav_services: "Capabilities",
+            nav_work: "Work",
+            nav_rules: "Principles",
+            nav_contact: "Initiate",
 
-            ch0_tag: "PROLOGUE",
-            ch0_title: "Hi! I'm Laziz. I craft reliable websites and Telegram systems for businesses.",
-            ch0_p1: "Based in Tashkent. You won't find agency buzzwords or inflated claims here. Just an honest conversation about what I build and how I can help your business grow.",
-            ch0_p2: "No middle managers or corporate bureaucracy. From day one, you work directly with the engineer writing your code — myself.",
-            ch0_quote: "\"My goal isn't merely selling lines of code, but building a system that brings you real customers and saves you hours every week.\"",
-            ch0_skills_label: "Tools I work with daily:",
-            read_next_price: "Chapter 1: Why are there no fixed prices? ↓",
+            c0_meta: "INDEPENDENT DEVELOPER • TASHKENT",
+            c0_title: "Intentional craft, clear thinking, and <span class=\"highlight-green\">tangible outcomes</span> in clean code.",
+            c0_lead: "Hi, I'm <strong>Laziz Bozorov</strong>. Free from agency bloat and middle management, I engineer high-speed websites, Telegram WebApp platforms, and operational tools that generate real revenue.",
+            c0_cta_discuss: "Tell me your idea →",
+            c0_cta_cases: "View selected work",
+            c0_manifesto: "\"I dislike cookie-cutter vibe coding and agency buzzwords. Every line of code is handwritten with care, clarity, and architectural precision.\"",
+            c0_stack_label: "Core Stack:",
 
-            ch1_tag: "CHAPTER 1: THE PRICING",
-            ch1_title: "Why don't I put rigid prices like \"$300\" or \"$500\" on this page?",
-            ch1_p1: "You've seen standard pricing tables across the web: \"Website — $300\", \"Bot — $200\". But in reality, every business challenge is distinct.",
-            ch1_p2: "One person needs a minimal single-page showcase — simple and low-cost. Another needs an inventory system with thousands of SKUs and integrated payments. Forcing both into the same price tag before listening is unfair to the client.",
-            ch1_box_title: "How I actually work:",
-            ch1_step1_t: "1. You share what you want to achieve:",
-            ch1_step1_d: "Your business goal, target users, and essential capabilities.",
-            ch1_step2_t: "2. I design the cleanest, most cost-effective path:",
-            ch1_step2_d: "No unnecessary add-ons, only what solves your problem.",
-            ch1_step3_t: "3. I provide an honest quote and clear timeline:",
-            ch1_step3_d: "The agreed budget stays fixed. Consultations are always free.",
-            ch1_note: "💡 The fastest way to get a price is simply to tell me your idea. I'll evaluate the scope and give you an honest quote within 15 minutes.",
-            read_next_serv: "Chapter 2: What do I build best? ↓",
+            c1_meta: "PRICING PHILOSOPHY",
+            c1_title: "Why don't I put rigid prices like \"$300\" or \"$500\" on this page?",
+            c1_p1: "You've seen standard pricing menus across the web: Landing — $300, Bot — $200. But in reality, every business challenge is distinct.",
+            c1_p2: "One person needs a minimal single-page showcase — simple and low-cost. Another needs an inventory system with thousands of SKUs, integrated Click/Payme payments, and automated order routing. Forcing both into the same price tag before listening is unfair to the client.",
+            c1_f_title: "My 3-step transparent framework:",
+            c1_s1_t: "I listen to your vision:",
+            c1_s1_d: "Your business goal, target users, and essential capabilities.",
+            c1_s2_t: "I design the cleanest path:",
+            c1_s2_d: "No unnecessary add-ons, only what solves your problem.",
+            c1_s3_t: "I provide an honest fixed quote:",
+            c1_s3_d: "The agreed budget stays fixed. Consultations are always free.",
 
-            ch2_tag: "CHAPTER 2: CAPABILITIES",
-            ch2_title: "What I build reliably (and what I don't)",
-            ch2_p1: "I don't claim to do everything. I focus strictly on battle-tested domains where I deliver top-notch results:",
-            s1_t: "High-Speed Websites & Landing Pages",
-            s1_d: "Websites that load in 1 second on mobile devices. Clean visuals, high conversion, and leads routed straight to your Telegram.",
-            s1_pill: "Timeline: ~4–8 business days",
-            s2_t: "Telegram Bots & WebApp Mini-Stores",
-            s2_d: "Zero app download required. Users browse catalog items, add to cart, and check out directly via Click/Payme inside Telegram.",
-            s2_pill: "Timeline: ~5–10 business days",
-            s3_t: "Internal Management Dashboards (Mini CRM)",
-            s3_d: "Tired of tracking orders on paper? A centralized, clean dashboard to oversee pipeline, customer records, and revenue.",
-            s3_pill: "Timeline: ~10–20 business days",
-            s4_t: "Payment & Technical Integrations",
-            s4_d: "Integrating Click, Payme, SMS alerts, optimizing slow websites, and configuring secure servers.",
-            s4_pill: "Timeline: ~2–5 business days",
-            ch2_not_title: "What I do not take on:",
-            ch2_not_desc: "I never accept work outside my expertise or impossible deadlines. If a project is not a great fit, I will tell you upfront.",
-            read_next_cases: "Chapter 3: Real client stories ↓",
+            c2_meta: "CAPABILITIES & STACK",
+            c2_title: "What I build reliably (and what I don't)",
+            c2_subtitle: "\"Designed in Figma, built in code.\" I don't claim to do everything. I focus strictly on battle-tested domains where I deliver top-notch results:",
+            s1_title: "High-Speed Websites & Landing Pages",
+            s1_desc: "Websites that load in 1 second on mobile devices. Clean visuals, high conversion, and leads routed straight to your Telegram.",
+            s2_title: "Telegram Bots & WebApp Mini-Stores",
+            s2_desc: "Zero app download required. Users browse catalog items, add to cart, and check out directly via Click/Payme inside Telegram.",
+            s3_title: "Internal Management Dashboards (Mini CRM)",
+            s3_desc: "Tired of tracking orders on paper? A centralized, clean dashboard to oversee pipeline, customer records, and revenue.",
+            s4_title: "API & Payment Gateway Integrations",
+            s4_desc: "Integrating Click, Payme, SMS alerts, optimizing slow websites, and configuring secure servers.",
+            c2_not_label: "WHAT I DO NOT TAKE ON:",
+            c2_not_text: "I never accept work outside my expertise or impossible deadlines. If a project is not a great fit, I will tell you upfront.",
 
-            ch3_tag: "CHAPTER 3: REAL STORIES",
-            ch3_title: "Case stories: what problems did businesses bring to me?",
-            c1_badge: "Story 1: Telegram Store",
-            c1_t: "Eliminating manual DM replies for a retail shop",
-            c1_p1: "A store owner spent entire days replying to repetitive DMs about sizes and prices, losing buyers who got tired of waiting.",
-            c1_p2: "We built an in-app Telegram WebApp store with full catalog filtering and automatic checkout.",
-            c1_res: "Result: Orders now process round-the-clock without manual intervention.",
-            c2_badge: "Story 2: Fixing Ad Waste",
-            c2_t: "A 1-second Next.js site connected to staff Telegram",
-            c2_p1: "A service firm was spending ad dollars on a website that took 6 seconds to load on phones. Visitors left before seeing the offer.",
-            c2_p2: "Rebuilt with Next.js (1.2s load), funneling form inquiries straight into the team Telegram group.",
-            c2_res: "Result: Twice as many qualified leads captured from the same ad budget.",
-            c3_badge: "Story 3: Ditching Paper Ledgers",
-            c3_t: "A streamlined order tracking panel for a repair shop",
-            c3_p1: "A 4-person repair shop tracked jobs in paper notebooks, constantly confusing completion and payment statuses.",
-            c3_p2: "Built a lightweight mobile-friendly dashboard where technicians update statuses and owners view cashflow instantly.",
-            c3_res: "Result: Zero lost jobs, and month-end audits take seconds instead of days.",
-            read_next_rules: "Chapter 4: Working principles ↓",
+            c3_meta: "SELECTED WORK",
+            c3_title: "Real client stories: what problems did businesses bring to me?",
+            c3_subtitle: "Not just screenshots — real problems solved with scalable code:",
+            case1_h: "Eliminating manual DM replies for a retail shop",
+            case_prob_lbl: "Challenge:",
+            case1_p1: "A store owner spent entire days replying to repetitive DMs about sizes and prices, losing buyers who got tired of waiting.",
+            case_sol_lbl: "Solution:",
+            case1_p2: "We built an in-app Telegram WebApp store with full catalog filtering and automatic checkout.",
+            case1_m1_t: "24/7 Orders",
+            case1_m1_d: "Orders process round-the-clock without manual intervention",
+            case1_m2_t: "0 Min Waiting",
+            case1_m2_d: "Customers check out in 30 seconds without waiting for DMs",
 
-            ch4_tag: "CHAPTER 4: PRINCIPLES",
-            ch4_title: "Working rules: what can you count on?",
-            ch4_p1: "The most common frustration with developers is ghosting and broken timelines. I adhere to 4 non-negotiable rules:",
-            r1_t: "Direct Line of Contact",
-            r1_d: "Zero middlemen. You can message me on Telegram anytime to check progress.",
-            r2_t: "Milestone Demos",
-            r2_d: "I don't hide code until the deadline. You see working prototypes along the way.",
-            r3_t: "100% Code Ownership",
-            r3_d: "Upon handover, all repository code, databases, and keys become solely yours.",
-            r4_t: "30-Day Post-Launch Warranty",
-            r4_d: "I don't disappear after deployment. Enjoy 30 days of free operational support.",
-            read_next_contact: "Chapter 5: Tell me your idea ↓",
+            case2_h: "Rebuilt a sluggish corporate site to double inbound lead flow",
+            case2_p1: "A service firm was spending ad dollars on a website that took 6 seconds to load on phones. Visitors left before seeing the offer.",
+            case2_p2: "Rebuilt with Next.js (1.1s load), funneling form inquiries straight into the team Telegram group.",
+            case2_m1_t: "2.8x Lead Growth",
+            case2_m1_d: "Same ad budget yielded more than twice as many inbound inquiries",
+            case2_m2_t: "1.1s Load Time",
+            case2_m2_d: "Loads instantly on all mobile browsers with zero lag",
 
-            ch5_tag: "CHAPTER 5: GET IN TOUCH",
-            ch5_title: "Have an idea? Let's discuss it without friction",
-            ch5_p1: "No complicated forms. Briefly describe what you'd like to build — I'll advise on the best architecture, realistic timeline, and honest cost:",
-            label_idea: "What would you like to build? (Brief idea):",
-            ph_idea: "e.g. I run an apparel shop and want a Telegram mini-app with automated payments...",
-            label_name: "Your Name:",
+            case3_h: "Transitioning a repair shop from paper ledgers to a custom tool",
+            case3_p1: "A 4-person repair shop tracked jobs in paper notebooks, constantly confusing completion and payment statuses.",
+            case3_p2: "Built a lightweight mobile-friendly dashboard where technicians update statuses and owners view cashflow instantly.",
+            case3_m1_t: "100% Tracking",
+            case3_m1_d: "Zero lost orders and clear accountability",
+            case3_m2_t: "1-Click Audit",
+            case3_m2_d: "Month-end audit generated in seconds instead of days",
+
+            c4_meta: "4 CORE PRINCIPLES",
+            c4_title: "What can you firmly count on?",
+            r1_title: "Direct Line of Contact",
+            r1_desc: "Zero middlemen. You can message me on Telegram anytime to check progress and discuss architecture.",
+            r2_title: "Milestone Demos",
+            r2_desc: "I don't hide code until the deadline. You see working prototypes along the way.",
+            r3_title: "100% Code Ownership",
+            r3_desc: "Upon handover, all repository code, databases, and keys become solely yours with zero vendor lock-in.",
+            r4_title: "30-Day Free Warranty",
+            r4_desc: "I don't disappear after deployment. Enjoy 30 days of free operational support and bug fixes.",
+
+            c5_meta: "START A PROJECT",
+            c5_title: "Have an idea? Let's discuss it without friction.",
+            c5_subtitle: "No complicated forms. Briefly describe what you'd like to build — I'll advise on the best architecture, realistic timeline, and honest cost.",
+            inq_scope_lbl: "What do you need built?:",
+            inq_details_lbl: "Project details or goals:",
+            ph_details: "e.g. I run an apparel shop and want a Telegram mini-app with automated payments...",
+            inq_name_lbl: "Your Name:",
             ph_name: "Enter your name",
-            label_contact: "Your Telegram or phone number:",
+            inq_contact_lbl: "Your Telegram or phone number:",
             ph_contact: "@username or +998 (90) 000-00-00",
-            btn_send_tg: "Send this message via Telegram →",
-            msg_sent: "Message formatted, opening Telegram. I will personally reply shortly!",
-            reach_direct: "Or message me directly:",
-            footer_text: "© 2026 Laziz Bozorov (lazizfullstack.dev). Handcrafted with care.",
+            btn_submit_tg: "Send Inquiry via Telegram →",
+            reach_direct_lbl: "Or message me directly:",
+            footer_copy: "© 2026 Laziz Bozorov. Designed with intention, engineered with clean code.",
             footer_top: "Back to top ↑"
         }
     };
 
     /* --------------------------------------------------------------------------
-       2. LANGUAGE SWITCHER CONTROLLER
+       2. LIVE TASHKENT CLOCK (Mike Wilcock Signature)
+       -------------------------------------------------------------------------- */
+    const clockEl = document.getElementById('liveTashkentClock');
+    const updateTashkentTime = () => {
+        if (!clockEl) return;
+        try {
+            const now = new Date();
+            const timeString = new Intl.DateTimeFormat('en-GB', {
+                timeZone: 'Asia/Tashkent',
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            }).format(now);
+            clockEl.textContent = `${timeString} (UTC+5)`;
+        } catch (e) {
+            clockEl.textContent = '14:00 (UTC+5)';
+        }
+    };
+    setInterval(updateTashkentTime, 1000);
+    updateTashkentTime();
+
+    /* --------------------------------------------------------------------------
+       3. MOTION TOGGLE (Mike Wilcock Signature)
+       -------------------------------------------------------------------------- */
+    let isMotionOn = localStorage.getItem('laziz_motion') !== 'off';
+    const btnMotion = document.getElementById('btnMotionToggle');
+    const motionStatusText = document.getElementById('motionStatusText');
+
+    const setMotionState = (on) => {
+        isMotionOn = on;
+        localStorage.setItem('laziz_motion', on ? 'on' : 'off');
+        if (motionStatusText) {
+            motionStatusText.textContent = on ? 'Motion: On' : 'Motion: Muted';
+        }
+        document.documentElement.classList.toggle('reduce-motion', !on);
+    };
+
+    if (btnMotion) {
+        btnMotion.addEventListener('click', () => {
+            setMotionState(!isMotionOn);
+        });
+        setMotionState(isMotionOn);
+    }
+
+    /* --------------------------------------------------------------------------
+       4. KINETIC GREEN CODE RIBBON & READING PROGRESS (SiriusXM Inspired)
+       -------------------------------------------------------------------------- */
+    const topScrollLine = document.getElementById('topScrollLine');
+    const spineGlowStream = document.getElementById('spineGlowStream');
+    const spineTravelerNode = document.getElementById('spineTravelerNode');
+    const spineMetricBadge = document.getElementById('spineMetricBadge');
+    const matrixTokens = document.querySelectorAll('.matrix-token');
+
+    const handleScrollMotion = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const fraction = scrollHeight > 0 ? Math.min(Math.max(scrollTop / scrollHeight, 0), 1) : 0;
+        const percentage = (fraction * 100).toFixed(1);
+
+        // 1. Top Scroll Indicator
+        if (topScrollLine) {
+            topScrollLine.style.width = `${percentage}%`;
+        }
+
+        // 2. Kinetic Spine Stream
+        if (spineGlowStream && spineTravelerNode) {
+            spineGlowStream.style.height = `${percentage}%`;
+            spineTravelerNode.style.top = `${percentage}%`;
+        }
+
+        // 3. Metric Badge
+        if (spineMetricBadge) {
+            spineMetricBadge.textContent = `${Math.round(percentage)}%`;
+        }
+
+        // 4. Matrix Code Tokens Activation
+        matrixTokens.forEach(token => {
+            const targetDepth = parseFloat(token.getAttribute('data-depth')) || 0;
+            if (percentage >= targetDepth) {
+                token.classList.add('active-token');
+            } else {
+                token.classList.remove('active-token');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScrollMotion, { passive: true });
+    window.addEventListener('resize', handleScrollMotion, { passive: true });
+    handleScrollMotion();
+
+    /* --------------------------------------------------------------------------
+       5. FLOATING CHAPTER QUICK NAV (ACTIVE HIGHLIGHT VIA INTERSECTION OBSERVER)
+       -------------------------------------------------------------------------- */
+    const chapters = document.querySelectorAll('.editorial-chapter');
+    const navDots = document.querySelectorAll('.c-nav-dot');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+    };
+
+    const chapterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navDots.forEach(dot => {
+                    const href = dot.getAttribute('href').replace('#', '');
+                    dot.classList.toggle('active', href === id);
+                });
+            }
+        });
+    }, observerOptions);
+
+    chapters.forEach(ch => chapterObserver.observe(ch));
+
+    /* --------------------------------------------------------------------------
+       6. SCOPE CHIPS SELECTOR (Mike Wilcock Project Starter Signature)
+       -------------------------------------------------------------------------- */
+    const scopeChips = document.querySelectorAll('#scopeChips .scope-chip');
+    let selectedScope = "Veb-Sayt & Landing";
+
+    scopeChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            scopeChips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            selectedScope = chip.getAttribute('data-scope') || chip.textContent.trim();
+        });
+    });
+
+    /* --------------------------------------------------------------------------
+       7. DIRECT TELEGRAM DISPATCH (NO FAKE POPUP MODALS)
+       -------------------------------------------------------------------------- */
+    const btnSendTg = document.getElementById('btnSendToTelegram');
+    const detailsInput = document.getElementById('inquiryDetails');
+    const nameInput = document.getElementById('inquiryName');
+    const contactInput = document.getElementById('inquiryContact');
+
+    if (btnSendTg) {
+        btnSendTg.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const scope = selectedScope;
+            const details = (detailsInput && detailsInput.value.trim()) || "Loyiha bo'yicha maslahatlashmoqchiman.";
+            const name = (nameInput && nameInput.value.trim()) || "";
+            const contact = (contactInput && contactInput.value.trim()) || "";
+
+            let message = "";
+            if (currentLang === 'ru') {
+                message = `Здравствуйте Лазиз!\n\n🎯 Направление: ${scope}\n💡 Задача: ${details}\n👤 Имя: ${name || 'Клиент'}\n📞 Контакт: ${contact || 'Telegram'}`;
+            } else if (currentLang === 'en') {
+                message = `Hi Laziz!\n\n🎯 Scope: ${scope}\n💡 Idea: ${details}\n👤 Name: ${name || 'Client'}\n📞 Contact: ${contact || 'Telegram'}`;
+            } else {
+                message = `Assalomu alaykum Laziz!\n\n🎯 Yo'nalish: ${scope}\n💡 Loyiha g'oyasi: ${details}\n👤 Ism: ${name || 'Mijoz'}\n📞 Aloqa: ${contact || 'Telegram'}`;
+            }
+
+            const tgUrl = `https://t.me/lazizfullstack?text=${encodeURIComponent(message)}`;
+            window.open(tgUrl, '_blank', 'noopener,noreferrer');
+        });
+    }
+
+    /* --------------------------------------------------------------------------
+       8. LANGUAGE SWITCHER CONTROLLER
        -------------------------------------------------------------------------- */
     let currentLang = localStorage.getItem('laziz_preferred_lang') || 'uz';
 
@@ -348,97 +509,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        document.querySelectorAll('.lang-item').forEach(btn => {
+        document.querySelectorAll('.lang-pill').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
     };
 
-    document.querySelectorAll('.lang-item').forEach(btn => {
+    document.querySelectorAll('.lang-pill').forEach(btn => {
         btn.addEventListener('click', () => {
             setLanguage(btn.getAttribute('data-lang'));
         });
     });
 
-    /* --------------------------------------------------------------------------
-       3. GREEN CODE RIBBON & READING PROGRESS SCROLLER
-       -------------------------------------------------------------------------- */
-    const codeRibbonProgress = document.getElementById('codeRibbonProgress');
-    const codeRibbonHead = document.getElementById('codeRibbonHead');
-    const readingProgressBar = document.getElementById('readingProgressBar');
-    const codeTokens = document.querySelectorAll('.code-token');
-
-    const updateScrollRibbon = () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollFraction = scrollHeight > 0 ? Math.min(Math.max(scrollTop / scrollHeight, 0), 1) : 0;
-        const percentage = (scrollFraction * 100).toFixed(2);
-
-        // Update top bar
-        if (readingProgressBar) {
-            readingProgressBar.style.width = `${percentage}%`;
-        }
-
-        // Update vertical green ribbon
-        if (codeRibbonProgress && codeRibbonHead) {
-            codeRibbonProgress.style.height = `${percentage}%`;
-            codeRibbonHead.style.top = `${percentage}%`;
-        }
-
-        // Light up tokens as green ribbon reaches them
-        if (codeTokens.length > 0) {
-            const activeCount = Math.floor(scrollFraction * codeTokens.length);
-            codeTokens.forEach((token, index) => {
-                if (index <= activeCount) {
-                    token.classList.add('active-token');
-                } else {
-                    token.classList.remove('active-token');
-                }
-            });
-        }
-    };
-
-    window.addEventListener('scroll', updateScrollRibbon, { passive: true });
-    window.addEventListener('resize', updateScrollRibbon, { passive: true });
-    updateScrollRibbon();
-
-    /* --------------------------------------------------------------------------
-       4. DIRECT TELEGRAM DISPATCH (NO FAKE POPUP MODALS)
-       -------------------------------------------------------------------------- */
-    const btnSendTg = document.getElementById('btnSendViaTelegram');
-    const userIdea = document.getElementById('userIdea');
-    const userName = document.getElementById('userName');
-    const userContact = document.getElementById('userContact');
-    const inlineSuccessMsg = document.getElementById('inlineSuccessMsg');
-
-    if (btnSendTg) {
-        btnSendTg.addEventListener('click', (e) => {
-            e.preventDefault();
-
-            const idea = (userIdea && userIdea.value.trim()) || "Loyiha bo'yicha maslahatlashmoqchiman.";
-            const name = (userName && userName.value.trim()) || "";
-            const contact = (userContact && userContact.value.trim()) || "";
-
-            let tgMessage = "";
-            if (currentLang === 'ru') {
-                tgMessage = `Здравствуйте Лазиз!\n\n💡 Задача: ${idea}\n👤 Имя: ${name || 'Клиент'}\n📞 Контакт: ${contact || 'Чат Telegram'}`;
-            } else if (currentLang === 'en') {
-                tgMessage = `Hi Laziz!\n\n💡 Project Idea: ${idea}\n👤 Name: ${name || 'Client'}\n📞 Contact: ${contact || 'Telegram Chat'}`;
-            } else {
-                tgMessage = `Assalomu alaykum Laziz!\n\n💡 Loyiha g'oyasi: ${idea}\n👤 Ism: ${name || 'Mijoz'}\n📞 Aloqa: ${contact || 'Telegram Chat'}`;
-            }
-
-            const tgUrl = `https://t.me/lazizfullstack?text=${encodeURIComponent(tgMessage)}`;
-
-            // Show polite inline notice
-            if (inlineSuccessMsg) {
-                inlineSuccessMsg.classList.remove('hidden');
-            }
-
-            // Open Telegram conversation directly
-            window.open(tgUrl, '_blank', 'noopener,noreferrer');
-        });
-    }
-
-    // Initialize Language
+    // Initialize with preferred or default language
     setLanguage(currentLang);
 });
