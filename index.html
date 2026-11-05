@@ -1,712 +1,1480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">Laziz Bozorov — Creative Full-Stack Engineer &amp; Digital Craftsman</title>
-    
-    <!-- Meta & SEO -->
-    <meta name="description" content="Toshkentda joylashgan Creative Full-Stack dasturchi. Bizneslar uchun yuqori darajadagi veb-saytlar, Telegram WebApp tizimlari va ichki boshqaruv vositalari.">
-    <meta name="keywords" content="laziz bozorov, creative developer, web development, telegram webapp, frontend architect, toshkent dasturchi">
-    <meta name="author" content="Laziz Bozorov">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Laziz Bozorov — Creative Full-Stack Engineer">
-    <meta property="og:description" content="Designed with intention, engineered in clean code. Fast web apps and Telegram systems for real businesses.">
-    <meta property="og:url" content="https://lazizfullstack.dev">
-    <meta property="og:type" content="website">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="title">Laziz Bozorov — Full-Stack Dasturchi &amp; IT Hamkor</title>
 
-    <!-- Fonts: Syne (Creative Editorial Display) + Plus Jakarta Sans + JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+<!-- SEO & Metadata -->
+<meta name="description" content="Salom, men Laziz Bozorovman. Toshkentdan Full-Stack dasturchi. Biznesingiz uchun veb-saytlar, Telegram WebApp tizimlari va mobil ilovalar yarataman.">
+<meta name="keywords" content="laziz bozorov, toshkent dasturchi, web sayt, telegram bot, fullstack, react, nextjs, python, django, c++">
+<meta name="author" content="Laziz Bozorov">
+<meta property="og:title" content="Laziz Bozorov — Portfolio">
+<meta property="og:description" content="Biznesingiz uchun sifatli sayt, Telegram WebApp va ilovalar.">
+<meta property="og:url" content="https://lazizfullstack.dev">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+
+<style>
+:root {
+  --bg: #2330F2;
+  --bg-dark: #1520B8;
+  --ink: #0B1030;
+  --paper: #F2F3FF;
+  --pop: #FF7A1A;
+  --lilac: #B7B4FF;
+  --mint: #34D399;
+  --d: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --b: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --m: "JetBrains Mono", monospace;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1520B8;
+    --ink: #050818;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1520B8;
+  --ink: #050818;
+}
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--paper);
+  font: 400 1.0625rem/1.55 var(--b);
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+}
+a:focus-visible, button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: max(38rem, 92svh);
+  overflow: hidden;
+}
+.nav {
+  position: absolute;
+  z-index: 4;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem clamp(1rem, 4vw, 3rem);
+  font: 600 1rem var(--d);
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav .logo {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.live-beacon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--m);
+  font-size: 0.76rem;
+  color: var(--mint);
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.beacon-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 8px var(--mint);
+  animation: pulseBeacon 2s infinite;
+}
+@keyframes pulseBeacon {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav a {
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.nav a:hover {
+  opacity: 0.75;
+}
+
+/* Lang Switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--paper);
+  font: 700 0.75rem var(--m);
+  padding: 4px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+.lang-btn:hover {
+  opacity: 1;
+}
+.lang-btn.active {
+  background: var(--pop);
+  color: var(--ink);
+  opacity: 1;
+}
+
+/* KINETIC BACKGROUND TRACKS & LENS FLASHLIGHT */
+.rows {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+.row {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0.02em 0 0.12em;
+  font: 800 clamp(5.5rem, 19vw, 17rem)/0.9 var(--d);
+  letter-spacing: -0.045em;
+  word-spacing: 0.12em;
+  animation: in 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.row:nth-child(2) { animation-delay: 0.12s; }
+.row:nth-child(3) { animation-delay: 0.24s; }
+.track {
+  display: inline-block;
+  animation: slide 30s linear infinite;
+}
+.row:nth-child(2) .track {
+  animation-direction: reverse;
+  animation-duration: 38s;
+}
+.row:nth-child(3) .track {
+  animation-duration: 24s;
+}
+.base {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--paper);
+}
+.lens {
+  background: var(--pop);
+  color: var(--ink);
+  clip-path: circle(0 at 50% 50%);
+}
+@keyframes in {
+  from { transform: translateY(45%); opacity: 0; }
+}
+@keyframes slide {
+  to { transform: translateX(-50%); }
+}
+
+/* HERO COPY BOX */
+.copy {
+  position: absolute;
+  z-index: 3;
+  left: clamp(1rem, 4vw, 3rem);
+  bottom: clamp(1rem, 4vw, 2.8rem);
+  max-width: 34rem;
+  background: var(--ink);
+  padding: 1.5rem 1.8rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.copy-badge {
+  font-family: var(--m);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--pop);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.copy h1 {
+  font: 800 clamp(1.4rem, 2.5vw, 1.8rem)/1.25 var(--d);
+  margin: 0 0 0.75rem;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+}
+.copy p {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  color: #C7CBEE;
+  line-height: 1.6;
+}
+.btn {
+  display: inline-block;
+  background: var(--pop);
+  color: var(--ink);
+  font: 700 1rem var(--d);
+  padding: 0.85em 1.6em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  background: #ff8d38;
+}
+
+/* SECTION WRAPPERS */
+.wrap {
+  padding: clamp(4rem, 9vw, 8rem) clamp(1rem, 4vw, 3rem) 0;
+}
+h2.sec-title {
+  margin: 0 0 3.5rem;
+  font: 800 clamp(3.2rem, 11vw, 10rem)/0.88 var(--d);
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+/* STACKING STICKY CASE CARDS */
+.cases-deck {
+  position: relative;
+}
+.case {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + var(--t));
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.2rem;
+  min-height: min(34rem, 82svh);
+  margin-bottom: 5rem;
+  padding: clamp(1.4rem, 3.2vw, 2.8rem);
+  border-radius: 32px;
+  background: var(--cbg);
+  color: var(--cfg);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15), 0 25px 50px -15px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.case:last-child {
+  margin-bottom: 0;
+}
+.txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.case-tag {
+  font-family: var(--m);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.case h3 {
+  margin: 0 0 1rem;
+  font: 800 clamp(2.4rem, 5.5vw, 4.5rem)/0.92 var(--d);
+  letter-spacing: -0.035em;
+}
+.case p {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  opacity: 0.9;
+}
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1.6rem;
+  margin: 0;
+}
+.meta div {
+  border-top: 1.5px solid currentColor;
+  padding-top: 0.5rem;
+}
+.meta dt {
+  font-size: 0.82rem;
+  opacity: 0.65;
+}
+.meta dd {
+  margin: 0;
+  font: 600 0.98rem var(--d);
+}
+
+/* VISUAL SHOWCASE SLIDES */
+.vis {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 24rem;
+}
+
+/* Visual A: Elevo Grammar Formula Cards */
+.vis.a {
+  background: var(--lilac);
+}
+.fb {
+  width: min(82%, 20rem);
+  background: #fff;
+  color: var(--ink);
+  padding: 1.1rem 1.3rem;
+  border-radius: 16px;
+  box-shadow: 0 16px 32px -12px rgba(11, 16, 48, 0.35);
+  transform: rotate(-4deg);
+  transition: transform 0.2s;
+}
+.fb:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+.fb + .fb {
+  margin: -0.5rem 0 0 16%;
+  transform: rotate(3deg);
+}
+.fb + .fb:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+.fb + .fb + .fb {
+  margin-left: 4%;
+  transform: rotate(-2deg);
+}
+.fb b {
+  display: block;
+  font: 700 1.18rem var(--d);
+}
+.fb code {
+  display: block;
+  margin: 0.25rem 0;
+  color: #2330F2;
+  font: 600 1rem var(--d);
+}
+.fb span {
+  font-size: 0.95rem;
+  color: #4A5175;
+}
+
+/* Visual B: Telegram WebApp Mini Store Mock */
+.vis.tg {
+  background: #0E1626;
+  padding: 1.5rem;
+}
+.tg-app-shell {
+  width: min(90%, 19rem);
+  background: #182234;
+  border-radius: 20px;
+  padding: 1.1rem;
+  color: var(--paper);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: var(--d);
+}
+.tg-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.6rem;
+}
+.tg-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+.tg-item-price {
+  color: var(--mint);
+  font-weight: 700;
+  font-family: var(--m);
+}
+.tg-pay-btn {
+  background: #0088cc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font: 700 0.92rem var(--d);
+  cursor: pointer;
+  text-align: center;
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Visual C: RentGo 3D Rotating Phone */
+.vis.b {
+  background: var(--bg);
+  perspective: 1000px;
+}
+.phone {
+  width: 10.5rem;
+  aspect-ratio: 9/18.5;
+  border-radius: 2rem;
+  background: var(--ink);
+  padding: 0.6rem;
+  transform: rotateY(var(--ry, -22deg)) rotateX(6deg);
+  box-shadow: 0 32px 55px -20px rgba(0, 0, 0, 0.65), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+  transition: transform 0.1s ease-out;
+}
+.scr {
+  height: 100%;
+  border-radius: 1.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font: 600 0.82rem var(--d);
+}
+.scr h4 {
+  margin: 0;
+  font: 800 1.25rem var(--d);
+  letter-spacing: -0.02em;
+}
+.car {
+  border-radius: 12px;
+  background: var(--lilac);
+  padding: 0.65rem;
+  font-size: 0.78rem;
+}
+.car i {
+  display: block;
+  height: 2rem;
+  border-radius: 8px 8px 14px 14px;
+  background: var(--bg);
+  margin-bottom: 0.4rem;
+}
+.tm {
+  margin-top: auto;
+  border-radius: 12px;
+  background: var(--pop);
+  padding: 0.65rem;
+  text-align: center;
+  color: var(--ink);
+}
+.tm strong {
+  display: block;
+  font: 800 1.35rem var(--d);
+}
+
+/* Visual D: Working Qt / C++ Calculator */
+.vis.c {
+  background: var(--ink);
+}
+.calc {
+  width: min(88%, 18rem);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.55rem;
+  padding: 1.1rem;
+  border-radius: 24px;
+  background: #171E47;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+#dsp {
+  grid-column: 1/-1;
+  text-align: right;
+  font: 700 2.5rem/1.25 var(--d);
+  padding: 0.3rem 0.5rem;
+  color: var(--paper);
+  overflow: hidden;
+}
+.k {
+  border: 0;
+  border-radius: 12px;
+  padding: 0.8rem 0;
+  font: 700 1.1rem var(--d);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.12s, background 0.15s;
+}
+.k:hover {
+  background: #fff;
+}
+.k:active {
+  transform: scale(0.92);
+}
+.k.o {
+  background: var(--pop);
+}
+.k.o:hover {
+  background: #ff8e3b;
+}
+.k.z {
+  grid-column: span 2;
+}
+
+/* Visual E: Dashboard / Mini CRM */
+.vis.crm {
+  background: #121A15;
+  padding: 1.5rem;
+}
+.crm-card-mock {
+  width: min(92%, 19.5rem);
+  background: #1C2720;
+  border-radius: 20px;
+  padding: 1.25rem;
+  color: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--d);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+.crm-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.crm-rev-box {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+.crm-rev-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--mint);
+  display: block;
+}
+.crm-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+.crm-order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+.status-tag {
+  color: var(--mint);
+  font-weight: 700;
+  font-family: var(--m);
+  font-size: 0.75rem;
+}
+
+/* TECH STACK CHIPS SECTION */
+.stack-section {
+  padding-top: 5rem;
+}
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+}
+.stack-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.4rem;
+}
+.stack-card h4 {
+  font: 800 1.2rem var(--d);
+  margin: 0 0 0.6rem;
+  color: var(--pop);
+}
+.stack-card p {
+  font-size: 0.92rem;
+  color: var(--paper);
+  opacity: 0.85;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* PROCESS / JARAYON SECTION */
+#jarayon {
+  padding-bottom: 2rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: s;
+}
+.steps li {
+  border-top: 2px solid var(--paper);
+  padding-top: 1.2rem;
+  counter-increment: s;
+}
+.steps li::before {
+  content: counter(s);
+  display: block;
+  font: 800 clamp(3rem, 6vw, 5rem)/1 var(--d);
+  color: var(--pop);
+}
+.steps b {
+  display: block;
+  margin: 0.5rem 0 0.35rem;
+  font: 700 1.4rem var(--d);
+  color: var(--paper);
+}
+.steps p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #D3D7FA;
+  line-height: 1.6;
+}
+
+/* PRICING PHILOSOPHY NOTE IN JARAYON */
+.pricing-notice-box {
+  margin-top: 3.5rem;
+  background: var(--ink);
+  border-left: 4px solid var(--pop);
+  padding: 1.6rem 2rem;
+  border-radius: 0 20px 20px 0;
+}
+.pricing-notice-box h3 {
+  font: 800 1.4rem var(--d);
+  margin: 0 0 0.5rem;
+  color: var(--paper);
+}
+.pricing-notice-box p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #C0C5EE;
+  line-height: 1.7;
+}
+
+/* CTA & CONTACT SECTION */
+.cta {
+  padding: clamp(5rem, 12vw, 10rem) clamp(1rem, 4vw, 3rem) 2.5rem;
+}
+.cta h2 {
+  font: 800 clamp(3rem, 10vw, 9rem)/0.9 var(--d);
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.04em;
+}
+.big {
+  display: block;
+  margin: 0 0 2rem;
+  font: 800 clamp(4.5rem, 21vw, 20rem)/0.85 var(--d);
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  color: var(--pop);
+  transition: color 0.2s, transform 0.2s;
+}
+.big:hover {
+  color: var(--paper);
+  transform: translateX(12px);
+}
+
+/* Direct Idea Dispatcher Box */
+.idea-box {
+  max-width: 38rem;
+  background: var(--ink);
+  padding: 1.8rem 2rem;
+  border-radius: 24px;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.idea-box label {
+  display: block;
+  font: 700 1.1rem var(--d);
+  margin-bottom: 0.6rem;
+}
+.idea-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+.idea-textarea:focus {
+  border-color: var(--pop);
+}
+.btn-send-idea {
+  background: var(--pop);
+  color: var(--ink);
+  border: none;
+  font: 700 1rem var(--d);
+  padding: 0.9em 1.8em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-send-idea:hover {
+  transform: translateY(-2px);
+  background: #ff8e3b;
+}
+
+.links {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  font: 600 1.25rem var(--d);
+}
+.links a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.links a:hover {
+  border-bottom-color: var(--pop);
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  font-family: var(--d);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 960px) {
+  .case {
+    position: static;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav-links a {
+    margin-left: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .meta {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .row, .track {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
 </head>
-<body class="editorial-body">
+<body>
 
-    <!-- Noise Texture Overlay for Editorial Tactile Feel -->
-    <div class="noise-overlay" aria-hidden="true"></div>
+<!-- HERO WITH LENS EFFECT & KINETIC SLIDER -->
+<header class="hero" id="top">
+  <nav class="nav">
+    <div class="nav-brand">
+      <a class="logo" href="#top">Laziz</a>
+      <span class="live-beacon">
+        <span class="beacon-dot"></span>
+        <span data-i18n="status_open">Ochiq &bull; Toshkent</span>
+      </span>
+    </div>
+    <div class="nav-links">
+      <a href="#ishlar" data-i18n="nav_work">Ishlar</a>
+      <a href="#stek" data-i18n="nav_stack">Stek</a>
+      <a href="#jarayon" data-i18n="nav_process">Jarayon</a>
+      <a href="#aloqa" data-i18n="nav_contact">Aloqa</a>
+      
+      <!-- 3-Language Segmented Switcher -->
+      <div class="lang-switcher" role="group" aria-label="Til tanlash">
+        <button type="button" class="lang-btn active" data-lang="uz">UZ</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Reading & Scroll Progress Ribbon at the very top -->
-    <div class="top-scroll-line" id="topScrollLine"></div>
+  <!-- Kinetic Typography Tracks -->
+  <div class="rows base" aria-hidden="true"></div>
+  <div class="rows lens" aria-hidden="true"></div>
 
-    <!-- THE KINETIC GREEN CODE RIBBON (Tasmasimon Yashil Kod Oqimi) -->
-    <aside class="kinetic-spine-wrapper" id="kineticSpineWrapper" aria-hidden="true">
-        <div class="spine-line-track"></div>
-        <div class="spine-glow-stream" id="spineGlowStream"></div>
-        <div class="spine-traveler-node" id="spineTravelerNode">
-            <span class="traveler-pulse"></span>
-            <span class="traveler-symbol">&gt;_</span>
+  <!-- Hero Personal Copy Box -->
+  <div class="copy">
+    <span class="copy-badge" data-i18n="hero_badge">FULL-STACK DEVELOPER &bull; TASHKENT</span>
+    <h1 data-i18n="hero_h1">Laziz Bozorov — sayt va ilovalar yasovchi</h1>
+    <p data-i18n="hero_desc">
+      Biznesingiz uchun veb-saytlar, Telegram WebApp tizimlari va mobil ilovalar yarataman. Vositachilarsiz to'g'ridan-to'g'ri dasturchi bilan ishlaysiz — maket bosqichidayoq natijani koʻrasiz.
+    </p>
+    <a class="btn" href="#aloqa" data-i18n="btn_start">Loyihani boshlash &rarr;</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ISHLAR (STACKING CARDS DECK) -->
+  <section class="wrap" id="ishlar">
+    <h2 class="sec-title" data-i18n="sec_works">(Ishlar)</h2>
+    <div class="cases-deck">
+
+      <!-- Case 1: Elevo (English Grammar Platform) -->
+      <article class="case" style="--t: 1rem; --cbg: var(--paper); --cfg: var(--ink)">
+        <div class="txt">
+          <div>
+            <span class="case-tag" data-i18n="c1_tag">EDTECH &bull; VEB-SAYT</span>
+            <h3 data-i18n="c1_title">Elevo</h3>
+            <p data-i18n="c1_desc">
+              Oʻzbek tilida tushuntiriladigan ingliz tili platformasi: B1 dan C2 gacha darajalar, 8 zamon grammatikasi, formula qutilari va jonli interaktiv misollar.
+            </p>
+          </div>
+          <dl class="meta">
+            <div><dt data-i18n="meta_client">Mijoz</dt><dd data-i18n="c1_client">Shaxsiy loyiha</dd></div>
+            <div><dt data-i18n="meta_role">Rol</dt><dd data-i18n="c1_role">Dizayn va frontend</dd></div>
+            <div><dt data-i18n="meta_platform">Platforma</dt><dd>Veb sayt</dd></div>
+            <div><dt data-i18n="meta_year">Yil</dt><dd>2026</dd></div>
+          </dl>
         </div>
-        <!-- Flowing Code Tokens Column -->
-        <div class="spine-code-matrix" id="spineCodeMatrix">
-            <div class="matrix-token" data-depth="0">01 // INIT</div>
-            <div class="matrix-token" data-depth="15">const dev = "Laziz";</div>
-            <div class="matrix-token" data-depth="30">listen(idea);</div>
-            <div class="matrix-token" data-depth="45">fairQuote();</div>
-            <div class="matrix-token" data-depth="60">writeCleanCode();</div>
-            <div class="matrix-token" data-depth="75">deployProduction();</div>
-            <div class="matrix-token" data-depth="90">support(30_days);</div>
-            <div class="matrix-token" data-depth="100">status: 200 OK</div>
+        <div class="vis a">
+          <div>
+            <div class="fb"><b>Present Perfect</b><code>have / has + V3</code><span>I have finished my project.</span></div>
+            <div class="fb"><b>Past Simple</b><code>V2</code><span>She visited Tashkent.</span></div>
+            <div class="fb"><b>Future Simple</b><code>will + V1</code><span>We will launch in May.</span></div>
+          </div>
         </div>
-        <div class="spine-metric-badge" id="spineMetricBadge">0%</div>
-    </aside>
+      </article>
 
-    <!-- FLOATING CHAPTER INDEX NAV (SiriusXM & Mike Wilcock Inspired) -->
-    <aside class="chapter-quick-nav" id="chapterQuickNav" aria-label="Bo'limlar">
-        <a href="#ch-intro" class="c-nav-dot active" data-chapter="01" title="Muqaddima">
-            <span class="c-nav-num">01</span>
-            <span class="c-nav-label" data-i18n="nav_intro">Muqaddima</span>
-        </a>
-        <a href="#ch-pricing" class="c-nav-dot" data-chapter="02" title="Narx Falsafasi">
-            <span class="c-nav-num">02</span>
-            <span class="c-nav-label" data-i18n="nav_pricing">Narx Falsafasi</span>
-        </a>
-        <a href="#ch-services" class="c-nav-dot" data-chapter="03" title="Imkoniyatlar">
-            <span class="c-nav-num">03</span>
-            <span class="c-nav-label" data-i18n="nav_services">Imkoniyatlar</span>
-        </a>
-        <a href="#ch-work" class="c-nav-dot" data-chapter="04" title="Tanlangan Ishlar">
-            <span class="c-nav-num">04</span>
-            <span class="c-nav-label" data-i18n="nav_work">Loyihalar</span>
-        </a>
-        <a href="#ch-rules" class="c-nav-dot" data-chapter="05" title="Qoidalar">
-            <span class="c-nav-num">05</span>
-            <span class="c-nav-label" data-i18n="nav_rules">Qoidalar</span>
-        </a>
-        <a href="#ch-contact" class="c-nav-dot" data-chapter="06" title="Bog'lanish">
-            <span class="c-nav-num">06</span>
-            <span class="c-nav-label" data-i18n="nav_contact">Bog'lanish</span>
-        </a>
-    </aside>
-
-    <!-- EDITORIAL HEADER (Live Tashkent Clock + Motion Toggle + Lang Switcher) -->
-    <header class="editorial-header" id="editorialHeader">
-        <div class="container-fluid header-grid">
-            
-            <!-- Left: Identity & Live Time Indicator (Mike Wilcock signature) -->
-            <div class="header-left">
-                <a href="#ch-intro" class="brand-monogram">
-                    <span class="monogram-box">LB</span>
-                    <span class="brand-text">laziz<span class="brand-accent">.dev</span></span>
-                </a>
-                <div class="live-clock-widget">
-                    <span class="pulse-beacon"></span>
-                    <span class="clock-city">Tashkent, UZ</span>
-                    <span class="clock-time" id="liveTashkentClock">--:--:--</span>
-                    <span class="clock-avail" data-i18n="clock_available">• Loyihalar uchun ochiq</span>
-                </div>
+      <!-- Case 2: Telegram WebApp Mini Store (NEW!) -->
+      <article class="case" style="--t: 2.2rem; --cbg: #0D1629; --cfg: var(--paper)">
+        <div class="txt">
+          <div>
+            <span class="case-tag" data-i18n="c2_tag">E-COMMERCE &bull; TELEGRAM WEBAPP</span>
+            <h3 data-i18n="c2_title">Telegram Doʻkon</h3>
+            <p data-i18n="c2_desc">
+              Telegramdan chiqmasdan ishlovchi zamonaviy WebApp mini-do'kon: mahsulot katalogi, razmer va rang tanlash, savatcha hamda Payme/Click to'lovlari. Buyurtmalar 24/7 avtomatik qabul qilinadi.
+            </p>
+          </div>
+          <dl class="meta">
+            <div><dt data-i18n="meta_client">Mijoz</dt><dd data-i18n="c2_client">Tijoriy loyiha</dd></div>
+            <div><dt data-i18n="meta_role">Rol</dt><dd data-i18n="c2_role">Full-Stack &amp; Telegram Bot</dd></div>
+            <div><dt data-i18n="meta_platform">Platforma</dt><dd>Telegram WebApp</dd></div>
+            <div><dt data-i18n="meta_year">Yil</dt><dd>2026</dd></div>
+          </dl>
+        </div>
+        <div class="vis tg">
+          <div class="tg-app-shell">
+            <div class="tg-head">
+              <span>🛍️ Mini Store</span>
+              <span style="color:var(--mint)">● Online</span>
             </div>
-
-            <!-- Right: Controls & Direct Telegram CTA -->
-            <div class="header-right">
-                <!-- Motion Mode Switcher -->
-                <button type="button" class="btn-motion-toggle" id="btnMotionToggle" aria-label="Animatsiyalarni yoqish/o'chirish">
-                    <span class="motion-icon">⚡</span>
-                    <span class="motion-text" id="motionStatusText">Motion: On</span>
-                </button>
-
-                <!-- 3-Language Segmented Switcher -->
-                <div class="lang-segmented-bar" role="group" aria-label="Til tanlash">
-                    <button type="button" class="lang-pill active" data-lang="uz">UZ</button>
-                    <button type="button" class="lang-pill" data-lang="ru">RU</button>
-                    <button type="button" class="lang-pill" data-lang="en">EN</button>
-                </div>
-
-                <!-- Primary Action CTA -->
-                <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" class="btn-direct-reach">
-                    <svg class="reach-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                    <span data-i18n="btn_header_action">Telegramda yozish</span>
-                </a>
+            <div class="tg-item">
+              <span>Minimalist Hoodie</span>
+              <span class="tg-item-price">280,000 UZS</span>
             </div>
-
-        </div>
-    </header>
-
-    <!-- MAIN EDITORIAL CONTENT FLOW -->
-    <main class="editorial-main" id="mainFlow">
-        <div class="container editorial-container">
-
-            <!-- ===================================================================
-                 CHAPTER 01 // PROLOGUE (HERO EDITORIAL)
-                 =================================================================== -->
-            <section class="editorial-chapter" id="ch-intro">
-                <div class="chapter-meta-line">
-                    <span class="c-index-tag">01 // PROLOGUE</span>
-                    <span class="c-meta-info" data-i18n="c0_meta">MUSTAQIL DASTURCHI &bull; TOSHKENT</span>
-                </div>
-
-                <div class="hero-headline-block">
-                    <h1 class="giant-display-title" data-i18n="c0_title">
-                        Toza kod, aniq fikrlash va <span class="highlight-green">haqiqiy natija</span> beruvchi IT yechimlar.
-                    </h1>
-                </div>
-
-                <div class="hero-editorial-grid">
-                    <div class="hero-lead-col">
-                        <p class="hero-narrative-lead" data-i18n="c0_lead">
-                            Salom, men <strong>Laziz Bozorovman</strong>. O'rtada qo'lma-qo'l qiluvchi agentliklar va byurokratiyasiz — to'g'ridan-to'g'ri biznesingizga yangi mijoz keltiradigan veb-saytlar, Telegram WebApp tizimlari va ichki boshqaruv dasturlarini yarataman.
-                        </p>
-                        <div class="hero-action-row">
-                            <a href="#ch-contact" class="btn-creative-primary">
-                                <span data-i18n="c0_cta_discuss">Loyihangizni aytib bering &rarr;</span>
-                            </a>
-                            <a href="#ch-work" class="btn-creative-ghost">
-                                <span data-i18n="c0_cta_cases">Haqiqiy ishlarni ko'rish</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="hero-side-card">
-                        <div class="craftsman-card">
-                            <div class="card-head">
-                                <span class="craft-tag">DEV MANIFESTO</span>
-                                <span class="craft-year">2026</span>
-                            </div>
-                            <blockquote class="craft-quote" data-i18n="c0_manifesto">
-                                "Men sun'iy marketing gaplarini va qolipdagi 'vibe coding' shablonlarini yoqtirmayman. Har bir satr kodni o'z qo'lim bilan, mehr va e'tibor bilan yozaman."
-                            </blockquote>
-                            <div class="craft-signature">
-                                <strong>Laziz Bozorov</strong>
-                                <span>Creative Full-Stack Engineer</span>
-                            </div>
-                            <div class="live-stack-ticker">
-                                <span class="ticker-label" data-i18n="c0_stack_label">Asosiy Stek:</span>
-                                <div class="ticker-badges">
-                                    <span>React</span>
-                                    <span>Next.js 15</span>
-                                    <span>Python</span>
-                                    <span>Django</span>
-                                    <span>PostgreSQL</span>
-                                    <span>Telegram Bot API</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- ===================================================================
-                 CHAPTER 02 // PRICING PHILOSOPHY (NO RIGID FAKE PRICES)
-                 =================================================================== -->
-            <section class="editorial-chapter" id="ch-pricing">
-                <div class="chapter-meta-line">
-                    <span class="c-index-tag">02 // PHILOSOPHY</span>
-                    <span class="c-meta-info" data-i18n="c1_meta">ADOLATLI NARX TAMOYILI</span>
-                </div>
-
-                <h2 class="giant-chapter-title" data-i18n="c1_title">
-                    Nega men bu yerga "$300" yoki "$500" deb oldindan narx yopishtirib qo'ymayman?
-                </h2>
-
-                <div class="story-columns-editorial">
-                    <div class="story-text-col">
-                        <p data-i18n="c1_p1">
-                            Ko'p saytlarda bir xil qolipdagi tariflarni ko'rgansiz: <em>"Landing — $300", "Bot — $200"</em>. Lekin amalda har bir biznesning muammosi va maqsadi butunlay o'ziga xos.
-                        </p>
-                        <p data-i18n="c1_p2">
-                            Birovga oddiy, 1 sahifali mahsulot taqdimoti kerak — unda murakkab funksiya yo'q va u arzon bo'ladi. Boshqa bir tadbirkorga esa minglab tovarlari bor, Click va Payme to'lovlari ulangan, omborni hisoblaydigan katta Telegram WebApp tizimi zarur. Ikkala odamni bir xil qolipga tiqib, ko'rmasdan narx to'qish — xaridorga nisbatan nohaqlik.
-                        </p>
-                    </div>
-
-                    <div class="story-framework-col">
-                        <div class="framework-card">
-                            <h3 class="framework-title" data-i18n="c1_f_title">Mening adolatli 3 bosqichim:</h3>
-                            <div class="framework-steps">
-                                <div class="f-step">
-                                    <span class="f-num">01</span>
-                                    <div class="f-text">
-                                        <strong data-i18n="c1_s1_t">G'oyangizni eshitaman:</strong>
-                                        <p data-i18n="c1_s1_d">Siz nima yasamoqchisiz, kimlar foydalanadi va asosiy vazifasi nima.</p>
-                                    </div>
-                                </div>
-                                <div class="f-step">
-                                    <span class="f-num">02</span>
-                                    <div class="f-text">
-                                        <strong data-i18n="c1_s2_t">Eng tejamkor yechimni topaman:</strong>
-                                        <p data-i18n="c1_s2_d">Ortiqcha xarajatlarsiz, faqat amaliy ishlaydigan texnologiyani tanlaymiz.</p>
-                                    </div>
-                                </div>
-                                <div class="f-step">
-                                    <span class="f-num">03</span>
-                                    <div class="f-text">
-                                        <strong data-i18n="c1_s3_t">Aniq va o'zgarmas narx aytaman:</strong>
-                                        <p data-i18n="c1_s3_d">Kelishilgan smeta va muddat ish jarayonida aslo oshmaydi. Maslahatlashish esa mutlaqo bepul.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- ===================================================================
-                 CHAPTER 03 // CAPABILITIES (DESIGNED IN FIGMA, BUILT IN CODE)
-                 =================================================================== -->
-            <section class="editorial-chapter" id="ch-services">
-                <div class="chapter-meta-line">
-                    <span class="c-index-tag">03 // CAPABILITIES</span>
-                    <span class="c-meta-info" data-i18n="c2_meta">IMKONIYATLAR VA STEK</span>
-                </div>
-
-                <div class="editorial-intro-header">
-                    <h2 class="giant-chapter-title" data-i18n="c2_title">
-                        Qo'limdan nimalar keladi? (Va nimalarni olmayman)
-                    </h2>
-                    <p class="section-lead-paragraph" data-i18n="c2_subtitle">
-                        "Designed in Figma, built in code." Men hamma narsani bilaman deb yolg'on gapirmayman — faqat o'zim mukammal tushunadigan yo'nalishlar bilan shug'ullanaman:
-                    </p>
-                </div>
-
-                <div class="capabilities-grid-interactive">
-                    
-                    <!-- Capability 01 -->
-                    <div class="capability-card" data-card-idx="1">
-                        <div class="cap-top">
-                            <span class="cap-num">01</span>
-                            <span class="cap-indicator">WEB &amp; DESIGN</span>
-                        </div>
-                        <h3 class="cap-title" data-i18n="s1_title">Tezkor Veb-Saytlar &amp; Landing Sahifalar</h3>
-                        <p class="cap-desc" data-i18n="s1_desc">
-                            Telefonda 1 soniyada ochiladigan, chiroyli va qulay veb-saytlar. Reklamadan kirgan mijoz qiynalmasdan ariza qoldiradi, barcha arizalar esa zudlik bilan Telegram guruh yoki botingizga boradi.
-                        </p>
-                        <div class="cap-tags">
-                            <span>Next.js 15</span>
-                            <span>TailwindCSS</span>
-                            <span>SEO 100%</span>
-                            <span>Ultra Fast</span>
-                        </div>
-                    </div>
-
-                    <!-- Capability 02 -->
-                    <div class="capability-card featured-cap" data-card-idx="2">
-                        <div class="cap-top">
-                            <span class="cap-num">02</span>
-                            <span class="cap-indicator highlight-pill">MOST REQUESTED</span>
-                        </div>
-                        <h3 class="cap-title" data-i18n="s2_title">Telegram Botlar &amp; WebApp Do'konlar</h3>
-                        <p class="cap-desc" data-i18n="s2_desc">
-                            Xaridor hech qanday ilova yuklamaydi. Telegram ichida tovar katalogini ko'radi, savatchaga soladi va Click yoki Payme orqali to'laydi. Buyurtmalar esa avtomatik tarzda admin panelga tushadi.
-                        </p>
-                        <div class="cap-tags">
-                            <span>Telegram WebApp</span>
-                            <span>Payme &amp; Click</span>
-                            <span>Python / Node</span>
-                            <span>24/7 Avtomat</span>
-                        </div>
-                    </div>
-
-                    <!-- Capability 03 -->
-                    <div class="capability-card" data-card-idx="3">
-                        <div class="cap-top">
-                            <span class="cap-num">03</span>
-                            <span class="cap-indicator">OPERATIONS</span>
-                        </div>
-                        <h3 class="cap-title" data-i18n="s3_title">Ichki Boshqaruv Tizimlari (Mini CRM / Dashboard)</h3>
-                        <p class="cap-desc" data-i18n="s3_desc">
-                            Qog'oz va daftardagi chalkashliklardan xalos bo'ling. Mijozlar bazasi, buyurtmalar holati, kassa tushumi va oylik hisobotlarni yagona xavfsiz ekranda nazorat qilish uchun sodda veb-panel.
-                        </p>
-                        <div class="cap-tags">
-                            <span>PostgreSQL</span>
-                            <span>Analytics</span>
-                            <span>Excel Export</span>
-                            <span>Rollar Tizimi</span>
-                        </div>
-                    </div>
-
-                    <!-- Capability 04 -->
-                    <div class="capability-card" data-card-idx="4">
-                        <div class="cap-top">
-                            <span class="cap-num">04</span>
-                            <span class="cap-indicator">INTEGRATION</span>
-                        </div>
-                        <h3 class="cap-title" data-i18n="s4_title">API &amp; To'lov Tizimlari Integratsiyasi</h3>
-                        <p class="cap-desc" data-i18n="s4_desc">
-                            Mavjud saytingiz yoki botingizga Click, Payme, SMS xabarnomalar ulash, serverlarni sozlash va sekin ishlayotgan tizimlarni 2-3 barobargacha tezlashtirish.
-                        </p>
-                        <div class="cap-tags">
-                            <span>Rest API</span>
-                            <span>Webhooks</span>
-                            <span>Docker</span>
-                            <span>Cloud Deploy</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Honest Boundary Notice -->
-                <div class="editorial-boundary-box">
-                    <span class="boundary-label" data-i18n="c2_not_label">NIMALARNI QILMAYMAN:</span>
-                    <p data-i18n="c2_not_text">
-                        O'zim yaxshi tushunmaydigan yoki muddati real bo'lmagan ishlarga hech qachon rozi bo'lmayman. Agar loyihangiz mening yo'nalishimga to'g'ri kelmasa, buni vaqtingizni olmay, boshidanoq ochiq aytaman.
-                    </p>
-                </div>
-            </section>
-
-
-            <!-- ===================================================================
-                 CHAPTER 04 // SELECTED WORK (MIKE WILCOCK / WELLPAWS STYLE)
-                 =================================================================== -->
-            <section class="editorial-chapter" id="ch-work">
-                <div class="chapter-meta-line">
-                    <span class="c-index-tag">04 // SELECTED WORK</span>
-                    <span class="c-meta-info" data-i18n="c3_meta">AMALIY NATIJALAR VA KEYSLAR</span>
-                </div>
-
-                <div class="editorial-intro-header">
-                    <h2 class="giant-chapter-title" data-i18n="c3_title">
-                        Haqiqiy loyihalar: bizneslar qanday muammo bilan kelgandi?
-                    </h2>
-                    <p class="section-lead-paragraph" data-i18n="c3_subtitle">
-                        Faqat quruq rasm emas — biznesning real muammosi, qilingan arxitektura va olingan natija:
-                    </p>
-                </div>
-
-                <div class="editorial-case-studies">
-                    
-                    <!-- Case Study 01 (WellPaws style layout) -->
-                    <article class="bespoke-case-study">
-                        <div class="case-header-strip">
-                            <span class="case-index">CASE 01</span>
-                            <span class="case-category">TELEGRAM WEBAPP &bull; E-COMMERCE</span>
-                            <span class="case-deliverable">Design &amp; Full Build</span>
-                        </div>
-
-                        <div class="case-hero-visual">
-                            <div class="browser-mockup-frame">
-                                <div class="mockup-header-dots">
-                                    <span></span><span></span><span></span>
-                                </div>
-                                <div class="mockup-content-preview tg-store-preview">
-                                    <div class="preview-brand-tag">📱 Telegram Mini App &bull; Click &amp; Payme</div>
-                                    <div class="preview-inner-hero">
-                                        <h4>Avtomatik Do'kon Tizimi</h4>
-                                        <p>Tovar katalogi, razmer tanlash, savatcha va 1-klikda to'lov</p>
-                                    </div>
-                                    <div class="preview-mini-grid">
-                                        <div class="p-card">Katalog &bull; 100+ Tovar</div>
-                                        <div class="p-card">Click &amp; Payme To'lov</div>
-                                        <div class="p-card">24/7 Avto Buyurtma</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="case-deep-dive-grid">
-                            <div class="case-narrative-col">
-                                <h3 class="case-study-heading" data-i18n="case1_h">
-                                    Mijozlar lichkada javob kutib qolmasligi uchun nima qildik?
-                                </h3>
-                                <div class="narrative-section">
-                                    <h4 data-i18n="case_prob_lbl">Muammo:</h4>
-                                    <p data-i18n="case1_p1">
-                                        Do'kon egasiga kuniga yuzlab mijozlar yozardi, lekin administrator ulgurmagani uchun odamlar narx va razmerni kutib, boshqa do'konlarga o'tib ketardi.
-                                    </p>
-                                </div>
-                                <div class="narrative-section">
-                                    <h4 data-i18n="case_sol_lbl">Yechim:</h4>
-                                    <p data-i18n="case1_p2">
-                                        Telegramdan chiqmasdan ishlaydigan WebApp mini-do'kon yaratdik. Rasmlar, razmerlar va Payme/Click to'lovi ulandi.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="case-metrics-col">
-                                <div class="impact-stat-card">
-                                    <span class="impact-num">24/7</span>
-                                    <strong data-i18n="case1_m1_t">Avtomatik savdo</strong>
-                                    <p data-i18n="case1_m1_d">Kechasi ham buyurtmalar o'z-o'zidan qabul qilinadi</p>
-                                </div>
-                                <div class="impact-stat-card">
-                                    <span class="impact-num">0 daqiqa</span>
-                                    <strong data-i18n="case1_m2_t">Kutish vaqti</strong>
-                                    <p data-i18n="case1_m2_d">Xaridor lichkani kutmasdan, 30 soniyada buyurtma qiladi</p>
-                                </div>
-                                <div class="case-tech-strip">
-                                    <span>Python</span>
-                                    <span>Aiogram 3</span>
-                                    <span>React WebApp</span>
-                                    <span>Click API</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Case Study 02 -->
-                    <article class="bespoke-case-study">
-                        <div class="case-header-strip">
-                            <span class="case-index">CASE 02</span>
-                            <span class="case-category">WEB PLATFORM &bull; LEAD CAPTURE</span>
-                            <span class="case-deliverable">Full-Stack Rebuild</span>
-                        </div>
-
-                        <div class="case-hero-visual">
-                            <div class="browser-mockup-frame">
-                                <div class="mockup-header-dots">
-                                    <span></span><span></span><span></span>
-                                </div>
-                                <div class="mockup-content-preview web-speed-preview">
-                                    <div class="preview-brand-tag">⚡ Next.js 15 &bull; 1.0s Speed Index</div>
-                                    <div class="preview-inner-hero">
-                                        <h4>Tezkor Landing Sahifa</h4>
-                                        <p>Arizalarni Telegram guruhga zudlik bilan yo'naltiruvchi konversiyali platforma</p>
-                                    </div>
-                                    <div class="preview-mini-grid">
-                                        <div class="p-card">1.1s Yuklanish</div>
-                                        <div class="p-card">100/100 Lighthouse</div>
-                                        <div class="p-card">TG Guruhga Xabar</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="case-deep-dive-grid">
-                            <div class="case-narrative-col">
-                                <h3 class="case-study-heading" data-i18n="case2_h">
-                                    Reklamadan kelgan mijozlar yo'qolmasligi uchun saytni qayta qurdik
-                                </h3>
-                                <div class="narrative-section">
-                                    <h4 data-i18n="case_prob_lbl">Muammo:</h4>
-                                    <p data-i18n="case2_p1">
-                                        Kompaniya reklamaga pul tikar, lekin eski sayt telefonda sekin (5-6 soniya) ochilgani sababli, odamlar kutmasdan chiqib ketardi.
-                                    </p>
-                                </div>
-                                <div class="narrative-section">
-                                    <h4 data-i18n="case_sol_lbl">Yechim:</h4>
-                                    <p data-i18n="case2_p2">
-                                        Next.js da qayta qurib, tezlikni 1.1 soniyaga tushirdik va foydalanuvchi ariza qoldirishi bilan ma'lumotlar xodimlarning Telegramiga tushadigan qildik.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="case-metrics-col">
-                                <div class="impact-stat-card">
-                                    <span class="impact-num">2.8x</span>
-                                    <strong data-i18n="case2_m1_t">Arizalar o'sishi</strong>
-                                    <p data-i18n="case2_m1_d">Reklamaga sarflangan har 1 so'm 2 barobar ko'proq foyda keltirdi</p>
-                                </div>
-                                <div class="impact-stat-card">
-                                    <span class="impact-num">1.1s</span>
-                                    <strong data-i18n="case2_m2_t">Sahifa tezligi</strong>
-                                    <p data-i18n="case2_m2_d">Telefonlarda darhol ochiladi, hech qanday qotishlarsiz</p>
-                                </div>
-                                <div class="case-tech-strip">
-                                    <span>Next.js</span>
-                                    <span>TypeScript</span>
-                                    <span>Tailwind</span>
-                                    <span>Telegram Bot API</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Case Study 03 -->
-                    <article class="bespoke-case-study">
-                        <div class="case-header-strip">
-                            <span class="case-index">CASE 03</span>
-                            <span class="case-category">INTERNAL TOOL &bull; MINI CRM</span>
-                            <span class="case-deliverable">Custom Dashboard</span>
-                        </div>
-
-                        <div class="case-deep-dive-grid">
-                            <div class="case-narrative-col">
-                                <h3 class="case-study-heading" data-i18n="case3_h">
-                                    Daftardagi chalkashlikdan bitta ixcham boshqaruv paneliga
-                                </h3>
-                                <div class="narrative-section">
-                                    <h4 data-i18n="case_prob_lbl">Muammo:</h4>
-                                    <p data-i18n="case3_p1">
-                                        Kichik servisda kuniga 20-30 ta buyurtma kelar, barcha ma'lumotlar daftarga yozilib, kim to'lagani yoki buyurtma bitgani chalkashib ketardi.
-                                    </p>
-                                </div>
-                                <div class="narrative-section">
-                                    <h4 data-i18n="case_sol_lbl">Yechim:</h4>
-                                    <p data-i18n="case3_p2">
-                                        Telefonda ham ochiladigan sodda veb-panel qurdik: ustalar ish statusini o'zgartiradi, rahbar esa kunlik tushumni 1 klikda ko'radi.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="case-metrics-col">
-                                <div class="impact-stat-card">
-                                    <span class="impact-num">100%</span>
-                                    <strong data-i18n="case3_m1_t">Tartibli hisobot</strong>
-                                    <p data-i18n="case3_m1_d">Hech bir mijoz yoki buyurtma yo'qolmaydi</p>
-                                </div>
-                                <div class="impact-stat-card">
-                                    <span class="impact-num">1 soniya</span>
-                                    <strong data-i18n="case3_m2_t">Oylik hisobot</strong>
-                                    <p data-i18n="case3_m2_d">Qog'oz titib o'tirmasdan, bitta tugma bilan hisob chiqadi</p>
-                                </div>
-                                <div class="case-tech-strip">
-                                    <span>Django</span>
-                                    <span>PostgreSQL</span>
-                                    <span>React</span>
-                                    <span>Docker</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </section>
-
-
-            <!-- ===================================================================
-                 CHAPTER 05 // RULES & PRINCIPLES
-                 =================================================================== -->
-            <section class="editorial-chapter" id="ch-rules">
-                <div class="chapter-meta-line">
-                    <span class="c-index-tag">05 // PRINCIPLES</span>
-                    <span class="c-meta-info" data-i18n="c4_meta">HAMKORLIKNING 4 ASOSIY QOIDASI</span>
-                </div>
-
-                <h2 class="giant-chapter-title" data-i18n="c4_title">
-                    Siz nimaga ishonishingiz mumkin?
-                </h2>
-
-                <div class="editorial-rules-grid">
-                    <div class="e-rule-card">
-                        <span class="e-rule-num">01</span>
-                        <h3 class="e-rule-title" data-i18n="r1_title">To'g'ridan-to'g'ri Muloqot</h3>
-                        <p class="e-rule-desc" data-i18n="r1_desc">
-                            O'rtada menejerlar yo'q. Loyihani birinchi kundanoq kod yozadigan odam bilan — o'zim bilan muhokama qilasiz va har kuni holatdan xabardor bo'lasiz.
-                        </p>
-                    </div>
-
-                    <div class="e-rule-card">
-                        <span class="e-rule-num">02</span>
-                        <h3 class="e-rule-title" data-i18n="r2_title">Bosqichma-bosqich Demo</h3>
-                        <p class="e-rule-desc" data-i18n="r2_desc">
-                            Ishni oxirigacha yashirib o'tirmayman. Har bir qismi tayyor bo'lishi bilan sizga ko'rsatib, fikringizni olib boraman.
-                        </p>
-                    </div>
-
-                    <div class="e-rule-card">
-                        <span class="e-rule-num">03</span>
-                        <h3 class="e-rule-title" data-i18n="r3_title">Kod 100% Sizning Mulkingiz</h3>
-                        <p class="e-rule-desc" data-i18n="r3_desc">
-                            Loyiha bitgach, barcha manba kodlari (GitHub va server) to'liq sizga topshiriladi. Hech qanday yashirin to'lovlar yoki bog'liqlik qolmaydi.
-                        </p>
-                    </div>
-
-                    <div class="e-rule-card">
-                        <span class="e-rule-num">04</span>
-                        <h3 class="e-rule-title" data-i18n="r4_title">Topshirilgach 30 Kun Bepul Yordam</h3>
-                        <p class="e-rule-desc" data-i18n="r4_desc">
-                            Sayt yoki bot topshirilgandan keyin ham yo'qolib qolmayman. 1 oy davomida texnik nazorat va xatoliklarni bartaraf etish mutlaqo bepul.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- ===================================================================
-                 CHAPTER 06 // INITIATE (START A PROJECT — MIKE WILCOCK STYLE)
-                 =================================================================== -->
-            <section class="editorial-chapter contact-editorial-chapter" id="ch-contact">
-                <div class="chapter-meta-line">
-                    <span class="c-index-tag">06 // INITIATE</span>
-                    <span class="c-meta-info" data-i18n="c5_meta">LOYIHANI BOSHLASH</span>
-                </div>
-
-                <div class="contact-editorial-header">
-                    <h2 class="giant-chapter-title" data-i18n="c5_title">
-                        G'oyangiz bormi? Keling, birgalikda muhokama qilamiz.
-                    </h2>
-                    <p class="section-lead-paragraph" data-i18n="c5_subtitle">
-                        Hech qanday murakkab formalarsiz. Nima yasatmoqchiligingizni qisqacha yozing — men sizga optimal yechimni, qancha vaqt ketishini va adolatli narxini aytaman.
-                    </p>
-                </div>
-
-                <div class="bespoke-inquiry-box">
-                    
-                    <!-- 1. Scope Selector Chips (Mike Wilcock signature) -->
-                    <div class="inquiry-field-group">
-                        <label class="inquiry-label" data-i18n="inq_scope_lbl">Qanday tizim kerak?:</label>
-                        <div class="scope-chips-selector" id="scopeChips">
-                            <button type="button" class="scope-chip active" data-scope="Veb-Sayt / Landing">🌐 Veb-Sayt &amp; Landing</button>
-                            <button type="button" class="scope-chip" data-scope="Telegram WebApp / Bot">🤖 Telegram Mini App &amp; Bot</button>
-                            <button type="button" class="scope-chip" data-scope="Ichki Tizim / CRM">📊 CRM / Boshqaruv Paneli</button>
-                            <button type="button" class="scope-chip" data-scope="API &amp; To'lovlar">💳 To'lov &amp; API Integratsiya</button>
-                        </div>
-                    </div>
-
-                    <!-- 2. Project Idea Details -->
-                    <div class="inquiry-field-group">
-                        <label for="inquiryDetails" class="inquiry-label" data-i18n="inq_details_lbl">Loyiha haqida qisqacha (yoki maqsadingiz):</label>
-                        <textarea id="inquiryDetails" rows="4" data-i18n-placeholder="ph_details" placeholder="Masalan: Menda kiyim do'koni bor, Telegramda to'lov qabul qiladigan mini-do'kon kerak..."></textarea>
-                    </div>
-
-                    <!-- 3. Dual Input: Name & Contact -->
-                    <div class="inquiry-dual-row">
-                        <div class="inquiry-field-group">
-                            <label for="inquiryName" class="inquiry-label" data-i18n="inq_name_lbl">Ismingiz:</label>
-                            <input type="text" id="inquiryName" data-i18n-placeholder="ph_name" placeholder="Ismingizni kiriting">
-                        </div>
-
-                        <div class="inquiry-field-group">
-                            <label for="inquiryContact" class="inquiry-label" data-i18n="inq_contact_lbl">Telegramingiz yoki telefoningiz:</label>
-                            <input type="text" id="inquiryContact" data-i18n-placeholder="ph_contact" placeholder="@username yoki +998 (90) 000-00-00">
-                        </div>
-                    </div>
-
-                    <!-- Action Button: Direct Telegram Dispatch -->
-                    <div class="inquiry-action-row">
-                        <button type="button" class="btn-creative-submit" id="btnSendToTelegram">
-                            <svg class="send-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                            <span data-i18n="btn_submit_tg">Xabarni Telegramda Yuborish &rarr;</span>
-                        </button>
-                    </div>
-
-                    <!-- Direct Reach Out Row -->
-                    <div class="direct-channels-row">
-                        <span class="direct-label" data-i18n="reach_direct_lbl">Yoki menga to'g'ridan-to'g'ri yozing:</span>
-                        <div class="channel-pills">
-                            <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" class="c-pill">
-                                <span>✈️ Telegram: @lazizfullstack</span>
-                            </a>
-                            <a href="mailto:lazizfullstack@gmail.com" class="c-pill">
-                                <span>✉️ Email: lazizfullstack@gmail.com</span>
-                            </a>
-                            <a href="https://github.com/laziz-bozorov" target="_blank" rel="noopener noreferrer" class="c-pill">
-                                <span>🐙 GitHub: laziz-bozorov</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/laziz-bozorov-143bb4448" target="_blank" rel="noopener noreferrer" class="c-pill">
-                                <span>💼 LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-    <!-- EDITORIAL FOOTER -->
-    <footer class="editorial-footer">
-        <div class="container footer-grid">
-            <div class="footer-left">
-                <span class="footer-brand-title">lazizfullstack.dev</span>
-                <p data-i18n="footer_copy">
-                    © 2026 Laziz Bozorov. Designed with intention, engineered with clean code.
-                </p>
+            <div class="tg-item">
+              <span>Classic Sneakers</span>
+              <span class="tg-item-price">450,000 UZS</span>
             </div>
-            <div class="footer-right">
-                <a href="#ch-intro" class="footer-top-link" data-i18n="footer_top">Yuqoriga qaytish &uarr;</a>
-                <span class="foot-sep">•</span>
-                <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer">Telegram</a>
-                <span class="foot-sep">•</span>
-                <a href="https://github.com/laziz-bozorov" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
+            <button class="tg-pay-btn" type="button">
+              <span>💳 Click / Payme orqali to'lash</span>
+            </button>
+          </div>
         </div>
-    </footer>
+      </article>
 
-    <!-- Interactive Script -->
-    <script src="script.js"></script>
+      <!-- Case 3: RentGo (3D Rotating Phone Mockup) -->
+      <article class="case" style="--t: 3.4rem; --cbg: var(--ink); --cfg: var(--paper)">
+        <div class="txt">
+          <div>
+            <span class="case-tag" data-i18n="c3_tag">MOBIL ILOVA &bull; PROTOTIP</span>
+            <h3 data-i18n="c3_title">RentGo</h3>
+            <p data-i18n="c3_desc">
+              Oʻzbekistonda vaqtinchalik mashina ijarasi ilovasi: kirish oqimi, Cobalt va Gentra avtoparki, bron taymeri va profil ekranlari.
+            </p>
+          </div>
+          <dl class="meta">
+            <div><dt data-i18n="meta_client">Mijoz</dt><dd data-i18n="c3_client">Universitet loyihasi</dd></div>
+            <div><dt data-i18n="meta_role">Rol</dt><dd data-i18n="c3_role">UX va prototip</dd></div>
+            <div><dt data-i18n="meta_platform">Platforma</dt><dd>Mobil ilova</dd></div>
+            <div><dt data-i18n="meta_year">Yil</dt><dd>2026</dd></div>
+          </dl>
+        </div>
+        <div class="vis b">
+          <div class="phone">
+            <div class="scr">
+              <h4>RentGo</h4>
+              <div class="car"><i></i>Chevrolet Gentra</div>
+              <div class="car"><i></i>Chevrolet Cobalt</div>
+              <div class="tm"><span data-i18n="c3_timer_label">Bron tugashiga</span><strong id="tm">02:45:10</strong></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 4: Working Qt & C++ Calculator -->
+      <article class="case" style="--t: 4.6rem; --cbg: var(--pop); --cfg: var(--ink)">
+        <div class="txt">
+          <div>
+            <span class="case-tag" data-i18n="c4_tag">SYSTEMS &bull; C++ / QT</span>
+            <h3 data-i18n="c4_title">Qt kalkulyator</h3>
+            <p data-i18n="c4_desc">
+              C++ va Qt kutubxonasida yaratilgan desktop kalkulyator. Bu yerdagi demo veb versiyasi: tugmalarni bemalol bosib koʻring, to'liq ishlaydi!
+            </p>
+          </div>
+          <dl class="meta">
+            <div><dt data-i18n="meta_client">Mijoz</dt><dd data-i18n="c4_client">Muhandislik ishi</dd></div>
+            <div><dt data-i18n="meta_role">Rol</dt><dd data-i18n="c4_role">Dasturlash</dd></div>
+            <div><dt data-i18n="meta_platform">Platforma</dt><dd>Desktop / Web</dd></div>
+            <div><dt data-i18n="meta_tech">Texnologiya</dt><dd>C++ / Qt</dd></div>
+          </dl>
+        </div>
+        <div class="vis c">
+          <div class="calc">
+            <div id="dsp">0</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 5: Mini CRM & Dashboard (NEW!) -->
+      <article class="case" style="--t: 5.8rem; --cbg: #141C16; --cfg: var(--paper)">
+        <div class="txt">
+          <div>
+            <span class="case-tag" data-i18n="c5_tag">DASHBOARD &bull; MINI CRM</span>
+            <h3 data-i18n="c5_title">Operatsion CRM</h3>
+            <p data-i18n="c5_desc">
+              Xizmat ko'rsatish va servislar uchun sodda boshqaruv paneli: buyurtmalar oqimi, mijozlar bazasi, kassa tushumlari va oylik hisobotlar. Qog'ozdagi chalkashliklarga to'liq chek qo'yadi.
+            </p>
+          </div>
+          <dl class="meta">
+            <div><dt data-i18n="meta_client">Mijoz</dt><dd data-i18n="c5_client">B2B servis</dd></div>
+            <div><dt data-i18n="meta_role">Rol</dt><dd data-i18n="c5_role">Backend &amp; Dashboard</dd></div>
+            <div><dt data-i18n="meta_platform">Platforma</dt><dd>Veb ilova</dd></div>
+            <div><dt data-i18n="meta_year">Yil</dt><dd>2026</dd></div>
+          </dl>
+        </div>
+        <div class="vis crm">
+          <div class="crm-card-mock">
+            <div class="crm-head">
+              <span>📊 Dashboard Overview</span>
+              <span class="status-tag">Live</span>
+            </div>
+            <div class="crm-rev-box">
+              <span style="font-size:0.75rem; opacity:0.8">Oylik sof tushum:</span>
+              <span class="crm-rev-num">42,850,000 UZS</span>
+            </div>
+            <div class="crm-orders-list">
+              <div class="crm-order-item">
+                <span>Buyurtma #108</span>
+                <span class="status-tag">Bajarildi</span>
+              </div>
+              <div class="crm-order-item">
+                <span>Buyurtma #109</span>
+                <span class="status-tag" style="color:var(--pop)">Jarayonda</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STEK & KO'NIKMALAR (NEW!) -->
+  <section class="wrap stack-section" id="stek">
+    <h2 class="sec-title" data-i18n="sec_stack">(Stek)</h2>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h4>Frontend</h4>
+        <p>React, Next.js 15, TypeScript, TailwindCSS, HTML5/CSS3 animatsiyalar.</p>
+      </div>
+      <div class="stack-card">
+        <h4>Backend</h4>
+        <p>Python, Django, Node.js, Express.js, REST API, Webhooks.</p>
+      </div>
+      <div class="stack-card">
+        <h4>Telegram &amp; To'lov</h4>
+        <p>Telegram Bot API, Telegram WebApp (Mini App), Payme, Click to'lovlari.</p>
+      </div>
+      <div class="stack-card">
+        <h4>Tizimli &amp; Baza</h4>
+        <p>C++, Qt, Java, PostgreSQL, SQLite, Docker, Git &amp; GitHub.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JARAYON (HOW WE WORK & PRICING PHILOSOPHY) -->
+  <section class="wrap" id="jarayon">
+    <h2 class="sec-title" data-i18n="sec_process">(Jarayon)</h2>
+    <ol class="steps">
+      <li>
+        <b data-i18n="step1_t">Gaplashamiz</b>
+        <p data-i18n="step1_d">Nima kerakligini, kim uchun ekanini va asosiy vazifasini eshitaman.</p>
+      </li>
+      <li>
+        <b data-i18n="step2_t">Adolatli Narx</b>
+        <p data-i18n="step2_d">Oldindan sun'iy narx to'qimayman: vazifaga qarab eng tejamkor yechim va o'zgarmas narx aytaman.</p>
+      </li>
+      <li>
+        <b data-i18n="step3_t">Maket &amp; Yasash</b>
+        <p data-i18n="step3_d">Kod yozishdan oldin ekranlarni koʻrasiz, so'ngra toza kod bilan ishlovchi holatga keltiraman.</p>
+      </li>
+      <li>
+        <b data-i18n="step4_t">Topshirish &amp; Yordam</b>
+        <p data-i18n="step4_d">Barcha kodlar 100% sizga beriladi va keyingi 30 kun bepul texnik yordam beraman.</p>
+      </li>
+    </ol>
+
+    <!-- Transparent Pricing Philosophy Note -->
+    <div class="pricing-notice-box">
+      <h3 data-i18n="price_box_t">Nega men saytga qat'iy narxlar yozib qo'ymayman?</h3>
+      <p data-i18n="price_box_d">
+        Har bir loyiha o'ziga xos: birovga oddiy 1 sahifali vizitka kerak, boshqa birovga esa to'lovlari bor katta do'kon. Shuning uchun siz avval nima yasatmoqchiligingizni aytasiz, men esa uni qanday eng oson va arzon qilishni o'ylab, aniq va halol narx aytaman. Maslahatlashish — mutlaqo bepul.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- CTA & CONTACT SECTION -->
+<section class="cta" id="aloqa">
+  <h2 data-i18n="cta_title">Loyihangiz bormi?</h2>
+
+  <!-- Quick Idea Dispatcher to Telegram -->
+  <div class="idea-box">
+    <label for="ideaText" data-i18n="idea_label">G'oyangiz haqida qisqacha yozing:</label>
+    <textarea class="idea-textarea" id="ideaText" rows="3" data-i18n-placeholder="idea_ph" placeholder="Masalan: Menda kiyim do'koni bor, Telegramda to'lov qabul qiladigan mini-do'kon kerak..."></textarea>
+    <button class="btn-send-idea" id="btnSendIdea" type="button" data-i18n="btn_send_tg">Telegram orqali yozish &rarr;</button>
+  </div>
+
+  <a class="big" href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer" data-i18n="big_cta">Yozing</a>
+
+  <!-- Authentic Verified Channels -->
+  <div class="links">
+    <a href="https://t.me/lazizfullstack" target="_blank" rel="noopener noreferrer">✈️ Telegram: @lazizfullstack</a>
+    <a href="mailto:lazizfullstack@gmail.com">✉️ lazizfullstack@gmail.com</a>
+    <a href="https://github.com/laziz-bozorov" target="_blank" rel="noopener noreferrer">🐙 GitHub: laziz-bozorov</a>
+    <a href="https://www.linkedin.com/in/laziz-bozorov-143bb4448" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+  </div>
+
+  <p class="foot">
+    <span>© 2026 Laziz Bozorov &bull; Tashkent, UZ</span>
+    <a href="#top" data-i18n="back_top">Tepaga &uarr;</a>
+  </p>
+</section>
+
+<!-- SCRIPT: KINETIC ROWS, LENS EFFECT, 3D PHONE, QT CALCULATOR, I18N -->
+<script>
+const $ = s => document.querySelector(s);
+const RM = matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+/* 1. I18N DICTIONARY */
+const i18n = {
+  uz: {
+    title: "Laziz Bozorov — sayt va ilova yasovchi",
+    status_open: "Ochiq • Toshkent",
+    nav_work: "Ishlar",
+    nav_stack: "Stek",
+    nav_process: "Jarayon",
+    nav_contact: "Aloqa",
+    hero_badge: "FULL-STACK DEVELOPER • TASHKENT",
+    hero_h1: "Laziz Bozorov — sayt va ilovalar yasovchi",
+    hero_desc: "Biznesingiz uchun veb-saytlar, Telegram WebApp tizimlari va mobil ilovalar yarataman. Vositachilarsiz to'g'ridan-to'g'ri dasturchi bilan ishlaysiz — maket bosqichidayoq natijani koʻrasiz.",
+    btn_start: "Loyihani boshlash →",
+    sec_works: "(Ishlar)",
+    c1_tag: "EDTECH • VEB-SAYT",
+    c1_title: "Elevo",
+    c1_desc: "Oʻzbek tilida tushuntiriladigan ingliz tili platformasi: B1 dan C2 gacha darajalar, 8 zamon grammatikasi, formula qutilari va jonli interaktiv misollar.",
+    meta_client: "Mijoz",
+    meta_role: "Rol",
+    meta_platform: "Platforma",
+    meta_year: "Yil",
+    meta_tech: "Texnologiya",
+    c1_client: "Shaxsiy loyiha",
+    c1_role: "Dizayn va frontend",
+    c2_tag: "E-COMMERCE • TELEGRAM WEBAPP",
+    c2_title: "Telegram Doʻkon",
+    c2_desc: "Telegramdan chiqmasdan ishlovchi zamonaviy WebApp mini-do'kon: mahsulot katalogi, razmer va rang tanlash, savatcha hamda Payme/Click to'lovlari. Buyurtmalar 24/7 avtomatik qabul qilinadi.",
+    c2_client: "Tijoriy loyiha",
+    c2_role: "Full-Stack & Telegram Bot",
+    c3_tag: "MOBIL ILOVA • PROTOTIP",
+    c3_title: "RentGo",
+    c3_desc: "Oʻzbekistonda vaqtinchalik mashina ijarasi ilovasi: kirish oqimi, Cobalt va Gentra avtoparki, bron taymeri va profil ekranlari.",
+    c3_client: "Universitet loyihasi",
+    c3_role: "UX va prototip",
+    c3_timer_label: "Bron tugashiga",
+    c4_tag: "SYSTEMS • C++ / QT",
+    c4_title: "Qt kalkulyator",
+    c4_desc: "C++ va Qt kutubxonasida yaratilgan desktop kalkulyator. Bu yerdagi demo veb versiyasi: tugmalarni bemalol bosib koʻring, to'liq ishlaydi!",
+    c4_client: "Muhandislik ishi",
+    c4_role: "Dasturlash",
+    c5_tag: "DASHBOARD • MINI CRM",
+    c5_title: "Operatsion CRM",
+    c5_desc: "Xizmat ko'rsatish va servislar uchun sodda boshqaruv paneli: buyurtmalar oqimi, mijozlar bazasi, kassa tushumlari va oylik hisobotlar. Qog'ozdagi chalkashliklarga to'liq chek qo'yadi.",
+    c5_client: "B2B servis",
+    c5_role: "Backend & Dashboard",
+    sec_stack: "(Stek)",
+    sec_process: "(Jarayon)",
+    step1_t: "Gaplashamiz",
+    step1_d: "Nima kerakligini, kim uchun ekanini va asosiy vazifasini eshitaman.",
+    step2_t: "Adolatli Narx",
+    step2_d: "Oldindan sun'iy narx to'qimayman: vazifaga qarab eng tejamkor yechim va o'zgarmas narx aytaman.",
+    step3_t: "Maket & Yasash",
+    step3_d: "Kod yozishdan oldin ekranlarni koʻrasiz, so'ngra toza kod bilan ishlovchi holatga keltiraman.",
+    step4_t: "Topshirish & Yordam",
+    step4_d: "Barcha kodlar 100% sizga beriladi va keyingi 30 kun bepul texnik yordam beraman.",
+    price_box_t: "Nega men saytga qat'iy narxlar yozib qo'ymayman?",
+    price_box_d: "Har bir loyiha o'ziga xos: birovga oddiy 1 sahifali vizitka kerak, boshqa birovga esa to'lovlari bor katta do'kon. Shuning uchun siz avval nima yasatmoqchiligingizni aytasiz, men esa uni qanday eng oson va arzon qilishni o'ylab, aniq va halol narx aytaman. Maslahatlashish — mutlaqo bepul.",
+    cta_title: "Loyihangiz bormi?",
+    idea_label: "G'oyangiz haqida qisqacha yozing:",
+    idea_ph: "Masalan: Menda kiyim do'koni bor, Telegramda to'lov qabul qiladigan mini-do'kon kerak...",
+    btn_send_tg: "Telegram orqali yozish →",
+    big_cta: "Yozing",
+    back_top: "Tepaga ↑"
+  },
+  ru: {
+    title: "Лазиз Бозоров — разработка сайтов и Telegram-систем",
+    status_open: "Открыт • Ташкент",
+    nav_work: "Работы",
+    nav_stack: "Стек",
+    nav_process: "Процесс",
+    nav_contact: "Контакты",
+    hero_badge: "FULL-STACK DEVELOPER • TASHKENT",
+    hero_h1: "Лазиз Бозоров — создаю сайты и мобильные сервисы",
+    hero_desc: "Разрабатываю быстрые сайты, Telegram WebApp магазины и приложения для бизнеса. Работа напрямую с разработчиком без посредников — результат виден уже на этапе макетов.",
+    btn_start: "Начать проект →",
+    sec_works: "(Работы)",
+    c1_tag: "EDTECH • ВЕБ-САЙТ",
+    c1_title: "Elevo",
+    c1_desc: "Образовательная платформа для изучения английского языка: грамматика 8 времен, интерактивные формулы и живые примеры.",
+    meta_client: "Клиент",
+    meta_role: "Роль",
+    meta_platform: "Платформа",
+    meta_year: "Год",
+    meta_tech: "Технологии",
+    c1_client: "Собственный проект",
+    c1_role: "Дизайн и frontend",
+    c2_tag: "E-COMMERCE • TELEGRAM WEBAPP",
+    c2_title: "Telegram Магазин",
+    c2_desc: "Полноценный WebApp магазин прямо в Telegram: каталог товаров, выбор размеров, корзина и моментальная оплата Click/Payme. Заказы поступают 24/7.",
+    c2_client: "Коммерческий проект",
+    c2_role: "Full-Stack & Telegram Bot",
+    c3_tag: "МОБИЛЬНОЕ ПРИЛОЖЕНИЕ • ПРОТОТИП",
+    c3_title: "RentGo",
+    c3_desc: "Приложение поминутной аренды автомобилей: автопарк Cobalt и Gentra, экраны бронирования с живым таймером.",
+    c3_client: "Университетский проект",
+    c3_role: "UX и прототип",
+    c3_timer_label: "До конца брони",
+    c4_tag: "SYSTEMS • C++ / QT",
+    c4_title: "Qt калькулятор",
+    c4_desc: "Десктопный калькулятор на C++ и Qt. Здесь представлена рабочая интерактивная веб-версия — кнопки полностью функциональны!",
+    c4_client: "Инженерная работа",
+    c4_role: "Разработка",
+    c5_tag: "DASHBOARD • MINI CRM",
+    c5_title: "Операционная CRM",
+    c5_desc: "Панель управления заказами, клиентами и кассой для сервисного бизнеса. Полный отказ от бумажной рутины.",
+    c5_client: "B2B сервис",
+    c5_role: "Backend & Dashboard",
+    sec_stack: "(Стек)",
+    sec_process: "(Процесс)",
+    step1_t: "Обсуждение",
+    step1_d: "Вникаю в задачу, определяем цель и сценарии использования.",
+    step2_t: "Честная Цена",
+    step2_d: "Никаких шаблонных ценников: подбираю оптимальное решение и фиксирую бюджет.",
+    step3_t: "Макет и Код",
+    step3_d: "Вы видите интерфейс до программирования, затем собираю чистый код.",
+    step4_t: "Сдача и Гарантия",
+    step4_d: "Все исходники передаются вам, плюс 30 дней бесплатной поддержки.",
+    price_box_t: "Почему на сайте нет фиксированных цен?",
+    price_box_d: "Каждый проект уникален: кому-то достаточно простого лендинга, а кому-то нужен большой магазин с интеграцией платежей. Поэтому сначала вы рассказываете идею, я подбираю экономное решение и называю честную цену. Консультация бесплатна.",
+    cta_title: "Есть проект?",
+    idea_label: "Кратко опишите задачу:",
+    idea_ph: "Например: Нужен Telegram-бот для магазина одежды с приемом оплаты Click...",
+    btn_send_tg: "Написать в Telegram →",
+    big_cta: "Пишите",
+    back_top: "Наверх ↑"
+  },
+  en: {
+    title: "Laziz Bozorov — Developer & Tech Partner",
+    status_open: "Open • Tashkent",
+    nav_work: "Work",
+    nav_stack: "Stack",
+    nav_process: "Process",
+    nav_contact: "Contact",
+    hero_badge: "FULL-STACK DEVELOPER • TASHKENT",
+    hero_h1: "Laziz Bozorov — websites & digital products",
+    hero_desc: "I engineer high-speed websites, Telegram WebApps, and custom software for businesses. You collaborate directly with the developer — reviewing progress right from prototype stage.",
+    btn_start: "Start a project →",
+    sec_works: "(Work)",
+    c1_tag: "EDTECH • WEB PLATFORM",
+    c1_title: "Elevo",
+    c1_desc: "Interactive English grammar platform: levels B1 to C2, 8 tenses, visual formula cards, and practical live examples.",
+    meta_client: "Client",
+    meta_role: "Role",
+    meta_platform: "Platform",
+    meta_year: "Year",
+    meta_tech: "Tech",
+    c1_client: "Personal project",
+    c1_role: "Design & Frontend",
+    c2_tag: "E-COMMERCE • TELEGRAM WEBAPP",
+    c2_title: "Telegram Store",
+    c2_desc: "In-app Telegram WebApp store: catalog browsing, size selection, shopping cart, and Click/Payme automated checkout. Orders process 24/7.",
+    c2_client: "Commercial project",
+    c2_role: "Full-Stack & Telegram Bot",
+    c3_tag: "MOBILE APP • PROTOTYPE",
+    c3_title: "RentGo",
+    c3_desc: "Car rental application concept in Uzbekistan: onboarding flow, vehicle fleet, live reservation countdown timer, and user profiles.",
+    c3_client: "University project",
+    c3_role: "UX & Prototype",
+    c3_timer_label: "Reservation ends in",
+    c4_tag: "SYSTEMS • C++ / QT",
+    c4_title: "Qt Calculator",
+    c4_desc: "Desktop calculator engineered in C++ and Qt. This live interactive web demo is fully functional — test the math logic yourself!",
+    c4_client: "Systems project",
+    c4_role: "Development",
+    c5_tag: "DASHBOARD • MINI CRM",
+    c5_title: "Operations CRM",
+    c5_desc: "Streamlined operational dashboard for service businesses: customer pipeline, order tracking, and cashflow reports without paper ledgers.",
+    c5_client: "B2B Service",
+    c5_role: "Backend & Dashboard",
+    sec_stack: "(Stack)",
+    sec_process: "(Process)",
+    step1_t: "Discovery",
+    step1_d: "I listen to your goal, target audience, and key technical expectations.",
+    step2_t: "Fair Pricing",
+    step2_d: "No rigid menus: I design the cleanest technical path and quote a fixed budget.",
+    step3_t: "Design & Build",
+    step3_d: "You review screens before coding, followed by clean production development.",
+    step4_t: "Handover & Support",
+    step4_d: "100% source code ownership transferred, backed by 30 days of free support.",
+    price_box_t: "Why are there no rigid price tags on this site?",
+    price_box_d: "Every business is distinct: one needs a lean single-page showcase, while another needs a multi-tier store with automated gateways. You share your vision, I design the most cost-effective path and give an honest quote. Inquiries are 100% free.",
+    cta_title: "Have a project?",
+    idea_label: "Briefly tell me your idea:",
+    idea_ph: "e.g. I need an in-app Telegram store with automated Click checkout...",
+    btn_send_tg: "Send on Telegram →",
+    big_cta: "Write",
+    back_top: "Back to top ↑"
+  }
+};
+
+let curLang = localStorage.getItem('laziz_lang') || 'uz';
+
+function setLang(l) {
+  if (!i18n[l]) l = 'uz';
+  curLang = l;
+  localStorage.setItem('laziz_lang', l);
+  document.documentElement.lang = l;
+
+  const d = i18n[l];
+  if (d.title) document.title = d.title;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (d[k]) el.innerHTML = d[k];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const k = el.getAttribute('data-i18n-placeholder');
+    if (d[k]) el.setAttribute('placeholder', d[k]);
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === l);
+  });
+}
+
+document.querySelectorAll('.lang-btn').forEach(b => {
+  b.addEventListener('click', () => setLang(b.getAttribute('data-lang')));
+});
+
+/* 2. DYNAMIC KINETIC ROWS */
+const wordsRow = {
+  uz: [["Sayt", "Ilova", "Dizayn"], ["Laziz", "Laziz", "Laziz"]],
+  ru: [["Сайт", "Сервис", "Дизайн"], ["Лазиз", "Лазиз", "Лазиз"]],
+  en: [["Web", "App", "Code"], ["Laziz", "Laziz", "Laziz"]]
+};
+
+function renderKineticRows() {
+  document.querySelectorAll(".rows").forEach((r, i) => {
+    r.innerHTML = "";
+    const list = i ? ["Sayt", "Ilova", "Telegram"] : ["Laziz", "Bozorov", "Laziz"];
+    list.forEach(w => {
+      const u = (w + " ").repeat(6);
+      r.insertAdjacentHTML("beforeend", `<div class="row"><div class="track">${u + u}</div></div>`);
+    });
+  });
+}
+renderKineticRows();
+
+/* 3. FLASHLIGHT / LENS POINTER TRACKER */
+const hero = $(".hero"), lens = $(".lens");
+let x = 0, y = 0, r = 0, tx = 0, ty = 0, tr = 0, act = false, tm;
+
+hero.addEventListener("pointermove", e => {
+  const b = hero.getBoundingClientRect();
+  tx = e.clientX - b.left;
+  ty = e.clientY - b.top;
+  tr = Math.min(220, innerWidth * 0.28);
+  act = true;
+  clearTimeout(tm);
+  tm = setTimeout(() => act = false, 2500);
+});
+hero.addEventListener("pointerleave", () => act = false);
+
+(function loop(t) {
+  const w = hero.clientWidth, h = hero.clientHeight;
+  if (!act) {
+    tr = Math.min(160, w * 0.22);
+    tx = w * (0.5 + (RM ? 0 : 0.3 * Math.sin(t / 1700)));
+    ty = h * (0.45 + (RM ? 0 : 0.18 * Math.cos(t / 2200)));
+  }
+  x += (tx - x) * 0.12;
+  y += (ty - y) * 0.12;
+  r += (tr - r) * 0.1;
+  lens.style.clipPath = `circle(${r}px at ${x}px ${y}px)`;
+  requestAnimationFrame(loop);
+})(0);
+
+/* 4. 3D PHONE PERSPECTIVE ROTATION ON SCROLL */
+const ph = $(".phone");
+addEventListener("scroll", () => {
+  if (!RM && ph) {
+    ph.style.setProperty("--ry", Math.sin(scrollY / 380) * 30 + "deg");
+  }
+}, { passive: true });
+
+/* 5. COUNTDOWN TIMER IN RENTGO */
+let s = 9910;
+setInterval(() => {
+  s = s > 0 ? s - 1 : 9910;
+  const p = n => String(n).padStart(2, "0");
+  const el = $("#tm");
+  if (el) el.textContent = `${p(s / 3600 | 0)}:${p(s % 3600 / 60 | 0)}:${p(s % 60)}`;
+}, 1000);
+
+/* 6. WORKING QT / C++ CALCULATOR ENGINE */
+const calcBox = $(".calc");
+if (calcBox) {
+  calcBox.insertAdjacentHTML("beforeend", "C ± % ÷ 7 8 9 × 4 5 6 − 1 2 3 + 0 . =".split(" ").map(t =>
+    `<button class="k${"÷×−+=".includes(t) ? " o" : ""}${t === "0" ? " z" : ""}">${t}</button>`
+  ).join(""));
+
+  let cur = "0", a = 0, op = null, fresh = false;
+  const calcFn = (p, q, o) => +(o === "+" ? p + q : o === "−" ? p - q : o === "×" ? p * q : q ? p / q : 0).toFixed(8);
+
+  calcBox.onclick = e => {
+    const t = e.target.closest(".k")?.textContent;
+    if (!t) return;
+    if (/[\d.]/.test(t)) {
+      if (fresh) { cur = "0"; fresh = false; }
+      if (t === "." && cur.includes(".")) return;
+      cur = cur === "0" && t !== "." ? t : cur + t;
+    } else if (t === "C") {
+      cur = "0"; a = 0; op = null; fresh = false;
+    } else if (t === "±") {
+      cur = String(-cur);
+    } else if (t === "%") {
+      cur = String(cur / 100);
+    } else {
+      if (op && !fresh) cur = String(calcFn(a, +cur, op));
+      a = +cur;
+      op = t === "=" ? null : t;
+      fresh = true;
+    }
+    $("#dsp").textContent = cur.length > 9 ? (+cur).toPrecision(7) : cur;
+  };
+}
+
+/* 7. QUICK IDEA DISPATCHER TO TELEGRAM */
+const btnSendIdea = $("#btnSendIdea");
+const ideaText = $("#ideaText");
+
+if (btnSendIdea && ideaText) {
+  btnSendIdea.addEventListener("click", () => {
+    const text = ideaText.value.trim() || "Salom Laziz, yangi loyiha bo'yicha maslahatlashmoqchiman!";
+    let msg = "";
+    if (curLang === 'ru') {
+      msg = `Здравствуйте Лазиз!\n\n💡 Задача: ${text}\n\nХочу обсудить этот проект!`;
+    } else if (curLang === 'en') {
+      msg = `Hi Laziz!\n\n💡 Project Idea: ${text}\n\nI'd like to discuss this with you!`;
+    } else {
+      msg = `Assalomu alaykum Laziz!\n\n💡 Loyiha g'oyasi: ${text}\n\nShu loyiha bo'yicha gaplashsak degandim!`;
+    }
+
+    const url = `https://t.me/lazizfullstack?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+}
+
+// Initialize Language
+setLang(curLang);
+</script>
 </body>
 </html>
